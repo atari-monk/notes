@@ -1,0 +1,24 @@
+{
+  "name": "notes-server",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "debug": "ndb build/server.js",
+    "on": "node build/server.js",
+    "start": "tsc && node build/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.15",
+    "typescript": "^5.2.2"
+  }
+}

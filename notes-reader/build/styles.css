@@ -1,0 +1,29 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/styles.css ***!
+  \**********************************************************************/
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.code-block {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
