@@ -1,25 +1,54 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-.section {
-  margin-top: 20px;
+h1 {
+  background-color: #f0f0f0;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+input[type='file'] {
+  margin: 10px 0;
+}
+
+#index {
+  background-color: #fff;
+  padding: 10px;
+}
+
+#jsonContainer {
+  background-color: #fff;
+  padding: 10px;
 }
 
 .card {
-  background-color: #f7f7f7;
-  padding: 10px;
   border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
 }
 
-.code-block {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-top: 10px;
+.card p {
+  margin: 5px 0;
 }
