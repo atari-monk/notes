@@ -1,20 +1,14 @@
-import { MultiLineConverter } from '../converter/MultiLineConverter'
-import { TextToHTMLConverter } from '../converter/TextToHTMLConverter'
+import MarkdownIt from 'markdown-it'
 
 export class AnswerCard {
   private sectionIndex: number
   private questionIndex: number
-  private converter: TextToHTMLConverter
-  private multiConverter: MultiLineConverter
+  private markdownIt: MarkdownIt
 
   constructor(sectionIndex: number, questionIndex: number) {
     this.sectionIndex = sectionIndex
     this.questionIndex = questionIndex
-    this.converter = new TextToHTMLConverter()
-    this.multiConverter = new MultiLineConverter()
-    this.multiConverter.addConverter(/```(.*?)```/gs, (text) => {
-      return `<pre class="code-block">${text}</pre>`
-    })
+    this.markdownIt = new MarkdownIt()
   }
 
   createCard(question: string, answer: string): HTMLElement {
@@ -23,9 +17,8 @@ export class AnswerCard {
     card.innerHTML += `<p><strong>Question:</strong> ${question}</p>`
     card.innerHTML += `<p><strong>Answer:</strong></p>`
 
-    const answer1 = this.converter.convertTextToHTML(answer)
-    //const answer2 = this.multiConverter.convert(answer1)
-    const answerDiv = this.createDiv(answer1)
+    var result = this.markdownIt.render(answer)
+    const answerDiv = this.createDiv(result)
     card.appendChild(answerDiv)
 
     card.id = `section-${this.sectionIndex}-question-${this.questionIndex}`
