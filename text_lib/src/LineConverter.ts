@@ -1,19 +1,17 @@
+import { ILineConverter } from "./ILineConverter";
+
 export class LineConverter {
 	private converters: ILineConverter[];
 
 	constructor() {
-		this.converters = [
-			{
-				pattern: /^- (.*)$/,
-				convert: (line) => `<li>${line.trim().replace(/^- /, "")}</li>`,
-			},
-			{
-				pattern: /^\*\*(.*?)\*\*$/,
-				convert: (line) =>
-					`<strong>${line.trim().replace(/\*\*/g, "")}</strong>`,
-			},
-			// Add more converters with patterns and conversion functions as needed
-		];
+		this.converters = [];
+	}
+
+	addConverter(pattern: RegExp, convertFn: (match: string) => string): void {
+		this.converters.push({
+			pattern,
+			convert: convertFn,
+		});
 	}
 
 	convertTextToHTML(text: string): string {
