@@ -7,6 +7,14 @@ import hljs from 'highlight.js'
 const fileInput = document.getElementById('fileInput') as HTMLInputElement
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
 const index = document.getElementById('index') as HTMLElement
+const darkModeButton = document.getElementById('darkModeButton') as HTMLElement
+
+darkModeButton.addEventListener('click', toggleDarkMode)
+
+function toggleDarkMode() {
+  const body = document.body
+  body.classList.toggle('dark-mode')
+}
 
 fileInput.addEventListener('change', function (_event) {
   const file = fileInput.files?.[0]
@@ -41,10 +49,7 @@ function handleFileLoad(data: IJsonData) {
 }
 
 function highlightCodeBlocks() {
-  const codeBlocks = document.querySelectorAll('code')
-
-  codeBlocks.forEach((codeBlock) => {
-    console.log('dsfsdfdsfsdf');
+  document.querySelectorAll('code').forEach((codeBlock) => {
     hljs.highlightElement(codeBlock)
   })
 }
