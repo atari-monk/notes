@@ -1,17 +1,12 @@
-/*!**********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/styles.css ***!
-  \**********************************************************************/
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  color: #000; /* Default text color */
+  color: #000;
 }
 
 h1 {
-  background-color: #f0f0f0;
-  color: #333;
   padding: 10px;
   text-align: center;
 }
@@ -39,8 +34,24 @@ input[type='file'] {
 }
 
 #index {
-  background-color: #fff;
+  background-color: #f0f0f0;
   margin-left: 50px;
+}
+
+#index a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#index a:hover {
+  background-color: #555;
+  color: #fff;
 }
 
 #jsonContainer {
@@ -59,14 +70,35 @@ input[type='file'] {
   margin: 5px 0;
 }
 
-/* Dark Mode */
 .dark-mode {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* Dark text color */
+  background-color: #333;
+  color: #fff;
 }
 
 .dark-mode button {
-  background-color: #555; /* Dark button background color */
+  background-color: #555;
 }
 
-/* Add more dark mode styling as needed */
+.dark-mode #index {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #index a {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #index a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode #jsonContainer {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode code.hljs {
+  background-color: #c3c0c0;
+}
