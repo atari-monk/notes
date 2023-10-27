@@ -17,9 +17,7 @@ export class AnswerCard {
     card.innerHTML += `<p><strong>Question:</strong> ${question}</p>`
     card.innerHTML += `<p><strong>Answer:</strong></p>`
 
-    var result = this.markdownIt.render(answer)
-    const answerDiv = this.createDiv(result)
-    card.appendChild(answerDiv)
+    card.appendChild(this.createDiv(answer))
 
     card.id = `section-${this.sectionIndex}-question-${this.questionIndex}`
     return card
@@ -27,7 +25,7 @@ export class AnswerCard {
 
   private createDiv(answer: string): Node {
     const div = document.createElement('div')
-    div.innerHTML = answer
+    div.innerHTML = this.markdownIt.render(answer)
     return div
   }
 }

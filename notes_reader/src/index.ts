@@ -2,6 +2,7 @@ import { IndexComponent } from './components/IndexComponent'
 import './css/styles.css'
 import { IJsonData } from './model/IJsonData'
 import { SectionComponent } from './components/SectionComponent'
+import hljs from 'highlight.js'
 
 const fileInput = document.getElementById('fileInput') as HTMLInputElement
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
@@ -34,5 +35,16 @@ function handleFileLoad(data: IJsonData) {
       indexComponent
     )
     sectionComponent.createSectionElement(section.title, section.questions)
+  })
+
+  highlightCodeBlocks()
+}
+
+function highlightCodeBlocks() {
+  const codeBlocks = document.querySelectorAll('code')
+
+  codeBlocks.forEach((codeBlock) => {
+    console.log('dsfsdfdsfsdf');
+    hljs.highlightElement(codeBlock)
   })
 }
