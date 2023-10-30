@@ -6,6 +6,12 @@ new DarkModeToggler()
 
 const load = getById('loadButton')
 
+export interface INote {
+  question: string
+  answer: string
+  dateTime: string
+}
+
 async function handleLoad(event: Event) {
   event.preventDefault()
 
@@ -35,8 +41,19 @@ async function handleLoad(event: Event) {
     })
 
     if (response.ok) {
-      const questionData = await response.json()
+      const questionData = (await response.json()) as INote
       console.log(questionData)
+      const sectionInput = document.getElementById(
+        'section'
+      ) as HTMLInputElement
+      const questionInput = document.getElementById(
+        'question'
+      ) as HTMLInputElement
+      const answerInput = document.getElementById(
+        'answer'
+      ) as HTMLTextAreaElement
+      questionInput.value = questionData.question
+      answerInput.value = questionData.answer
     } else {
       console.error('Failed to fetch question from the server')
     }
