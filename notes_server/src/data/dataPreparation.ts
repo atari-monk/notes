@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
-import { INote } from './INote'
-import { ISection } from './ISection'
-import { INotesData } from './INotesData'
+import { INote } from '../types/data/INote'
+import { ISection } from '../types/data/ISection'
+import { INotesData } from '../types/data/INotesData'
 
 export async function appendData(
   filePath: string,
@@ -65,7 +65,7 @@ async function writeData(filePath: string, data: INotesData): Promise<void> {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2))
 }
 
-export async function getQuestionFromJSON(
+export async function loadQuestionFromJSON(
   filePath: string,
   sectionNumber: number,
   questionNumber: number
@@ -82,6 +82,40 @@ export async function getQuestionFromJSON(
       const section: ISection = notesData.sections[sectionNumber]
       const question: INote = section.questions[questionNumber]
       return question
+    }
+
+    return null // Question or section not found
+  } catch (err) {
+    throw err
+  }
+}
+
+export async function editQuestion(
+  filePath: string,
+  sectionNumber: number,
+  questionNumber: number,
+  updatedQuestion: string,
+  updatedAnswer: string
+): Promise<INotesData | null> {
+  try {
+    const notesData = await readData(filePath)
+
+    if (
+      sectionNumber >= 0 &&
+      sectionNumber < notesData.sections.length &&
+      questionNumber >= 0 &&
+      questionNumber < notesData.sections[sectionNumber].questions.length
+    ) {
+      const section: ISection = notesData.sections[sectionNumber]
+      const question: INote = section.questions[questionNumber]
+      // Update the question and answer
+      question.question = updatedQuestion
+      question.answer = updatedAnswer
+      question.dateTime = new Date().toISOString()
+
+      await writeData(filePath, notesData)
+
+      return notesData
     }
 
     return null // Question or section not found
