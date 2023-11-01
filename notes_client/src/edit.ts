@@ -1,15 +1,14 @@
 import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
 import './css/styles.css'
+import { INote } from './types/data/INote'
+import { INoteData } from './types/data/INoteData'
+import { INoteIndex } from './types/data/INoteIndex'
+import { INoteEdit } from './types/data/INoteEdit'
 
-new DarkModeToggler()
-
-const load = getById('loadButton')
-
-export interface INote {
-  question: string
-  answer: string
-  dateTime: string
+let noteIndex: INoteIndex = {
+  sectionNr: 0,
+  questionNr: 0,
 }
 
 async function handleLoad(event: Event) {
@@ -20,13 +19,12 @@ async function handleLoad(event: Event) {
   const questionNumber = getById('questionNumber') as HTMLInputElement
 
   const fileTitle = fileTitleInput.value
-  const section = sectionNumber.value
-  const question = questionNumber.value
+  const sectionNr = sectionNumber.value
+  const questionNr = questionNumber.value
 
-  // Prepare the data to send to the server
-  const data = {
-    section,
-    question,
+  noteIndex = {
+    sectionNr: Number(sectionNr),
+    questionNr: Number(questionNr),
   }
 
   const actionUrl = `http://localhost:3000/notes/getQuestion/${fileTitle}.json`
@@ -37,12 +35,12 @@ async function handleLoad(event: Event) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(noteIndex),
     })
 
     if (response.ok) {
       const questionData = (await response.json()) as INote
-      console.log(questionData)
+      console.log('hello', questionData)
       const sectionInput = document.getElementById(
         'section'
       ) as HTMLInputElement
@@ -62,4 +60,66 @@ async function handleLoad(event: Event) {
   }
 }
 
-load.addEventListener('click', handleLoad)
+async function handleEdit(event: Event) {
+  event.preventDefault()
+
+  const fileTitleInput = document.getElementById(
+    'fileTitle'
+  ) as HTMLInputElement
+  const sectionInput = document.getElementById('section') as HTMLInputElement
+  const questionInput = document.getElementById('question') as HTMLInputElement
+  const answerInput = document.getElementById('answer') as HTMLTextAreaElement
+
+  const fileTitle = fileTitleInput.value
+  const section = sectionInput.value
+  const question = questionInput.value
+  const answer = answerInput.value
+
+  console.log('Data to be sent:', {
+    fileTitle,
+    section,
+    question,
+    answer,
+  })
+
+  const note: INoteData = {
+    fileTitle,
+    section,
+    question,
+    answer,
+  }
+
+  const noteEdit: INoteEdit = {
+    noteIndex,
+    note,
+  }
+
+  console.log('noteEdit:', noteEdit)
+
+  const actionUrl = `http://localhost:3000/notes/edit/${fileTitle}.json`
+
+  try {
+    const response = await fetch(actionUrl, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(noteEdit),
+    })
+
+    if (response.status === 200) {
+      alert('Note submitted successfully!')
+      ;(event.target as HTMLFormElement).reset()
+    } else {
+      alert('Error submitting note.')
+    }
+  } catch (error: any) {
+    alert('Error submitting note: ' + error.message)
+  }
+}
+
+new DarkModeToggler()
+const loadBtn = getById('loadButton')
+loadBtn.addEventListener('click', handleLoad)
+const editBtn = getById('editButton')
+editBtn.addEventListener('click', handleEdit)

@@ -1,10 +1,8 @@
+import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
-import { INoteData } from './INoteData'
+import { INoteData } from './types/data/INoteData'
 import './css/styles.css'
 
-new DarkModeToggler()
-
-// Async function to handle form submission
 async function handleSubmit(event: Event) {
   event.preventDefault()
 
@@ -22,22 +20,19 @@ async function handleSubmit(event: Event) {
 
   console.log('Data to be sent:', {
     fileTitle,
-    section, // Include section in the data to be sent
+    section,
     question,
     answer,
   })
 
   const actionUrl = `http://localhost:3000/notes/append/${fileTitle}.json`
 
-  // Create a note object with section included
   const note: INoteData = {
     fileTitle,
-    section, // Include section in the note object
+    section,
     question,
     answer,
   }
-
-  console.log('Note object:', note)
 
   try {
     const response = await fetch(actionUrl, {
@@ -59,8 +54,6 @@ async function handleSubmit(event: Event) {
   }
 }
 
-// Get the form element
-const form = document.getElementById('noteForm') as HTMLFormElement
-
-// Add a submit event listener to the form
+new DarkModeToggler()
+const form = getById('noteForm') as HTMLFormElement
 form.addEventListener('submit', handleSubmit)
