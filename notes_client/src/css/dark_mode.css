@@ -19,6 +19,7 @@ body.dark-mode label {
 }
 
 body.dark-mode input[type='text'],
+body.dark-mode input[type='number'],
 body.dark-mode textarea {
   background-color: #111 !important;
   color: #f5f5f5 !important;

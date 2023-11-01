@@ -20,10 +20,9 @@ h2 {
   color: black;
 }
 
-/* Form styles */
 form {
   width: 90%;
-  margin: 15px; /* Center the form horizontally */
+  margin: 15px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -31,15 +30,14 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form labels */
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* Form inputs */
 input[type='text'],
+input[type='number'],
 textarea {
   width: 95%;
   padding: 10px;
@@ -64,7 +62,6 @@ a {
 
 ul,
 ol {
-  /* list-style: none; */
   padding: 0;
 }
 
@@ -88,13 +85,15 @@ li {
 }
 
 #fileTitle {
-  width: 300px;
+  width: 400px;
 }
 
-#section {
-  width: 300px;
+#sectionNumber,
+#questionNumber {
+  max-width: 100px;
 }
 
+#question,
 #answer {
   height: 500px;
   resize: none;
