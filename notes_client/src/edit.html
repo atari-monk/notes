@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Submit Note</title>
+    <title>Notes</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <button id="darkModeToggle" class="dark-mode-toggle">
-      <span class="icon">🌙</span>
-      Toggle Dark Mode
-    </button>
-    <h2>Menu</h2>
-    <ul id="menu">
-      <li><a href="submit.html">Submit a Note</a></li>
-      <li><a href="edit.html">Edit Note</a></li>
-    </ul>
-    <h2>Submit a Note</h2>
+    <div id="menu_box">
+      <div>
+        <h2>Options</h2>
+        <ul id="menu">
+          <li><a href="index.html">Append Chat</a></li>
+          <li><a href="edit.html">Update Chat</a></li>
+        </ul>
+      </div>
+      <button id="darkModeToggle" class="dark-mode-toggle">
+        <span class="icon">☀️</span>
+        Light
+      </button>
+    </div>
+    <h2>Update Chat</h2>
     <form id="noteForm" action="" method="post">
       <label for="fileTitle">File Title:</label>
       <input type="text" id="fileTitle" name="fileTitle" required /><br /><br />

@@ -58,7 +58,7 @@ a {
   transition: color 0.3s;
 
   &:hover {
-    color: #e90909;
+    color: #007bff;
   }
 }
 
@@ -78,6 +78,15 @@ li {
   margin-bottom: 5px;
 }
 
+#menu_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 #fileTitle {
   width: 300px;
 }
@@ -91,21 +100,33 @@ li {
   resize: none;
 }
 
-#menu {
-  margin-bottom: 30px;
+#darkModeToggle span {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #0056b3;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #007bff;
 }
 
 .dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  position: relative;
-  margin: 20px;
-  background-color: #333;
-  color: #f5f5f5;
-  padding: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  align-self: flex-end;
+  margin-left: 40px;
+  margin-bottom: 25px;
+  max-height: 60px;
+  padding: 5px 5px;
 }
 
 .dark-mode-toggle .icon {
@@ -116,7 +137,7 @@ input[type='submit'] {
   background-color: #0056b3;
   color: #f5f5f5;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;

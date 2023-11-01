@@ -8,7 +8,6 @@ module.exports = () => {
     devtool: false,
     entry: {
       index: './src/index.ts',
-      submit: './src/submit.ts',
       edit: './src/edit.ts',
     },
     output: {
@@ -46,8 +45,7 @@ module.exports = () => {
       new CopyWebpackPlugin({
         patterns: [
           { from: 'src/index.html', to: 'index.html' },
-          { from: 'src/edit.html', to: 'edit.html' },
-          { from: 'src/submit.html', to: 'submit.html' },
+          { from: 'src/edit.html', to: 'edit.html' }
         ],
       }),
       new MiniCssExtractPlugin({
