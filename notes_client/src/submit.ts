@@ -1,7 +1,8 @@
+import './css/styles.css'
+import './css/dark_mode.css'
 import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
 import { INoteData } from './types/data/INoteData'
-import './css/styles.css'
 
 async function handleSubmit(event: Event) {
   event.preventDefault()

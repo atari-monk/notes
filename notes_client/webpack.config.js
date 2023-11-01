@@ -53,6 +53,9 @@ module.exports = () => {
       new MiniCssExtractPlugin({
         filename: 'styles.css',
       }),
+      new MiniCssExtractPlugin({
+        filename: 'dark_mode.css',
+      }),
     ],
   }
 }
