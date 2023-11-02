@@ -18,7 +18,7 @@ export class IndexComponent {
     questionText: string
   ): HTMLElement {
     const questionLink = document.createElement('a')
-    questionLink.textContent = questionText
+    questionLink.textContent = questionText.replace(/#/g, '')
     questionLink.href = `#section-${sectionIndex}-question-${questionIndex}`
     return questionLink
   }

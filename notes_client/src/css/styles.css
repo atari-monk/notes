@@ -39,6 +39,8 @@ label {
 input[type='text'],
 input[type='number'],
 textarea {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
   width: 95%;
   padding: 10px;
   margin-left: 5px;
@@ -93,10 +95,17 @@ li {
   max-width: 100px;
 }
 
-#question,
+#question {
+  min-height: 30px;
+  height: 60px;
+  resize: vertical;
+  overflow: auto;
+}
+
 #answer {
-  height: 500px;
-  resize: none;
+  height: 600px;
+  resize: vertical;
+  overflow: auto;
 }
 
 #darkModeToggle span {

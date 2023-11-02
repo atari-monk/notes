@@ -1,5 +1,6 @@
-import { IndexComponent } from './components/IndexComponent'
 import './css/styles.css'
+import './css/dark_mode.css'
+import { IndexComponent } from './components/IndexComponent'
 import { IJsonData } from './model/IJsonData'
 import { SectionComponent } from './components/SectionComponent'
 import hljs from 'highlight.js'
