@@ -1,17 +1,11 @@
 import MarkdownIt from 'markdown-it'
-import anchor from 'markdown-it-anchor'
 
 export class AnswerCard {
-  private sectionIndex: number
-  private questionIndex: number
-  private markdownIt: MarkdownIt
-
-  constructor(sectionIndex: number, questionIndex: number) {
-    this.sectionIndex = sectionIndex
-    this.questionIndex = questionIndex
-    this.markdownIt = new MarkdownIt()
-    this.markdownIt.use(anchor)
-  }
+  constructor(
+    private readonly markdownIt: MarkdownIt,
+    private readonly sectionIndex: number,
+    private readonly questionIndex: number
+  ) {}
 
   createCard(question: string, answer: string): HTMLElement {
     const card = document.createElement('div')

@@ -1,20 +1,14 @@
 import { IndexComponent } from './IndexComponent'
 import { AnswerCard } from './AnswerCard'
+import MarkdownIt from 'markdown-it'
 
 export class SectionComponent {
-  private sectionIndex: number
-  private jsonContainer: HTMLElement
-  private indexComponent: IndexComponent
-
   constructor(
-    sectionIndex: number,
-    jsonContainer: HTMLElement,
-    indexComponent: IndexComponent
-  ) {
-    this.sectionIndex = sectionIndex
-    this.jsonContainer = jsonContainer
-    this.indexComponent = indexComponent
-  }
+    private readonly markdownIt: MarkdownIt,
+    private readonly sectionIndex: number,
+    private readonly jsonContainer: HTMLElement,
+    private readonly indexComponent: IndexComponent
+  ) {}
 
   createSectionElement(
     sectionTitle: string,
@@ -22,10 +16,14 @@ export class SectionComponent {
   ) {
     const sectionDiv = document.createElement('div')
     sectionDiv.id = `section-${this.sectionIndex}`
-    sectionDiv.innerHTML = `<h3>${sectionTitle}</h3`
+    sectionDiv.innerHTML = this.markdownIt.render(sectionTitle)
 
     questions.forEach((item, questionIndex) => {
-      const answerCard = new AnswerCard(this.sectionIndex, questionIndex)
+      const answerCard = new AnswerCard(
+        this.markdownIt,
+        this.sectionIndex,
+        questionIndex
+      )
       const card = answerCard.createCard(item.question, item.answer)
 
       sectionDiv.appendChild(card)

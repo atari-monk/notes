@@ -7,7 +7,7 @@ export class IndexComponent {
 
   createSectionLink(sectionIndex: number, sectionTitle: string): HTMLElement {
     const sectionLink = document.createElement('a')
-    sectionLink.textContent = sectionTitle
+    sectionLink.textContent = sectionTitle.replace(/#/g, '')
     sectionLink.href = `#section-${sectionIndex}`
     return sectionLink
   }

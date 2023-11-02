@@ -4,11 +4,15 @@ import { IndexComponent } from './components/IndexComponent'
 import { IJsonData } from './model/IJsonData'
 import { SectionComponent } from './components/SectionComponent'
 import hljs from 'highlight.js'
+import MarkdownIt from 'markdown-it'
+import anchor from 'markdown-it-anchor'
 
 const fileInput = document.getElementById('fileInput') as HTMLInputElement
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
 const index = document.getElementById('index') as HTMLElement
 const darkModeButton = document.getElementById('darkModeButton') as HTMLElement
+const markDownIt: MarkdownIt = new MarkdownIt()
+markDownIt.use(anchor)
 
 darkModeButton.addEventListener('click', toggleDarkMode)
 
@@ -39,6 +43,7 @@ function handleFileLoad(data: IJsonData) {
 
   data.sections.forEach((section, sectionIndex) => {
     const sectionComponent = new SectionComponent(
+      markDownIt,
       sectionIndex,
       jsonContainer,
       indexComponent
