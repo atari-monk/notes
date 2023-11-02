@@ -1,5 +1,6 @@
 import './css/styles.css'
 import './css/dark_mode.css'
+import 'font-awesome/css/font-awesome.min.css'
 import { IndexComponent } from './components/IndexComponent'
 import { IJsonData } from './model/IJsonData'
 import { SectionComponent } from './components/SectionComponent'
@@ -52,10 +53,49 @@ function handleFileLoad(data: IJsonData) {
   })
 
   highlightCodeBlocks()
+  addCopyBtns()
 }
 
 function highlightCodeBlocks() {
   document.querySelectorAll('code').forEach((codeBlock) => {
     hljs.highlightElement(codeBlock)
   })
+}
+
+function addCopyBtns() {
+  const codeBlocks = document.querySelectorAll(
+    'pre code[class*="language-"]'
+  ) as NodeListOf<HTMLElement>
+
+  codeBlocks.forEach((codeBlock: HTMLElement) => {
+    const pre = codeBlock.parentNode
+    const container = document.createElement('div')
+    container.className = 'code-container'
+
+    const copyButton = document.createElement('button')
+    copyButton.className = 'copy-button'
+
+    const copyIcon = document.createElement('i')
+    copyIcon.className = 'fa fa-copy'
+
+    copyButton.appendChild(copyIcon)
+
+    copyButton.addEventListener('click', async () => {
+      await handleCopyButtonClick(codeBlock)
+    })
+
+    container.appendChild(codeBlock)
+    container.appendChild(copyButton)
+    pre?.appendChild(container)
+  })
+}
+
+async function handleCopyButtonClick(codeBlock: HTMLElement) {
+  const text = codeBlock.textContent || ''
+
+  try {
+    await navigator.clipboard.writeText(text)
+  } catch (err) {
+    console.error('Failed to copy text: ', err)
+  }
 }
