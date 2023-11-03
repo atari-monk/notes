@@ -1,37 +1,34 @@
 import { promises as fs } from 'fs'
-import { INote } from '../types/data/INote'
-import { ISection } from '../types/data/ISection'
-import { INotesData } from '../types/data/INotesData'
+import { IChat } from '../types/data/IChat'
+import { ISectionsAndChats } from '../types/data/ISectionsAndChats'
+import { ISectionAndChats } from '../types/data/ISectionAndChats'
 
-export async function appendData(
+export async function appendChatToFile(
   filePath: string,
   section: string,
   question: string,
   answer: string
-): Promise<INotesData> {
+): Promise<ISectionsAndChats> {
   try {
-    const existingData = await readData(filePath)
-
-    const newNote: INote = {
+    const newChat: IChat = {
       question,
       answer,
       dateTime: new Date().toISOString(),
     }
 
-    const updatedData = updateData(existingData, section, newNote)
+    const updatedChat = updateChat(await readJson(filePath), section, newChat)
 
-    await writeData(filePath, updatedData)
+    await writeJson(filePath, updatedChat)
 
-    return updatedData
+    return updatedChat
   } catch (err) {
     throw err
   }
 }
 
-async function readData(filePath: string): Promise<INotesData> {
+async function readJson(filePath: string): Promise<ISectionsAndChats> {
   try {
-    const data = await fs.readFile(filePath, 'utf8')
-    return JSON.parse(data)
+    return JSON.parse(await fs.readFile(filePath, 'utf8'))
   } catch (err) {
     return {
       sections: [],
@@ -39,86 +36,89 @@ async function readData(filePath: string): Promise<INotesData> {
   }
 }
 
-function updateData(
-  existingData: INotesData,
-  section: string,
-  newNote: INote
-): INotesData {
+function updateChat(
+  existingData: ISectionsAndChats,
+  sectionTitle: string,
+  newChat: IChat
+): ISectionsAndChats {
   const sectionIndex = existingData.sections.findIndex(
-    (s) => s.title === section
+    (s) => s.title === sectionTitle
   )
 
   if (sectionIndex !== -1) {
-    existingData.sections[sectionIndex].questions.push(newNote)
+    existingData.sections[sectionIndex].chats.push(newChat)
   } else {
-    const newSection: ISection = {
-      title: section,
-      questions: [newNote],
+    const newSectionAndChats: ISectionAndChats = {
+      title: sectionTitle,
+      chats: [newChat],
     }
-    existingData.sections.push(newSection)
+    existingData.sections.push(newSectionAndChats)
   }
 
   return existingData
 }
 
-async function writeData(filePath: string, data: INotesData): Promise<void> {
+async function writeJson(
+  filePath: string,
+  data: ISectionsAndChats
+): Promise<void> {
   await fs.writeFile(filePath, JSON.stringify(data, null, 2))
 }
 
-export async function loadQuestionFromJSON(
+export async function loadchatFromFile(
   filePath: string,
   sectionNumber: number,
   questionNumber: number
-): Promise<INote | null> {
+): Promise<IChat | null> {
   try {
-    const notesData = await readData(filePath)
+    const allChats = await readJson(filePath)
 
     if (
       sectionNumber >= 0 &&
-      sectionNumber < notesData.sections.length &&
+      sectionNumber < allChats.sections.length &&
       questionNumber >= 0 &&
-      questionNumber < notesData.sections[sectionNumber].questions.length
+      questionNumber < allChats.sections[sectionNumber].chats.length
     ) {
-      const section: ISection = notesData.sections[sectionNumber]
-      const question: INote = section.questions[questionNumber]
-      return question
+      const sectionAndChats: ISectionAndChats = allChats.sections[sectionNumber]
+      const chat: IChat = sectionAndChats.chats[questionNumber]
+      return chat
     }
 
-    return null // Question or section not found
+    return null
   } catch (err) {
     throw err
   }
 }
 
-export async function editQuestion(
+export async function updateChatFromFile(
   filePath: string,
   sectionNumber: number,
-  questionNumber: number,
+  chatNumber: number,
   updatedQuestion: string,
   updatedAnswer: string
-): Promise<INotesData | null> {
+): Promise<ISectionsAndChats | null> {
   try {
-    const notesData = await readData(filePath)
+    const allChats = await readJson(filePath)
 
     if (
       sectionNumber >= 0 &&
-      sectionNumber < notesData.sections.length &&
-      questionNumber >= 0 &&
-      questionNumber < notesData.sections[sectionNumber].questions.length
+      sectionNumber < allChats.sections.length &&
+      chatNumber >= 0 &&
+      chatNumber < allChats.sections[sectionNumber].chats.length
     ) {
-      const section: ISection = notesData.sections[sectionNumber]
-      const question: INote = section.questions[questionNumber]
-      // Update the question and answer
-      question.question = updatedQuestion
-      question.answer = updatedAnswer
-      question.dateTime = new Date().toISOString()
+      const sectionAndChats: ISectionAndChats = allChats.sections[sectionNumber]
+      const chat: IChat = sectionAndChats.chats[chatNumber]
 
-      await writeData(filePath, notesData)
+      chat.question = updatedQuestion
+      chat.answer = updatedAnswer
+      chat.dateTime = new Date().toISOString()
 
-      return notesData
+      await writeJson(filePath, allChats)
+
+      return allChats
     }
 
-    return null // Question or section not found
+    return null
   } catch (err) {
     throw err
   }

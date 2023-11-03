@@ -1,4 +1,4 @@
-export interface INote {
+export interface IChat {
   question: string
   answer: string
   dateTime: string

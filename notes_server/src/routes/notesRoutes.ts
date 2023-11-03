@@ -1,14 +1,14 @@
 import express from 'express'
 import {
-  appendDataToJSONFile,
-  loadQuestion,
-  saveQuestion,
+  appendChat,
+  loadChat,
+  updateChat,
 } from '../controllers/notesController'
 
 const router = express.Router()
 
-router.post('/append/:filename', appendDataToJSONFile)
-router.post('/getQuestion/:filename', loadQuestion)
-router.patch('/edit/:filename', saveQuestion)
+router.post('/append/:filename', appendChat)
+router.post('/getQuestion/:filename', loadChat)
+router.patch('/edit/:filename', updateChat)
 
 export default router
