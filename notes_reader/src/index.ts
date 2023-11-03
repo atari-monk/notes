@@ -49,7 +49,7 @@ function handleFileLoad(data: IJsonData) {
       jsonContainer,
       indexComponent
     )
-    sectionComponent.createSectionElement(section.title, section.questions)
+    sectionComponent.createSectionElement(section.title, section.chats)
   })
 
   highlightCodeBlocks()

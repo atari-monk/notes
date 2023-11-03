@@ -1,6 +1,6 @@
-import { IQuestionData } from './IQuestionData'
+import { IChatData } from './IChatData'
 
 export interface ISectionData {
   title: string
-  questions: IQuestionData[]
+  chats: IChatData[]
 }
