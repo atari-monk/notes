@@ -2,14 +2,14 @@ import './css/styles.css'
 import './css/dark_mode.css'
 import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
-import { INote } from './types/data/INote'
-import { INoteData } from './types/data/INoteData'
-import { INoteIndex } from './types/data/INoteIndex'
-import { INoteEdit } from './types/data/INoteEdit'
+import { IChat } from './types/data/IChat'
+import { IFileSectionChatData } from './types/data/IFileSectionChatData'
+import { ISectionAndChatNr } from './types/data/ISectionAndChatNr'
+import { IChatEdit } from './types/data/IChatEdit'
 
-let noteIndex: INoteIndex = {
+let noteIndex: ISectionAndChatNr = {
   sectionNr: 0,
-  questionNr: 0,
+  chatNr: 0,
 }
 
 async function handleLoad(event: Event) {
@@ -25,7 +25,7 @@ async function handleLoad(event: Event) {
 
   noteIndex = {
     sectionNr: Number(sectionNr),
-    questionNr: Number(questionNr),
+    chatNr: Number(questionNr),
   }
 
   const actionUrl = `http://localhost:3000/notes/getQuestion/${fileTitle}.json`
@@ -40,8 +40,7 @@ async function handleLoad(event: Event) {
     })
 
     if (response.ok) {
-      const questionData = (await response.json()) as INote
-      console.log('hello', questionData)
+      const questionData = (await response.json()) as IChat
       const sectionInput = document.getElementById(
         'section'
       ) as HTMLInputElement
@@ -76,26 +75,17 @@ async function handleEdit(event: Event) {
   const question = questionInput.value
   const answer = answerInput.value
 
-  console.log('Data to be sent:', {
-    fileTitle,
-    section,
-    question,
-    answer,
-  })
-
-  const note: INoteData = {
+  const note: IFileSectionChatData = {
     fileTitle,
     section,
     question,
     answer,
   }
 
-  const noteEdit: INoteEdit = {
-    noteIndex,
-    note,
+  const noteEdit: IChatEdit = {
+    chatNr: noteIndex,
+    chat: note,
   }
-
-  console.log('noteEdit:', noteEdit)
 
   const actionUrl = `http://localhost:3000/notes/edit/${fileTitle}.json`
 

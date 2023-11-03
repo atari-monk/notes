@@ -1,5 +1,4 @@
-// Define an interface for the data model
-export interface INoteData {
+export interface IFileSectionChatData {
   fileTitle: string
   section: string
   question: string

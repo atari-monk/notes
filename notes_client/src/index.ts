@@ -2,7 +2,7 @@ import './css/styles.css'
 import './css/dark_mode.css'
 import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
-import { INoteData } from './types/data/INoteData'
+import { IFileSectionChatData } from './types/data/IFileSectionChatData'
 
 async function handleSubmit(event: Event) {
   event.preventDefault()
@@ -19,16 +19,9 @@ async function handleSubmit(event: Event) {
   const question = questionInput.value
   const answer = answerInput.value
 
-  console.log('Data to be sent:', {
-    fileTitle,
-    section,
-    question,
-    answer,
-  })
-
   const actionUrl = `http://localhost:3000/notes/append/${fileTitle}.json`
 
-  const note: INoteData = {
+  const note: IFileSectionChatData = {
     fileTitle,
     section,
     question,
