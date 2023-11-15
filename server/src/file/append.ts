@@ -17,7 +17,6 @@ function updateChat(
   newChat: IChat
 ) {
   const sectionIndex = json.sections.findIndex((s) => s.title === sectionTitle)
-
   if (sectionIndex !== -1) {
     console.log('adding new chat to existing section')
     json.sections[sectionIndex].chats.push(newChat)
