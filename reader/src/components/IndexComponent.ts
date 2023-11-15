@@ -9,6 +9,7 @@ export class IndexComponent {
     const sectionLink = document.createElement('a')
     sectionLink.textContent = sectionTitle.replace(/#/g, '')
     sectionLink.href = `#section-${sectionIndex}`
+    sectionLink.classList.add('section')
     return sectionLink
   }
 
@@ -20,6 +21,7 @@ export class IndexComponent {
     const questionLink = document.createElement('a')
     questionLink.textContent = questionText.replace(/#/g, '')
     questionLink.href = `#section-${sectionIndex}-question-${questionIndex}`
+    questionLink.classList.add('chat')
     return questionLink
   }
 

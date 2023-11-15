@@ -29,8 +29,13 @@ button:hover {
   background-color: #555;
 }
 
+#darkModeButton {
+  max-height: 40px;
+  padding: 10px;
+}
+
 input[type='file'] {
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .code-container {
@@ -52,6 +57,18 @@ button.copy-button:active {
   background-color: #0056b3;
 }
 
+.row-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-container * {
+  margin: 10px;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+}
+
 #index {
   background-color: #f0f0f0;
   margin-left: 50px;
@@ -71,6 +88,14 @@ button.copy-button:active {
 #index a:hover {
   background-color: #555;
   color: #fff;
+}
+
+#index a.section {
+  margin-left: 50px;
+}
+
+#index a.chat {
+  margin-left: 100px;
 }
 
 #jsonContainer {

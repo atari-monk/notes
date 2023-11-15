@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JSON Reader</title>
+    <title>Reader</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link
@@ -10,17 +10,20 @@
     />
   </head>
   <body class="dark-mode">
-    <button id="darkModeButton">Toggle Dark Mode</button>
+    <div class="row-container">
+      <h2>Reader</h2>
+      <button id="darkModeButton">Toggle Dark Mode</button>
+    </div>
 
-    <h1>JSON Reader</h1>
+    <div class="row-container">
+      <h4>Select file:</h4>
+      <input type="file" id="fileInput" accept=".json" />
+    </div>
 
-    <h2>Upload JSON File:</h2>
-    <input type="file" id="fileInput" accept=".json" />
-
-    <h2>Index:</h2>
+    <h3>Index:</h3>
     <div id="index"></div>
 
-    <h2>Sections, Questions, and Answers:</h2>
+    <h3>Sections, Questions and Answers:</h3>
     <div id="jsonContainer"></div>
 
     <script src="index.js"></script>
