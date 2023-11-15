@@ -1,15 +1,12 @@
 . "C:\atari-monk\Code\notes\script\CommonFunctions.ps1"
 
-$libFolder = "lib"
-$libName = "notes_lib"
+$libFolder = "server"
+$libName = "notes_server"
 $build = "$libFolder\build\"
 $pack = "$libName-1.0.0.tgz"
 $lib = $RepoPath + $build + $pack
 
 $targetProjects = @(
-  "$RepoPath\server\",
-  "$RepoPath\editor\",
-  "$RepoPath\reader\",
   "$RepoPath\server_tests\"
 )
 

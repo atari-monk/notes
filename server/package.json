@@ -2,11 +2,13 @@
   "name": "notes_server",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node ./script/copy-package.js && tsc",
+    "i-lib": "powershell.exe -ExecutionPolicy Bypass -File .\\script\\i-lib.ps1",
     "debug": "ndb build/server.js",
-    "on": "node build/server.js",
-    "start": "tsc && node build/server.js"
+    "run": "node build/server.js",
+    "build&run": "npm run build && node build/server.js"
   },
   "keywords": [],
   "author": "",
