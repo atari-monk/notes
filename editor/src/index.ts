@@ -2,7 +2,7 @@ import './css/styles.css'
 import './css/dark_mode.css'
 import { getById } from 'dom-lib'
 import { DarkModeToggler } from './DarkModeToggler'
-import { IFileSectionChatData } from './types/data/IFileSectionChatData'
+import { IFileSectionChatData } from 'notes_lib'
 
 async function handleSubmit(event: Event) {
   event.preventDefault()
