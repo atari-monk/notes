@@ -22,6 +22,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "dom-lib": "file:dom-lib-1.0.0.tgz"
+    "dom-lib": "file:dom-lib-1.0.0.tgz",
+    "notes_lib": "file:notes_lib-1.0.0.tgz"
   }
 }
