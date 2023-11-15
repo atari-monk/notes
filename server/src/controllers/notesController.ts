@@ -12,13 +12,14 @@ const baseDirectory = 'C:/atari-monk/docs/chatgpt_db'
 
 export const appendChat = async (req: Request, res: Response) => {
   const { filename } = req.params
-  const { question, answer, section } = req.body
+  const { indexTitle, question, answer, section } = req.body
   const filePath = path.join(baseDirectory, filename)
 
   try {
     const notesData = await appendChatToFile(
       filePath,
       section,
+      indexTitle,
       question,
       answer
     )
@@ -62,6 +63,7 @@ export const updateChat = async (req: Request, res: Response) => {
       filePath,
       sectionNr,
       chatNr,
+      noteEdit.chat.indexTitle,
       noteEdit.chat.question,
       noteEdit.chat.answer
     )

@@ -6,11 +6,13 @@ import { ISectionAndChats } from '../types/data/ISectionAndChats'
 export async function appendChatToFile(
   filePath: string,
   section: string,
+  indexTitle: string,
   question: string,
   answer: string
 ): Promise<ISectionsAndChats> {
   try {
     const newChat: IChat = {
+      indexTitle,
       question,
       answer,
       dateTime: new Date().toISOString(),
@@ -94,6 +96,7 @@ export async function updateChatFromFile(
   filePath: string,
   sectionNumber: number,
   chatNumber: number,
+  updatedindexTitle: string,
   updatedQuestion: string,
   updatedAnswer: string
 ): Promise<ISectionsAndChats | null> {
@@ -109,6 +112,7 @@ export async function updateChatFromFile(
       const sectionAndChats: ISectionAndChats = allChats.sections[sectionNumber]
       const chat: IChat = sectionAndChats.chats[chatNumber]
 
+      chat.indexTitle = updatedindexTitle
       chat.question = updatedQuestion
       chat.answer = updatedAnswer
       chat.dateTime = new Date().toISOString()

@@ -16,10 +16,10 @@ export class IndexComponent {
   createQuestionLink(
     sectionIndex: number,
     questionIndex: number,
-    questionText: string
+    indexTitle: string
   ): HTMLElement {
     const questionLink = document.createElement('a')
-    questionLink.textContent = questionText.replace(/#/g, '')
+    questionLink.textContent = indexTitle.replace(/#/g, '')
     questionLink.href = `#section-${sectionIndex}-question-${questionIndex}`
     questionLink.classList.add('chat')
     return questionLink
@@ -28,7 +28,7 @@ export class IndexComponent {
   addSectionEntry(
     sectionIndex: number,
     sectionTitle: string,
-    questions: { question: string }[]
+    questions: { indexTitle: string }[]
   ): void {
     const sectionLink = this.createSectionLink(sectionIndex, sectionTitle)
     const sectionEntry = document.createElement('div')
@@ -39,7 +39,7 @@ export class IndexComponent {
       const questionLink = this.createQuestionLink(
         sectionIndex,
         questionIndex,
-        item.question
+        item.indexTitle
       )
       sectionEntry.appendChild(questionLink)
     })

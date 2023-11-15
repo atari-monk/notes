@@ -12,7 +12,7 @@ export class SectionComponent {
 
   createSectionElement(
     sectionTitle: string,
-    questions: { question: string; answer: string }[]
+    questions: { indexTitle: string, question: string; answer: string }[]
   ) {
     const sectionDiv = document.createElement('div')
     sectionDiv.id = `section-${this.sectionIndex}`

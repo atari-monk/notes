@@ -50,6 +50,7 @@ async function handleLoad(event: Event) {
       const answerInput = document.getElementById(
         'answer'
       ) as HTMLTextAreaElement
+      //sectionInput.value =
       questionInput.value = questionData.question
       answerInput.value = questionData.answer
     } else {
@@ -67,17 +68,22 @@ async function handleEdit(event: Event) {
     'fileTitle'
   ) as HTMLInputElement
   const sectionInput = document.getElementById('section') as HTMLInputElement
+  const indexTitleInput = document.getElementById(
+    'indexTitle'
+  ) as HTMLInputElement
   const questionInput = document.getElementById('question') as HTMLInputElement
   const answerInput = document.getElementById('answer') as HTMLTextAreaElement
 
   const fileTitle = fileTitleInput.value
   const section = sectionInput.value
+  const indexTitle = indexTitleInput.value
   const question = questionInput.value
   const answer = answerInput.value
 
   const note: IFileSectionChatData = {
     fileTitle,
     section,
+    indexTitle,
     question,
     answer,
   }
