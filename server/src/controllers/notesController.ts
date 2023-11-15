@@ -23,6 +23,7 @@ export const appendChat = async (req: Request, res: Response) => {
     await appendChatToFile(filePath, section, newChat)
     res.sendStatus(200)
   } catch (error) {
+    console.error('Error when appending chat to file:', error)
     res.status(500).send('Error when appending chat to file')
   }
 }
