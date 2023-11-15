@@ -2,11 +2,11 @@ import './css/styles.css'
 import './css/dark_mode.css'
 import 'font-awesome/css/font-awesome.min.css'
 import { IndexComponent } from './components/IndexComponent'
-import { IJsonData } from './model/IJsonData'
 import { SectionComponent } from './components/SectionComponent'
 import hljs from 'highlight.js'
 import MarkdownIt from 'markdown-it'
 import anchor from 'markdown-it-anchor'
+import { ISectionsAndChats } from 'notes_lib'
 
 const fileInput = document.getElementById('fileInput') as HTMLInputElement
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
@@ -27,7 +27,7 @@ fileInput.addEventListener('change', function (_event) {
   if (file) {
     const reader = new FileReader()
     reader.onload = function (event) {
-      const jsonData: IJsonData = JSON.parse(event.target?.result as string)
+      const jsonData: ISectionsAndChats = JSON.parse(event.target?.result as string)
       handleFileLoad(jsonData)
     }
     reader.readAsText(file)
@@ -36,7 +36,7 @@ fileInput.addEventListener('change', function (_event) {
   }
 })
 
-function handleFileLoad(data: IJsonData) {
+function handleFileLoad(data: ISectionsAndChats) {
   jsonContainer.innerHTML = ''
   index.innerHTML = ''
 
