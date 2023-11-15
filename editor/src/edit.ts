@@ -39,8 +39,11 @@ async function handleLoad(event: Event) {
 
     if (response.ok) {
       const questionData = (await response.json()) as IChat
-      const sectionInput = document.getElementById(
-        'section'
+    //   const sectionInput = document.getElementById(
+    //     'section'
+    //   ) as HTMLInputElement
+      const indexTitleInput = document.getElementById(
+        'indexTitle'
       ) as HTMLInputElement
       const questionInput = document.getElementById(
         'question'
@@ -49,6 +52,7 @@ async function handleLoad(event: Event) {
         'answer'
       ) as HTMLTextAreaElement
       //sectionInput.value =
+      indexTitleInput.value = questionData.indexTitle
       questionInput.value = questionData.question
       answerInput.value = questionData.answer
     } else {
