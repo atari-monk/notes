@@ -1,5 +1,5 @@
 {
-  "name": "notes-client",
+  "name": "notes_reader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/markdown-it": "^13.0.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
@@ -22,6 +23,9 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "dom-lib": "file:dom-lib-1.0.0.tgz"
+    "font-awesome": "^4.7.0",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^13.0.2",
+    "markdown-it-anchor": "^8.6.7"
   }
 }
