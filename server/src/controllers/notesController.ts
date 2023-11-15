@@ -1,32 +1,29 @@
 import { Request, Response } from 'express'
-import fs from 'fs/promises'
 import path from 'path'
-import {
-  appendChatToFile,
-  updateChatFromFile,
-  loadchatFromFile,
-} from '../data/dataPreparation'
-import { IChatEdit } from 'notes_lib'
+import { updateChatFromFile } from '../file/update'
+import { IChat, IChatEdit } from 'notes_lib'
+import { appendChatToFile } from '../file/append'
+import { loadchatFromFile } from '../file/load'
 
-const baseDirectory = 'C:/atari-monk/docs/chatgpt_db'
+const baseDirectory = 'C:/atari-monk/docs/notes_db'
 
 export const appendChat = async (req: Request, res: Response) => {
   const { filename } = req.params
   const { indexTitle, question, answer, section } = req.body
   const filePath = path.join(baseDirectory, filename)
 
+  const newChat: IChat = {
+    indexTitle,
+    question,
+    answer,
+    dateTime: new Date().toISOString(),
+  }
+
   try {
-    const notesData = await appendChatToFile(
-      filePath,
-      section,
-      indexTitle,
-      question,
-      answer
-    )
-    await fs.writeFile(filePath, JSON.stringify(notesData, null, 2))
+    await appendChatToFile(filePath, section, newChat)
     res.sendStatus(200)
   } catch (error) {
-    res.status(500).send('Error reading or writing the file.')
+    res.status(500).send('Error when appending chat to file')
   }
 }
 
