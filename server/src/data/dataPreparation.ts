@@ -1,7 +1,5 @@
 import { promises as fs } from 'fs'
-import { IChat } from '../types/data/IChat'
-import { ISectionsAndChats } from '../types/data/ISectionsAndChats'
-import { ISectionAndChats } from '../types/data/ISectionAndChats'
+import { IChat, ISectionAndChats, ISectionsAndChats } from 'notes_lib'
 
 export async function appendChatToFile(
   filePath: string,

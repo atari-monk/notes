@@ -6,7 +6,7 @@ import {
   updateChatFromFile,
   loadchatFromFile,
 } from '../data/dataPreparation'
-import { IChatEdit } from '../types/data/IChatEdit'
+import { IChatEdit } from 'notes_lib'
 
 const baseDirectory = 'C:/atari-monk/docs/chatgpt_db'
 
