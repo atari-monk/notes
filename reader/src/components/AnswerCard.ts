@@ -10,14 +10,13 @@ export class AnswerCard {
   createCard(question: string, answer: string): HTMLElement {
     const card = document.createElement('div')
     card.classList.add('card')
-    card.innerHTML += `<p><strong>Question:</strong> ${this.markdownIt.render(
-      question
-    )}</p>`
-    card.innerHTML += `<p><strong>Answer:</strong></p>`
+    card.innerHTML += `<p>${this.markdownIt.render(question)}</p><hr>`
 
     card.appendChild(this.createDiv(answer))
 
     card.id = `section-${this.sectionIndex}-question-${this.questionIndex}`
+
+    card.innerHTML += `<a href="#index" class="index">&#9650;</a>`
     return card
   }
 

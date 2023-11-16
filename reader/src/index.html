@@ -13,14 +13,20 @@
     <div class="row-container">
       <h2>Reader</h2>
       <button id="darkModeButton">Toggle Dark Mode</button>
+      <label for="fileInput" class="file-label">
+        Choose a JSON file
+        <input
+          type="file"
+          id="fileInput"
+          accept=".json"
+          style="display: none"
+        />
+      </label>
     </div>
 
-    <div class="row-container">
-      <h4>Select file:</h4>
-      <input type="file" id="fileInput" accept=".json" />
+    <div id="index_title">
+      <a href="#index">Index</a>
     </div>
-
-    <h3>Index:</h3>
     <div id="index"></div>
 
     <h3>Sections, Questions and Answers:</h3>

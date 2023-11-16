@@ -12,12 +12,14 @@
   color: #fff;
 }
 
-.dark-mode #index a {
+.dark-mode #index_title a,
+#index a {
   background-color: #333;
   color: #fff;
 }
 
-.dark-mode #index a:hover {
+.dark-mode #index_title a,
+#index a:hover {
   background-color: #555;
   color: #fff;
 }
