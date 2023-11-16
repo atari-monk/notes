@@ -10,7 +10,7 @@ export class AnswerCard {
   createCard(question: string, answer: string): HTMLElement {
     const card = document.createElement('div')
     card.classList.add('card')
-    card.innerHTML += `<p>${this.markdownIt.render(question)}</p><hr>`
+    card.innerHTML += `<p>${this.markdownIt.render(question)}</p><hr />`
 
     card.appendChild(this.createDiv(answer))
 
