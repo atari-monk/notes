@@ -6,6 +6,7 @@ import { SectionComponent } from './components/SectionComponent'
 import hljs from 'highlight.js'
 import MarkdownIt from 'markdown-it'
 import anchor from 'markdown-it-anchor'
+import implicitFigures from 'markdown-it-implicit-figures'
 import { ISectionsAndChats } from 'notes_lib'
 
 const fileInput = document.getElementById('fileInput') as HTMLInputElement
@@ -14,6 +15,7 @@ const index = document.getElementById('index') as HTMLElement
 const darkModeButton = document.getElementById('darkModeButton') as HTMLElement
 const markDownIt: MarkdownIt = new MarkdownIt()
 markDownIt.use(anchor)
+markDownIt.use(implicitFigures, { dataType: false, figcaption: true })
 
 darkModeButton.addEventListener('click', toggleDarkMode)
 
@@ -27,7 +29,9 @@ fileInput.addEventListener('change', function (_event) {
   if (file) {
     const reader = new FileReader()
     reader.onload = function (event) {
-      const jsonData: ISectionsAndChats = JSON.parse(event.target?.result as string)
+      const jsonData: ISectionsAndChats = JSON.parse(
+        event.target?.result as string
+      )
       handleFileLoad(jsonData)
     }
     reader.readAsText(file)
