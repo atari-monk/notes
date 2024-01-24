@@ -7,10 +7,11 @@ $pack = "$libName-1.0.0.tgz"
 $lib = $RepoPath + $build + $pack
 
 $targetProjects = @(
-  "$RepoPath\server\",
-  "$RepoPath\editor\",
-  "$RepoPath\reader\",
-  "$RepoPath\server_tests\"
+    "$RepoPath\static_page\"
+#   "$RepoPath\server\",
+#   "$RepoPath\editor\",
+#   "$RepoPath\reader\",
+#   "$RepoPath\server_tests\"
 )
 
 Build-Lib

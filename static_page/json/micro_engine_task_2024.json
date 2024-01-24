@@ -1,0 +1,74 @@
+{
+  "sections": [
+    {
+      "title": "Rules",
+      "chats": [
+        {
+          "indexTitle": "Rules of this document",
+          "question": "Rules of this document",
+          "answer": "Put task in Tasks section.  \nTask should have template where fields should have values:  \nIndex Title: Task X.  \nQuestion: Task X.  Description of Task  \nAnswer: List of points where each point is a description and number of pomodoro done on task",
+          "dateTime": "2024-01-03T10:08:44.441Z"
+        },
+        {
+          "indexTitle": "Template to copy",
+          "question": "Template to copy",
+          "answer": "```json\nTask X.\n```\n```json\nTask X.  \nDescription\n```\n```json\n1. x    \n2. x  \n3. x  \n4. x  \n5. x  \n6. x  \n7. x  \n8. x  \n```",
+          "dateTime": "2024-01-03T10:18:56.294Z"
+        }
+      ]
+    },
+    {
+      "title": "Tasks",
+      "chats": [
+        {
+          "indexTitle": "Task 30.",
+          "question": "Task 30.  \nRefactor ECS of BouncingBall to unity style ECS",
+          "answer": "1. Decide to do unity style ECS  \n2. Thinking how to do a unity style ECS (data in components, logic in systems)\n3. Implement ball wall in new way  \n4. Implement ball wall in new way  \n5. Implement ball wall in new way  \n6. Integrate systems with engine  \n7. Update entity to have new components; InsideWallsCollisionSystem introduced  \n8. Unity syle TransformComponent (later deleted)\n",
+          "dateTime": "2024-01-03T10:04:02.861Z"
+        },
+        {
+          "indexTitle": "Task 31.",
+          "question": "Task 31.  \nCreate system able to load data to TransformComponent from json file (turned out to hard for now)\nInstead refactor MovementComponent   to data component and system",
+          "answer": "1. Ponder what to do  \n2. Make notes and plan  \n3. Start refactor MovementComponent  \n4. Add system  \n5. Implementing system  \n6. Integrating with engine  \n7. Debuging bugs  \n8. Debuging bugs; commit  \n---\n9. KinematicsComponent refactor\n10. Above continued\n11. Nice refactor of KinematicsComponent  and adding of KinematicsSystem was done",
+          "dateTime": "2024-01-03T10:11:38.501Z"
+        },
+        {
+          "indexTitle": "Task 32.",
+          "question": "Task 32.  \nRefactor CollisionComponent to ECS in style of unity.  \nComponent should be only data, simple public fields with default values at that.  \nCollisionSystem should be added, where collision logic resides and each entity with required components (data) can be registered to have that logic.  \nThere will be subsystems handling collision detection in here.",
+          "answer": "1. Plan: Produce component with only data, produce system with logic. Include subsystems needed in system. Integrate it with engine. Test.  \n2. Work on system  \n3. Integrate system with engine\n4. Integrate system with game  \n5. Commit CollisionComponent refactor; lunch; unpause for refactor of LimitMoveComponent.  \n    First refactor InsideWallsCollisionSystem to SimpleCollisionSystem and InsideBoxCollisionSubSystem.  \n    Then LimitMoveComponent to component with data and LimitMoveSubSystem used in SimpleCollisionSystem  \n6. Continue 5\n7. Refactor SpriteComponent and RenderComponent to RenderSystem, SubSystems and data based components\n8. Continue 7  \n9. Finish with render system (first draft)  \n10. Commit, docs",
+          "dateTime": "2024-01-03T19:45:07.670Z"
+        },
+        {
+          "indexTitle": "Task 33.",
+          "question": "Task 33.  \nGameStateComponent Refactor \nFor Component only with data and system for logic",
+          "answer": "1. Try to use one RenderSystem instead of new one for evry entity and renderer    \n2.   \n3.   \n4. Refactor render systems, now only one system and subsystem registers all needed entities and renders  \n5.   \n6.   \n7.   \n8. GameStateComponent refactor, leved only data, moved logic to GameEventSystem and render to RenderSubSystem, tested, fixed bugs  \n",
+          "dateTime": "2024-01-04T18:37:22.959Z"
+        },
+        {
+          "indexTitle": "Task 34.",
+          "question": "Task 34.",
+          "answer": "StateComponent refactor  \nDone 8x pomodoros\nRemoving strings and replacing them with typed, kind of typed i guess, js objects  \nAdded StateSystem\n",
+          "dateTime": "2024-01-05T23:51:49.805Z"
+        },
+        {
+          "indexTitle": "Task 35.",
+          "question": "Task 35.  \nJust refactor whatever component left\nComponent just data, logic to system",
+          "answer": "1. MovementSubSystem refactor (data type fix, better data type)\n2. add unsubscribeInput, to input and to MovementSubSystem, add interface  \n3. MovementSystem unsubscribe  \n4. IFactory<T>, updated MovementSystem to store subsystems in manager,  \nto be able to unsubscribe input; it is ready to be extended  \n---\n* added 2,5 pomodoro refactored StepMovementComponent  \nRemoved it and added StepMovementSubSystem instead  \nSo i can switch beetween movement systems, this seem nice  \n---\n* 6 pomodoro  \nrefactored to use new component system  \nonly data in components, logic in systems",
+          "dateTime": "2024-01-11T20:30:45.196Z"
+        },
+        {
+          "indexTitle": "Task 36.",
+          "question": "Task 36.",
+          "answer": "Lets assume format for json  ",
+          "dateTime": "2024-01-12T12:18:34.571Z"
+        },
+        {
+          "indexTitle": "Task 37.",
+          "question": "Task 37.",
+          "answer": "1. fix, player can sore for rival team by scroring own gate  \n2. fix, score position  \n3. ball_game package to have one version for all platforms  \n4. sucked in to produce nice builders, iron out with chatgpt  \n---\n1. LocalGameBuilder\n2. draft of game builders that are more SRP",
+          "dateTime": "2024-01-20T19:11:39.472Z"
+        }
+      ]
+    }
+  ]
+}
