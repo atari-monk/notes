@@ -9,7 +9,6 @@ import anchor from 'markdown-it-anchor'
 import implicitFigures from 'markdown-it-implicit-figures'
 import { ISectionsAndChats } from 'notes_lib'
 
-//const fileInput = document.getElementById('fileInput') as HTMLInputElement
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
 const index = document.getElementById('index') as HTMLElement
 const darkModeButton = document.getElementById('darkModeButton') as HTMLElement
@@ -24,22 +23,25 @@ function toggleDarkMode() {
   body.classList.toggle('dark-mode')
 }
 
-export default interface IFileList {
+export default interface IFile {
   path: string
   name: string
+  protected: boolean
 }
 
-const fileList: IFileList[] = []
+const fileList: IFile[] = []
 
 fileList.push(
   ...[
     {
       path: '../json/micro_engine_task_2024.json',
       name: 'micro_engine_task_2024.json',
+      protected: true,
     },
     {
       path: '../json/micro_engine_flow_2024.json',
       name: 'micro_engine_flow_2024.json',
+      protected: false,
     },
   ]
 )
@@ -53,41 +55,39 @@ fileList.forEach((file) => {
   link.textContent = file.name
   link.addEventListener('click', async (event) => {
     event.preventDefault()
-    const currentPage = document.getElementById('currentPage_value')
-    currentPage!.innerText = file.name
-    await handleLinkClick(file.path)
+    await handleLinkClick(file)
   })
   fileListContainer.appendChild(link)
   const br = document.createElement('br')
   fileListContainer.appendChild(br)
 })
 
-async function handleLinkClick(filePath: string) {
+async function handleLinkClick(file: IFile) {
+  if (file.protected) {
+    const encodedPassword = 'NkN6bG9uZWs2'
+    const password = prompt('Enter password:')
+    const decodedPassword = atob(encodedPassword)
+
+    if (password !== decodedPassword) {
+      alert('Incorrect password. Access denied.')
+      return
+    }
+  }
+
   try {
-    const response = await fetch(filePath)
+    const response = await fetch(file.path)
     if (!response.ok) {
       throw new Error(`Failed to load JSON file. Status: ${response.status}`)
     }
+
     const jsonData = await response.json()
     handleFileLoad(jsonData)
+    const currentPage = document.getElementById('currentPage_value')
+    currentPage!.innerText = file.name
   } catch (error: any) {
     console.error('Error loading or parsing JSON file:', error.message)
   }
 }
-
-document.addEventListener('DOMContentLoaded', async function (_event) {
-  const filePath = '../json/micro_engine_task_2024.json'
-  try {
-    const response = await fetch(filePath)
-    if (!response.ok) {
-      throw new Error(`Failed to load JSON file. Status: ${response.status}`)
-    }
-    const jsonData = await response.json()
-    handleFileLoad(jsonData)
-  } catch (error: any) {
-    console.error('Error loading or parsing JSON file:', error.message)
-  }
-})
 
 function handleFileLoad(data: ISectionsAndChats) {
   jsonContainer.innerHTML = ''
