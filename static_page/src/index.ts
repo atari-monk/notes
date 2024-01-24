@@ -36,12 +36,17 @@ fileList.push(
     {
       path: '../json/micro_engine_task_2024.json',
       name: 'micro_engine_task_2024.json',
-      protected: true,
+      protected: false,
     },
     {
       path: '../json/micro_engine_flow_2024.json',
       name: 'micro_engine_flow_2024.json',
       protected: false,
+    },
+    {
+      path: '../json/p_list.json',
+      name: 'p_list.json',
+      protected: true,
     },
   ]
 )
