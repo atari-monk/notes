@@ -24,6 +24,57 @@ function toggleDarkMode() {
   body.classList.toggle('dark-mode')
 }
 
+export default interface IFileList {
+  path: string
+  name: string
+}
+
+const fileList: IFileList[] = []
+
+fileList.push(
+  ...[
+    {
+      path: '../json/micro_engine_task_2024.json',
+      name: 'micro_engine_task_2024.json',
+    },
+    {
+      path: '../json/micro_engine_flow_2024.json',
+      name: 'micro_engine_flow_2024.json',
+    },
+  ]
+)
+
+const fileListContainer = document.getElementById(
+  'fileListContainer'
+) as HTMLElement
+fileList.forEach((file) => {
+  const link = document.createElement('a')
+  link.href = '#'
+  link.textContent = file.name
+  link.addEventListener('click', async (event) => {
+    event.preventDefault()
+    const currentPage = document.getElementById('currentPage_value')
+    currentPage!.innerText = file.name
+    await handleLinkClick(file.path)
+  })
+  fileListContainer.appendChild(link)
+  const br = document.createElement('br')
+  fileListContainer.appendChild(br)
+})
+
+async function handleLinkClick(filePath: string) {
+  try {
+    const response = await fetch(filePath)
+    if (!response.ok) {
+      throw new Error(`Failed to load JSON file. Status: ${response.status}`)
+    }
+    const jsonData = await response.json()
+    handleFileLoad(jsonData)
+  } catch (error: any) {
+    console.error('Error loading or parsing JSON file:', error.message)
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async function (_event) {
   const filePath = '../json/micro_engine_task_2024.json'
   try {

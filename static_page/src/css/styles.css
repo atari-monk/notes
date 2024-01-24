@@ -16,6 +16,31 @@ h3 {
   margin-left: 50px;
 }
 
+a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+#currentPage {
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+#currentPage p {
+  display: inline-block;
+  margin: 10px;
+}
+
 .file-label {
   display: inline-block;
   padding: 10px !important;
@@ -89,9 +114,21 @@ button.copy-button:active {
   /* border: 1px solid #ccc; */
 }
 
+#fileListContainer {
+  background-color: #333;
+  margin-left: 50px;
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
 #index {
   background-color: #f0f0f0;
   margin-left: 50px;
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
 }
 
 #index_title a,
@@ -104,6 +141,9 @@ button.copy-button:active {
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
 }
 
 #index_title a:hover,
@@ -126,6 +166,7 @@ button.copy-button:active {
   font-family: Arial, sans-serif;
   font-size: 18px;
   max-width: min-content;
+  min-width: 800px;
   margin: 0 auto;
 }
 

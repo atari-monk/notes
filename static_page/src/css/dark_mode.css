@@ -12,6 +12,11 @@
   color: #fff;
 }
 
+.dark-mode a {
+  background-color: #333;
+  color: #fff;
+}
+
 .dark-mode #index_title a,
 #index a {
   background-color: #333;
