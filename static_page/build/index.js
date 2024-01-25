@@ -9200,6 +9200,16 @@ function toggleDarkMode() {
 const fileList = [];
 fileList.push(...[
     {
+        path: '../json/my_pages.json',
+        name: 'my_pages.json',
+        protected: false,
+    },
+    {
+        path: '../json/coding_habit_2024.json',
+        name: 'coding_habit_2024.json',
+        protected: false,
+    },
+    {
         path: '../json/micro_engine_task_2024.json',
         name: 'micro_engine_task_2024.json',
         protected: false,

@@ -67,6 +67,12 @@
           "question": "Task 37.",
           "answer": "1. fix, player can sore for rival team by scroring own gate  \n2. fix, score position  \n3. ball_game package to have one version for all platforms  \n4. sucked in to produce nice builders, iron out with chatgpt  \n---\n1. LocalGameBuilder\n2. draft of game builders that are more SRP",
           "dateTime": "2024-01-20T19:11:39.472Z"
+        },
+        {
+          "indexTitle": "Task 38.",
+          "question": "Task 38.  \nDownsize collision box, offset it, fix collision detection and handler",
+          "answer": "1. Fixed collision and renderer of collision box with offset\n2. todo: vector math fix\n3. there is no way to fix player movement limiter, becouse current technology supports only one collision box  \n4. todo: add collision box id, add method to query by type and id, check what happens in query by type when multiple types are in data  \n5. As preparation to 4, removed not used logger in entity and set it in managers, removed name from component, added id to component ",
+          "dateTime": "2024-01-25T20:58:40.146Z"
         }
       ]
     }

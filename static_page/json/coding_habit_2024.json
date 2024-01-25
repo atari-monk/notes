@@ -1,0 +1,212 @@
+{
+  "sections": [
+    {
+      "title": "Rules",
+      "chats": [
+        {
+          "indexTitle": "Coding Habits",
+          "question": "## Coding Habits",
+          "answer": "### a. Code for 3 hrs (6 pomodoro) daily  \n### a2. Code for 2 hrs (4 pomodoro) on weekends  \n### b. Tutorial for 1hrs (2 pomodoro) daily  \n### 1. Start coding by 7  \n### 2. No coding past 18:00  \n### 3. No computers past 20:00  \n### 4. No mobile phone past 22:00  ",
+          "dateTime": "2024-01-25T21:35:28.409Z"
+        },
+        {
+          "indexTitle": "Template",
+          "question": "Template",
+          "answer": "```markdown\n| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n```\n",
+          "dateTime": "2024-01-25T21:42:18.663Z"
+        }
+      ]
+    },
+    {
+      "title": "January",
+      "chats": [
+        {
+          "indexTitle": "01.01.2024",
+          "question": "01.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 8 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:45:02.484Z"
+        },
+        {
+          "indexTitle": "02.01.2024",
+          "question": "02.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 11 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:44:53.716Z"
+        },
+        {
+          "indexTitle": "03.01.2024",
+          "question": "03.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 10 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:45:31.741Z"
+        },
+        {
+          "indexTitle": "04.01.2024",
+          "question": "04.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 8 pomodoro |\n| b.         | 1           | 2.5 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:46:37.995Z"
+        },
+        {
+          "indexTitle": "05.01.2024",
+          "question": "05.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 8 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:47:15.087Z"
+        },
+        {
+          "indexTitle": "06.01.2024",
+          "question": "06.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 4 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:47:38.280Z"
+        },
+        {
+          "indexTitle": "07.01.2024",
+          "question": "07.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 2.5 pomodoro |\n| b.         | 1           | 3.5 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:48:08.887Z"
+        },
+        {
+          "indexTitle": "08.01.2024",
+          "question": "08.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 6 pomodoro |\n| b.         | 0           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:48:26.021Z"
+        },
+        {
+          "indexTitle": "09.01.2024",
+          "question": "09.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 0 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:48:43.449Z"
+        },
+        {
+          "indexTitle": "10.01.2024",
+          "question": "10.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:50:58.756Z"
+        },
+        {
+          "indexTitle": "11.01.2024",
+          "question": "11.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:51:31.137Z"
+        },
+        {
+          "indexTitle": "12.01.2024",
+          "question": "12.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:51:56.137Z"
+        },
+        {
+          "indexTitle": "13.01.2024",
+          "question": "13.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:52:27.597Z"
+        },
+        {
+          "indexTitle": "14.01.2024",
+          "question": "14.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 11 pomodoro |\n| b.         | 0           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:52:48.835Z"
+        },
+        {
+          "indexTitle": "15.01.2024",
+          "question": "15.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 10 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:54:15.321Z"
+        },
+        {
+          "indexTitle": "16.01.2024",
+          "question": "16.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:57:16.562Z"
+        },
+        {
+          "indexTitle": "17.01.2024",
+          "question": "17.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 8 pomodoro |\n| b.         | 0           | 1 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T21:59:53.915Z"
+        },
+        {
+          "indexTitle": "18.01.2024",
+          "question": "18.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 6 pomodoro |\n| b.         | 1           | 2 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:00:58.584Z"
+        },
+        {
+          "indexTitle": "19.01.2024",
+          "question": "19.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 10 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:01:58.164Z"
+        },
+        {
+          "indexTitle": "20.01.2024",
+          "question": "20.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 9.5 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:02:33.060Z"
+        },
+        {
+          "indexTitle": "21.01.2024",
+          "question": "21.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 0 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:03:27.182Z"
+        },
+        {
+          "indexTitle": "22.01.2024",
+          "question": "22.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 5.5 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:05:04.030Z"
+        },
+        {
+          "indexTitle": "23.01.2024",
+          "question": "23.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 2 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:10:40.544Z"
+        },
+        {
+          "indexTitle": "24.01.2024",
+          "question": "24.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | 0 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:10:24.412Z"
+        },
+        {
+          "indexTitle": "25.01.2024",
+          "question": "25.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 1           | 8 pomodoro |\n| b.         | 0           | 0 pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:09:38.896Z"
+        },
+        {
+          "indexTitle": "26.01.2024",
+          "question": "26.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:11.893Z"
+        },
+        {
+          "indexTitle": "27.01.2024",
+          "question": "27.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:19.356Z"
+        },
+        {
+          "indexTitle": "28.01.2024",
+          "question": "28.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:25.201Z"
+        },
+        {
+          "indexTitle": "29.01.2024",
+          "question": "29.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:30.141Z"
+        },
+        {
+          "indexTitle": "30.01.2024",
+          "question": "30.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:34.934Z"
+        },
+        {
+          "indexTitle": "31.01.2024",
+          "question": "31.01.2024",
+          "answer": "| Rule     | Result  | Note             |\n|:----------|:----------:|-----------------:|\n| a.         | 0           | x pomodoro |\n| b.         | 0           | x pomodoro |\n| 1.         | 0           |                     |\n| 2.         | 0           |                     |\n| 3.         | 0           |                     |\n| 4.         | 0           |                     |\n",
+          "dateTime": "2024-01-25T22:15:40.456Z"
+        }
+      ]
+    }
+  ]
+}
