@@ -1,0 +1,60 @@
+{
+  "sections": [
+    {
+      "title": "Doc Rules",
+      "chats": [
+	    {
+          "indexTitle": "Content",
+          "question": "Content",
+          "answer": "This is doc for To-Do notes  \nWrite here things you want to do",
+          "dateTime": "2024-02-01T18:24:09.683Z"
+        },
+        {
+          "indexTitle": "Format",
+          "question": "Format",
+          "answer": "* Section is main category of to-do's, it has only title  \n* Multiple to-do notes can be added to section, they have title and content, naming and describing what you want to do  \n* For example, add Tutorials as section, add notes Stool woodworking, Apple Pie to it",
+          "dateTime": "2024-02-01T18:31:28.326Z"
+        }
+      ]
+    },
+    {
+      "title": "Online profile",
+      "chats": [
+        {
+          "indexTitle": "Mbank",
+          "question": "Mbank",
+          "answer": "Zlikwidować konto",
+          "dateTime": "2024-02-01T17:51:18.066Z"
+        },
+        {
+          "indexTitle": "Accounts",
+          "question": "Accounts",
+          "answer": "Check and/or close my online public service accounts",
+          "dateTime": "2024-02-01T17:52:01.384Z"
+        }
+      ]
+    },
+    {
+      "title": "Repo notes",
+      "chats": [
+        {
+          "indexTitle": "Needed improvements",
+          "question": "Needed improvements",
+          "answer": "1. Rename button Choose a JSON file to Open  \n2. Rename button Toggle Dark Mode to Theme  \n3. Add current file name text\n4. Add button Refresh to refresh current file  \n5. Add mobile style and desktop style  \n6. Do not remove inputs from form after submiting it  \n7. Fix light/dark theme style  \n8. Edit Category form editor  \n9. Add date of note creation and update to data and to html pages ui",
+          "dateTime": "2024-02-01T18:20:45.447Z"
+        }
+      ]
+    },
+    {
+      "title": "Music",
+      "chats": [
+        {
+          "indexTitle": "Relax audio",
+          "question": "Relax audio",
+          "answer": "Cut agni sutra vocal from 19 min to sample audio chunk that can induce relax",
+          "dateTime": "2024-02-01T18:15:47.630Z"
+        }
+      ]
+    }
+  ]
+}
