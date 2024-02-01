@@ -97,6 +97,12 @@
           "question": "Task 42  \nFix desktop version of ball game",
           "answer": "Fix desktop version of ball game  \nTook 3 pomodoros  \nText could not be fixed with data\n",
           "dateTime": "2024-01-31T19:19:11.594Z"
+        },
+        {
+          "indexTitle": "Task 43",
+          "question": "Task 43  \nProvide ability to map keys to system logic  \nHitting keys should invoke some console log in system logic",
+          "answer": "* Plan should be executed in 3 pomodoros  \n* Plan:  \n  1. First state plan in doc micro_engine_flow_2024 for Task 43  \n  2. Second state context of base code  \n  3. Make a draft of new class with chatgpt, refactor and integrate with existing code  \n  4. Test and ajust till working  \n\n",
+          "dateTime": "2024-02-01T14:07:21.463Z"
         }
       ]
     }
