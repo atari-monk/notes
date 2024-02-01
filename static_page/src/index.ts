@@ -54,6 +54,16 @@ fileList.push(
       protected: false,
     },
     {
+      path: '../json/micro_engine_documentation/micro_engine_init_logic.json',
+      name: 'micro_engine_init_logic.json',
+      protected: false,
+    },
+    {
+      path: '../json/micro_engine_documentation/micro_engine_input_manager.json',
+      name: 'micro_engine_input_manager.json',
+      protected: false,
+    },
+    {
       path: '../json/p_list.json',
       name: 'p_list.json',
       protected: true,

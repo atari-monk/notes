@@ -1,0 +1,51 @@
+{
+  "sections": [
+    {
+      "title": "Version 1",
+      "chats": [
+        {
+          "indexTitle": "Description",
+          "question": "Description",
+          "answer": "* Named InputManager  \n* Engine class  \n* Api to handle keyboard input  ",
+          "dateTime": "2024-02-01T16:08:14.705Z"
+        },
+        {
+          "indexTitle": "File Structure",
+          "question": "File Structure",
+          "answer": "```plaintext\n|-- engine_api/\n|   |-- src/\n|       |-- input\n|           |-- IInputCallback.ts\n|           |-- IInputManager.ts\n```\n```plaintext\n|-- engine/\n|   |-- src/\n|       |-- input\n|           |-- InputManager.ts\n```",
+          "dateTime": "2024-02-01T16:16:45.821Z"
+        },
+        {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```typescript\nexport default interface IInputCallback {\n  (inputData: any): void\n}\n```\n```typescript\nimport IInputCallback from './IInputCallback'\n\nexport default interface IInputManager {\n  subscribeInputEvent(eventType: string, callback: IInputCallback): void\n  unsubscribeInputEvent(eventType: string, callback: IInputCallback): void\n  unsubscribeAll(eventType: string): void\n  handleKeyDown(key: string): void\n  handleKeyUp(key: string): void\n  isKeyDown(key: string): boolean\n}\n```\n* Api defined in engine_api proj lib",
+          "dateTime": "2024-02-01T16:19:06.317Z"
+        },
+        {
+          "indexTitle": "InputManager",
+          "question": "InputManager",
+          "answer": "```typescript\nimport { IInputCallback, IInputManager } from 'engine_api'\n\nexport default class InputManager implements IInputManager {\n  private inputCallbacks: { [key: string]: IInputCallback[] } = {}\n  private keyStates: { [key: string]: boolean } = {}\n\n  subscribeInputEvent(eventType: string, callback: IInputCallback): void {\n    if (!this.inputCallbacks[eventType]) {\n      this.inputCallbacks[eventType] = []\n    }\n    this.inputCallbacks[eventType].push(callback)\n  }\n\n  unsubscribeInputEvent(eventType: string, callback: IInputCallback): void {\n    const callbacks = this.inputCallbacks[eventType]\n    if (callbacks) {\n      this.inputCallbacks[eventType] = callbacks.filter((cb) => cb !== callback)\n    }\n  }\n\n  unsubscribeAll(eventType: string): void {\n    if (this.inputCallbacks[eventType]) {\n      delete this.inputCallbacks[eventType]\n    }\n  }\n\n  handleKeyDown(key: string): void {\n    this.keyStates[key] = true\n    this.handleInputEvent('KeyDown', key)\n  }\n\n  handleKeyUp(key: string): void {\n    this.keyStates[key] = false\n    this.handleInputEvent('KeyUp', key)\n  }\n\n  isKeyDown(key: string): boolean {\n    return this.keyStates[key] || false\n  }\n\n  private handleInputEvent(eventType: string, inputData: any): void {\n    const callbacks = this.inputCallbacks[eventType]\n    if (callbacks) {\n      callbacks.forEach((callback) => callback(inputData))\n    }\n  }\n}\n```\n* Containes key states  \n* Allows to subscribe callbacks on input events  \n* This is registered once, in engine, to document EventListener and \n  used in all engine classes to react to input events  \n* It is container for callbacks",
+          "dateTime": "2024-02-01T17:05:52.284Z"
+        },
+        {
+          "indexTitle": "Engine class",
+          "question": "Engine class",
+          "answer": "* Used in single/Engine class  \n\n```typescript\n  //fields\n  protected readonly _input: IInputManager\n  protected _keyDownHandler!: (event: KeyboardEvent) => void\n  protected _keyUpHandler!: (event: KeyboardEvent) => void\n  //dependency in ctor\n  //part of initialize method\n  private subscribeKeyboardEvents() {\n    this._keyDownHandler = (event: KeyboardEvent) => {\n      this._input.handleKeyDown(event.key)\n    }\n    this._keyUpHandler = (event: KeyboardEvent) => {\n      this._input.handleKeyUp(event.key)\n    }\n    document.addEventListener('keydown', this._keyDownHandler)\n    document.addEventListener('keyup', this._keyUpHandler)\n  }\n```\n* Set up in engine as logic handling document key events",
+          "dateTime": "2024-02-01T17:15:48.323Z"
+        },
+        {
+          "indexTitle": "Usage in ecs system class",
+          "question": "Usage in ecs system class",
+          "answer": "* To use InputManager in logic class, like ecs system, do this:  \n```typescript\n//provide as dependency of the class\n//from engine class instance\nconstructor(\n    private readonly _input: IInputManager){}\n//subscribe\nthis._input.subscribeInputEvent(KeyEvents.KeyDown, this._keyDownCallback)\n    this._input.subscribeInputEvent(KeyEvents.KeyUp, this._keyUpCallback)\n//unsubscribe\nthis._input.unsubscribeInputEvent(KeyEvents.KeyDown, this._keyDownCallback)\n    this._input.unsubscribeInputEvent(KeyEvents.KeyUp, this._keyUpCallback)\n//define callbacks\nthis._keyDownCallback = (key: string) => {\n    //define callback, for example:\n    const keyLower = key.toLowerCase()\n    if (this.isKeyMapped(keyLower)) return\n    this.onKeyDown(keyLower)\n    this.handleKeys(entity.id, rigidBody)\n}\nthis._keyUpCallback = (key: string) => {\n    //...\n}\n```",
+          "dateTime": "2024-02-01T17:16:56.981Z"
+        },
+        {
+          "indexTitle": "Is this needed ?",
+          "question": "Is this needed ?",
+          "answer": "* I think yes  \n* It provides api that can be passed in engine classes  \n* It allows that document.addEventListener is set once in Engine class  \n* Interface is passed as dependency, to logic class and  \n   it can add it's callbacks to handle input events  \n* It provides subscribe/unsubscribe methods   ",
+          "dateTime": "2024-02-01T17:14:19.860Z"
+        }
+      ]
+    }
+  ]
+}
