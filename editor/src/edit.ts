@@ -39,9 +39,9 @@ async function handleLoad(event: Event) {
 
     if (response.ok) {
       const questionData = (await response.json()) as IChat
-    //   const sectionInput = document.getElementById(
-    //     'section'
-    //   ) as HTMLInputElement
+      //   const sectionInput = document.getElementById(
+      //     'section'
+      //   ) as HTMLInputElement
       const indexTitleInput = document.getElementById(
         'indexTitle'
       ) as HTMLInputElement
@@ -65,7 +65,7 @@ async function handleLoad(event: Event) {
 
 async function handleEdit(event: Event) {
   event.preventDefault()
-
+  const form = (event.currentTarget as HTMLButtonElement).form
   const fileTitleInput = document.getElementById(
     'fileTitle'
   ) as HTMLInputElement
@@ -108,11 +108,14 @@ async function handleEdit(event: Event) {
 
     if (response.status === 200) {
       alert('Note submitted successfully!')
-      ;(event.target as HTMLFormElement).reset()
+      if (form) {
+        form.reset()
+      }
     } else {
-      alert('Error submitting note.')
+      alert('Error submitting note. No response from server.')
     }
   } catch (error: any) {
+    console.log('Error submitting note: ' + error.message)
     alert('Error submitting note: ' + error.message)
   }
 }

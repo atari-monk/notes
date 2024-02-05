@@ -65,6 +65,7 @@ export const updateChat = async (req: Request, res: Response) => {
       noteEdit.chat.question,
       noteEdit.chat.answer
     )
+    res.sendStatus(200)
   } catch (error) {
     res.status(500).send('Error editing question.')
   }
