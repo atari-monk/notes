@@ -12,9 +12,9 @@
   <body class="dark-mode">
     <div class="row-container">
       <h2>Reader</h2>
-      <button id="darkModeButton">Toggle Dark Mode</button>
+      <button id="darkModeButton">Theme</button>
       <label for="fileInput" class="file-label">
-        Choose a JSON file
+        Open
         <input
           type="file"
           id="fileInput"
@@ -22,6 +22,11 @@
           style="display: none"
         />
       </label>
+    </div>
+
+    <div id="currentPage">
+      <p>CurrentPage:</p>
+      <p id="currentPage_value"></p>
     </div>
 
     <div id="index_title">

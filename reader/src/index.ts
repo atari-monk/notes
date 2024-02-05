@@ -16,29 +16,48 @@ const darkModeButton = document.getElementById('darkModeButton') as HTMLElement
 const markDownIt: MarkdownIt = new MarkdownIt()
 markDownIt.use(anchor)
 markDownIt.use(implicitFigures, { dataType: false, figcaption: true })
-
 darkModeButton.addEventListener('click', toggleDarkMode)
+const currentPage = document.getElementById('currentPage_value')
 
 function toggleDarkMode() {
   const body = document.body
   body.classList.toggle('dark-mode')
 }
 
-fileInput.addEventListener('change', function (_event) {
+fileInput.addEventListener('change', openFile)
+
+function openFile() {
   const file = fileInput.files?.[0]
+
   if (file) {
+    currentPage!.innerText = file.name
     const reader = new FileReader()
+
     reader.onload = function (event) {
-      const jsonData: ISectionsAndChats = JSON.parse(
-        event.target?.result as string
-      )
-      handleFileLoad(jsonData)
+      try {
+        const jsonData: ISectionsAndChats = JSON.parse(
+          event.target?.result as string
+        )
+        handleFileLoad(jsonData)
+      } catch (error) {
+        console.error('Error parsing JSON:', error)
+        // You can add additional error handling here as needed
+        jsonContainer.textContent =
+          'Error parsing JSON. Please check the file format.'
+      }
     }
+
+    reader.onerror = function (event) {
+      console.error('File reading error:', event.target?.error)
+      // You can add additional error handling here as needed
+      jsonContainer.textContent = 'Error reading file.'
+    }
+
     reader.readAsText(file)
   } else {
     jsonContainer.textContent = 'No file selected.'
   }
-})
+}
 
 function handleFileLoad(data: ISectionsAndChats) {
   jsonContainer.innerHTML = ''

@@ -126,6 +126,12 @@ button.copy-button:active {
   margin-left: 100px;
 }
 
+#currentPage {
+  max-width: min-content;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
 #jsonContainer {
   background-color: #fff;
   padding: 10px;
