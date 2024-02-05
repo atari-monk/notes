@@ -18,11 +18,18 @@ markDownIt.use(anchor)
 markDownIt.use(implicitFigures, { dataType: false, figcaption: true })
 darkModeButton.addEventListener('click', toggleDarkMode)
 const currentPage = document.getElementById('currentPage_value')
+let previousFileName: string = ''
 
 function toggleDarkMode() {
   const body = document.body
   body.classList.toggle('dark-mode')
 }
+
+fileInput.addEventListener('click', () => {
+  if (previousFileName) {
+    copyFileNameToClipboard(previousFileName)
+  }
+})
 
 fileInput.addEventListener('change', openFile)
 
@@ -30,6 +37,7 @@ function openFile() {
   const file = fileInput.files?.[0]
 
   if (file) {
+    previousFileName = file.name
     currentPage!.innerText = file.name
     const reader = new FileReader()
 
@@ -54,8 +62,17 @@ function openFile() {
     }
 
     reader.readAsText(file)
+    fileInput.value = ''
   } else {
     jsonContainer.textContent = 'No file selected.'
+  }
+}
+
+function copyFileNameToClipboard(fileName: string) {
+  try {
+    navigator.clipboard.writeText(fileName)
+  } catch (err) {
+    console.error('Failed to copy file name to clipboard: ', err)
   }
 }
 
