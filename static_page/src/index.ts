@@ -59,13 +59,13 @@ fileList.push(
       protected: false,
     },
     {
-      path: '../json/micro_engine_documentation/micro_engine_init_logic.json',
-      name: 'micro_engine_init_logic.json',
+      path: '../json/micro_engine_code.json',
+      name: 'micro_engine_code.json',
       protected: false,
     },
     {
-      path: '../json/micro_engine_documentation/micro_engine_input_manager.json',
-      name: 'micro_engine_input_manager.json',
+      path: '../json/js_ts.json',
+      name: 'js_ts.json',
       protected: false,
     },
     {

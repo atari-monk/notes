@@ -1,0 +1,181 @@
+{
+  "sections": [
+    {
+      "title": "Entity",
+      "chats": [
+        {
+          "indexTitle": "Description",
+          "question": "Description",
+          "answer": "* Named Entity  \n* Entity part of Entity Component System in game engine  \n* It has string id and stores components of game object that i call Entity",
+          "dateTime": "2024-02-02T13:41:25.284Z"
+        },
+        {
+          "indexTitle": "File Structure",
+          "question": "File Structure",
+          "answer": "```plaintext\n|-- engine_api/\n|   |-- src/\n|       |-- ecs\n|           |-- entity\n|               |-- IEntity.ts\n|               |-- IEntityWithComponents.ts\n|               |-- IRenderable.ts\n|               |-- IUpdatable.ts\n```\n```plaintext\n|-- engine/\n|   |-- src/\n|       |-- ecs\n|           |-- entity\n|               |-- Entity.ts\n```",
+          "dateTime": "2024-02-02T13:46:52.270Z"
+        },
+        {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```typescript\nimport IEntityWithComponents from './IEntityWithComponents'\n\nexport default interface IEntity extends IEntityWithComponents {\n  id: string\n}\n```\n```typescript\nimport { ClassType } from '../../tech/entity_component/ClassType'\nimport IComponent from '../../tech/entity_component/IComponent'\nimport IRenderable from './IRenderable'\nimport IUpdatable from './IUpdatable'\n\nexport default interface IEntityWithComponents extends IUpdatable, IRenderable {\n  addComponent(component: IComponent): void\n  addComponents(components: IComponent[]): void\n  getComponentStrict<T extends IComponent>(\n    componentType: ClassType<T>,\n    id?: string\n  ): T\n  getComponent<T extends IComponent>(\n    componentType: ClassType<T>,\n    id?: string\n  ): T | undefined\n}\n```\n```typescript\nexport default interface IRenderable {\n  render(deltaTime: number): void\n}\n```\n```typescript\nexport default interface IUpdatable {\n  update(deltaTime: number): void\n}\n```",
+          "dateTime": "2024-02-02T13:49:17.477Z"
+        },
+        {
+          "indexTitle": "Entity",
+          "question": "Entity",
+          "answer": "```typescript\nimport {\n  ClassType,\n  IComponent,\n  IEntity,\n  IEntityWithComponents,\n} from 'engine_api'\n\nexport default class Entity implements IEntityWithComponents, IEntity {\n  private _components = new Map<ClassType<IComponent>, IComponent[]>()\n  private _id!: string\n\n  get id(): string {\n    return this._id\n  }\n\n  set id(id: string) {\n    this._id = id\n  }\n\n  addComponent(component: IComponent): void {\n    this.addComponentToEntity(component)\n  }\n\n  addComponents(components: IComponent[]): void {\n    for (const component of components) {\n      this.addComponentToEntity(component)\n    }\n  }\n\n  private addComponentToEntity(component: IComponent) {\n    const componentType = component.constructor as ClassType<IComponent>\n\n    if (!this._components.has(componentType)) {\n      this._components.set(componentType, [component])\n    } else {\n      this._components.get(componentType)!.push(component)\n    }\n  }\n\n  getComponent<T extends IComponent>(\n    componentType: ClassType<T>,\n    id?: string\n  ): T | undefined {\n    const components = this._components.get(componentType)\n\n    if (components) {\n      if (id) {\n        return components.find((item) => item.id === id) as T | undefined\n      } else {\n        return components[0] as T | undefined\n      }\n    }\n\n    return undefined\n  }\n\n  getComponentStrict<T extends IComponent>(\n    componentType: ClassType<T>,\n    id?: string\n  ): T {\n    const components = this._components.get(componentType)\n    const errorMessage = (id?: string) =>\n      id\n        ? `Component of type ${componentType.name} and id ${id} not found.`\n        : `No components of type ${componentType.name} found.`\n    if (components) {\n      if (id) {\n        const component = components.find((item) => item.id === id) as\n          | T\n          | undefined\n\n        if (component) {\n          return component\n        } else {\n          throw new Error(errorMessage(id))\n        }\n      } else {\n        const firstComponent = components[0] as T | undefined\n\n        if (firstComponent) {\n          return firstComponent\n        } else {\n          throw new Error(errorMessage())\n        }\n      }\n    } else {\n      throw new Error(errorMessage())\n    }\n  }\n\n  update(deltaTime: number): void {\n    for (const componentArrays of this._components.values()) {\n      for (const component of componentArrays) {\n        component.update(deltaTime)\n      }\n    }\n  }\n\n  render(deltaTime: number): void {\n    for (const componentArrays of this._components.values()) {\n      for (const component of componentArrays) {\n        component.render(deltaTime)\n      }\n    }\n  }\n}\n```",
+          "dateTime": "2024-02-02T13:50:16.460Z"
+        }
+      ]
+    },
+    {
+      "title": "Component",
+      "chats": [
+        {
+          "indexTitle": "Description",
+          "question": "Description",
+          "answer": "* Named Component  \n* Component part of Entity Component System in game engine  \n* This type defines data model and content of Entity",
+          "dateTime": "2024-02-02T15:51:02.902Z"
+        },
+        {
+          "indexTitle": "File Structure",
+          "question": "File Structure",
+          "answer": "```plaintext\n|-- engine_api/\n|   |-- src/\n|       |-- ecs/\n|           |-- component/\n|               |-- ClassType.ts\n|               |-- IComponent.ts\n```\n```plaintext\n|-- engine/\n|   |-- src/\n|       |-- ecs/\n|           |-- component/\n|               |-- Component.ts\n```",
+          "dateTime": "2024-02-02T15:56:44.952Z"
+        },
+        {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```typescript\nexport type ClassType<T> = abstract new (...args: any[]) => T\n```\n```typescript\nexport default interface IComponent {\n  update(deltaTime: number): void\n  render(deltaTime: number): void\n  get id(): string\n  set id(id: string)\n}\n```",
+          "dateTime": "2024-02-02T15:57:38.895Z"
+        },
+        {
+          "indexTitle": "Component",
+          "question": "Component",
+          "answer": "```typescript\nimport { IComponent } from 'engine_api'\n\nexport default abstract class Component implements IComponent {\n  private _id!: string\n\n  get id(): string {\n    return this._id\n  }\n\n  set id(id: string) {\n    this._id = id\n  }\n\n  update(_deltaTime: number) {}\n\n  render(_deltaTime: number) {}\n}\n```",
+          "dateTime": "2024-02-02T15:58:45.970Z"
+        },
+        {
+          "indexTitle": "BoxCollider",
+          "question": "BoxCollider",
+          "answer": "```typescript\nimport { IBoxCollider, IVector2 } from 'engine_api'\nimport Vector2 from '../../math/vector/Vector2'\nimport Collider from './base/Collider'\n\nexport default class BoxCollider extends Collider implements IBoxCollider {\n  private _size: IVector2 = new Vector2()\n  private _halfSize: IVector2 = new Vector2()\n\n  public get size(): IVector2 {\n    return this._size\n  }\n\n  public set size(size: IVector2) {\n    this._size = size\n    this._halfSize.x = this._size.x / 2\n    this._halfSize.y = this._size.y / 2\n  }\n\n  public get halfSize(): IVector2 {\n    return this._halfSize\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:28:04.217Z"
+        },
+        {
+          "indexTitle": "CircleCollider",
+          "question": "CircleCollider",
+          "answer": "```typescript\nimport { ICircleCollider } from 'engine_api'\nimport Collider from './base/Collider'\n\nexport default class CircleCollider\n  extends Collider\n  implements ICircleCollider\n{\n  private _radius: number = 100\n\n  public get radius(): number {\n    return this._radius\n  }\n\n  public set radius(radius: number) {\n    this._radius = radius\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:29:57.905Z"
+        },
+        {
+          "indexTitle": "ClientMovement ",
+          "question": "ClientMovement ",
+          "answer": "```typescript\nimport { InputDto } from 'engine_api'\nimport Component from './base/Component'\n\nexport default class ClientMovement extends Component {\n  private readonly _inputDto: InputDto = new InputDto()\n\n  get inputDto(): InputDto {\n    return this._inputDto\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:31:56.043Z"
+        },
+        {
+          "indexTitle": "CollisionObject",
+          "question": "CollisionObject",
+          "answer": "```typescript\nimport { ICollisionObject } from 'engine_api'\nimport Component from './base/Component'\n\nexport default class CollisionObject\n  extends Component\n  implements ICollisionObject\n{\n  private _objectIdToCollideWith!: string\n\n  set objectIdToCollideWith(objectId: string) {\n    this._objectIdToCollideWith = objectId\n  }\n\n  get objectIdToCollideWith(): string {\n    return this._objectIdToCollideWith\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:33:58.275Z"
+        },
+        {
+          "indexTitle": "GameState ",
+          "question": "GameState ",
+          "answer": "```typescript\nimport { ICollisionInfo, IScoreInfo, IVector2 } from 'engine_api'\nimport Component from './base/Component'\nimport { IGameState } from 'engine_api'\nimport Vector2 from '../../math/vector/Vector2'\n\nexport default class GameState extends Component implements IGameState {\n  private _lastCollisionInfo: ICollisionInfo = {} as ICollisionInfo\n  private _score: IScoreInfo = { redScore: 0, blueScore: 0 } as IScoreInfo\n  private _position: IVector2 = new Vector2()\n\n  public get lastCollisionInfo(): ICollisionInfo {\n    return this._lastCollisionInfo\n  }\n\n  public set lastCollisionInfo(lastCollisionInfo: ICollisionInfo) {\n    this._lastCollisionInfo = lastCollisionInfo\n  }\n\n  public get score(): IScoreInfo {\n    return this._score\n  }\n\n  public set score(score: IScoreInfo) {\n    this._score = score\n  }\n\n  public get position(): IVector2 {\n    return this._position\n  }\n\n  public set position(position: IVector2) {\n    this._position = position\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:35:24.723Z"
+        },
+        {
+          "indexTitle": "InsideBoxCollider ",
+          "question": "InsideBoxCollider ",
+          "answer": "```typescript\nimport BoxCollider from './BoxCollider'\n\nexport default class InsideBoxCollider extends BoxCollider {}\n```\n",
+          "dateTime": "2024-02-05T21:36:42.881Z"
+        },
+        {
+          "indexTitle": "LimitMove ",
+          "question": "LimitMove ",
+          "answer": "```typescript\nimport Vector2 from '../../math/vector/Vector2'\nimport { ILimitMove, IVector2 } from 'engine_api'\nimport Collider from './base/Collider'\n\nexport default class LimitMove extends Collider implements ILimitMove {\n  private _limitSize: IVector2 = new Vector2()\n\n  public get limitSize(): IVector2 {\n    return this._limitSize\n  }\n\n  public set limitSize(limitSize: IVector2) {\n    this._limitSize = limitSize\n  }\n}\n```",
+          "dateTime": "2024-02-05T21:37:49.301Z"
+        }
+      ]
+    },
+    {
+      "title": "System",
+      "chats": [
+        {
+          "indexTitle": "1. InitLogicSystem",
+          "question": "InitLogicSystem",
+          "answer": "* System part of Entity Component System in game engine  \n* Api for specific type of system base \n* Preforms initialization tasks on registered entities  \n* Used as base in initialization systems  \n  invoked after entities are created from data   \n  and need initialization and integration with engine \n",
+          "dateTime": "2024-02-05T21:55:52.175Z"
+        },
+        {
+          "indexTitle": "File Structure",
+          "question": "File Structure",
+          "answer": "```plaintext\n|-- engine/\n|   |-- src/\n|       |-- ecs/\n|           |-- component/\n|           |-- entity/\n|           |-- system/\n|               |-- base/\n|                   |-- init_logic/\n|                       |-- IInitLogicSystem.ts\n|                       |-- IInitLogicSystemManager.ts\n|                       |-- InitLogicSystemBase.ts\n|                       |-- InitLogicSystemManager.ts\n```\n",
+          "dateTime": "2024-02-01T15:06:02.741Z"
+        },
+        {
+          "indexTitle": "IInitLogicSystem",
+          "question": "IInitLogicSystem",
+          "answer": "```typescript\nexport default interface IRegisterEntityByName {\n  registerEntityByName(name: string): void\n}\n```\n```typescript\nimport IRegisterEntityByName from '../IRegisterEntityByName'\n\nexport default interface IInitLogicSystem extends IRegisterEntityByName {\n  init(): void\n}\n```\n* System Api",
+          "dateTime": "2024-02-01T15:30:06.452Z"
+        },
+        {
+          "indexTitle": "IInitLogicSystemManager",
+          "question": "IInitLogicSystemManager",
+          "answer": "```typescript\nimport { IManager } from 'engine_api'\nimport IInitLogicSystem from './IInitLogicSystem'\n\nexport default interface IInitLogicSystemManager\n  extends IManager<IInitLogicSystem> {\n  init(): void\n}\n```\n* Systems container api",
+          "dateTime": "2024-02-01T15:29:34.364Z"
+        },
+        {
+          "indexTitle": "InitLogicSystemBase",
+          "question": "InitLogicSystemBase",
+          "answer": "```typescript\nimport { IEntity, IEntityManager } from 'engine_api'\nimport IInitLogicSystem from './IInitLogicSystem'\n\nexport default abstract class InitLogicSystemBase implements IInitLogicSystem {\n  protected _entityList: IEntity[] = []\n\n  constructor(protected readonly _entityManager: IEntityManager) {}\n\n  init(): void {\n    this.iterateEntities((entity) => this.initLogic(entity))\n  }\n\n  private iterateEntities(callback: (entity: IEntity) => void): void {\n    for (const entity of this._entityList) {\n      callback(entity)\n    }\n  }\n\n  abstract initLogic(entity: IEntity): void\n\n  registerEntityByName(name: string): void {\n    this._entityList.push(this._entityManager.getStrict(name))\n  }\n}\n```\n* Base class  \n* Stores registered entities  \n* Preforms init logic on them  \n* Child classes must override initLogic method   \n  to define their init logic and run it on each registered entity",
+          "dateTime": "2024-02-01T15:39:55.647Z"
+        },
+        {
+          "indexTitle": "InitLogicSystemManager",
+          "question": "InitLogicSystemManager",
+          "answer": "```typescript\nimport MapManager from '../../../../tech/entity_component/MapManager'\nimport IInitLogicSystem from './IInitLogicSystem'\nimport IInitLogicSystemManager from './IInitLogicSystemManager'\n\nexport default class InitLogicSystemManager\n  extends MapManager<IInitLogicSystem>\n  implements IInitLogicSystemManager\n{\n  init(): void {\n    for (const system of this.values()) {\n      system.init()\n    }\n  }\n}\n```\n* Init systems container  \n* Stores evry init system in engine  \n* Runs all of them",
+          "dateTime": "2024-02-01T15:38:00.772Z"
+        },
+		{
+          "indexTitle": "2. KeyboardMappingSystem",
+          "question": "KeyboardMappingSystem",
+          "answer": "* System in ecs  \n* Mapping keyboard keys to events  ",
+          "dateTime": "2024-02-03T22:28:08.265Z"
+        },
+        {
+          "indexTitle": "File Structure",
+          "question": "File Structure",
+          "answer": "```plaintext\n|-- engine_api/\n|   |-- src/\n```\n```plaintext\n|-- engine/\n|   |-- src/\n|       |--ecs\n|           |--system\n|               |--keyboard\n|                   |--KeyboardMappingSubSystem.ts\n|                   |--KeyboardMappingSystem.ts\n|                   |--keyboardTypes.ts\n```",
+          "dateTime": "2024-02-03T22:26:06.639Z"
+        },
+        {
+          "indexTitle": "KeyboardTypes",
+          "question": "KeyboardTypes",
+          "answer": "```typescript\nexport type KeyAction = () => void\n\nexport type KeyActionMap = { [key: string]: KeyAction }\n\nexport type KeyEvent = 'KeyDown' | 'KeyUp'\n\nexport const KeyEvents: { [key in KeyEvent]: key } = {\n  KeyDown: 'KeyDown',\n  KeyUp: 'KeyUp',\n}\n\nexport type KeyActionWithParam<T> = (data: T) => void\n\nexport type KeyActionWithParamMap<T> = { [key: string]: KeyActionWithParam<T> }\n\nexport const KeyboardEvent = 'KeyboardEvent'\n\nexport type KeyboardKey = 'q' | 'e' | 'z' | 'x'\n\nexport const KeyboardKeys: { [key in KeyboardKey]: key } = {\n  q: 'q',\n  e: 'e',\n  z: 'z',\n  x: 'x',\n}\n```",
+          "dateTime": "2024-02-03T23:34:12.376Z"
+        },
+        {
+          "indexTitle": "KeyboardMappingSubSystem",
+          "question": "KeyboardMappingSubSystem",
+          "answer": "```typescript\nimport { KeyboardKey } from './keyboardTypes'\n\nexport default interface IKeyboardEventData {\n  entityId: string\n  key: KeyboardKey\n}\n```\n```typescript\nimport { IEntity } from 'engine_api'\n\nexport default interface IKeyboardMappingSubSystem {\n  subscribeInput(entity: IEntity): void\n  unsubscribeInput(): void\n}\n```\n```typescript\nimport { IInputManager, IEventSystem, IEntity } from 'engine_api'\nimport {\n  KeyActionWithParamMap,\n  KeyEvents,\n  KeyboardEvent,\n  KeyboardKeys,\n} from './keyboardTypes'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport IKeyboardEventData from './IKeyboardEventData'\n\nexport default class KeyboardMappingSubSystem\n  implements IKeyboardMappingSubSystem\n{\n  private _keyActions: KeyActionWithParamMap<string>\n  private _keyDownCallback!: (key: string) => void\n\n  constructor(\n    private readonly _inputManager: IInputManager,\n    private readonly _eventSystem: IEventSystem\n  ) {\n    this._keyActions = this.initKeyAction()\n  }\n\n  private initKeyAction() {\n    return {\n      q: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.q,\n        } as IKeyboardEventData),\n      e: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.e,\n        } as IKeyboardEventData),\n      z: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.z,\n        } as IKeyboardEventData),\n      x: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.x,\n        } as IKeyboardEventData),\n    } as KeyActionWithParamMap<string>\n  }\n\n  subscribeInput(entity: IEntity): void {\n    this._keyDownCallback = (inputKey: string) => {\n      const key = inputKey.toLowerCase()\n      if (this.isKeyMapped(key)) return\n      this._keyActions[key](entity.id)\n    }\n\n    this._inputManager.subscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  unsubscribeInput() {\n    this._inputManager.unsubscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  private isKeyMapped(key: string) {\n    return !this._keyActions.hasOwnProperty(key)\n  }\n}\n```\n```typescript\nimport { IFactory, IInputManager, IEventSystem } from 'engine_api'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport KeyboardMappingSubSystem from './KeyboardMappingSubSystem'\n\nexport default class KeyboardMappingSubSystemFactory\n  implements IFactory<IKeyboardMappingSubSystem>\n{\n  constructor(\n    private readonly _input: IInputManager,\n    private readonly _eventSystem: IEventSystem\n  ) {}\n\n  create(): IKeyboardMappingSubSystem {\n    return new KeyboardMappingSubSystem(this._input, this._eventSystem)\n  }\n}\n```",
+          "dateTime": "2024-02-04T23:23:03.941Z"
+        },
+        {
+          "indexTitle": "KeyboardMappingSystem",
+          "question": "KeyboardMappingSystem",
+          "answer": "```typescript\nimport { IEntityManager, IEntity, IManager, IFactory } from 'engine_api'\nimport InitLogicSystemBase from '../base/init_logic/InitLogicSystemBase'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport MapManager from '../../entity/manager/MapManager'\n\nexport default class KeyboardMappingSystem extends InitLogicSystemBase {\n  private _subSystemManager: IManager<IKeyboardMappingSubSystem> =\n    new MapManager<IKeyboardMappingSubSystem>()\n\n  constructor(\n    entityManager: IEntityManager,\n    private readonly _subSystemFactory: IFactory<IKeyboardMappingSubSystem>\n  ) {\n    super(entityManager)\n  }\n\n  initLogic(entity: IEntity): void {\n    const subSystem = this._subSystemFactory.create()\n    subSystem.subscribeInput(entity)\n    this._subSystemManager.add(entity.id, subSystem)\n  }\n\n  unsubscribe(entity: IEntity) {\n    const subSystem = this._subSystemManager.getStrict(entity.id)\n    subSystem.unsubscribeInput()\n  }\n}\n```",
+          "dateTime": "2024-02-03T23:35:26.892Z"
+        },
+        {
+          "indexTitle": "GameSystemBuilder",
+          "question": "GameSystemBuilder",
+          "answer": "```typescript\nwithKeyboardMapping() {\n    const system = new KeyboardMappingSystem(\n      this._entityManager,\n      new KeyboardMappingSubSystemFactory(\n        this._engine.input,\n        this._engine.eventSystem\n      )\n    )\n\n    const { player1, player2 } = this._entityList\n    ;[player1, player2].forEach((entity) => {\n      system.registerEntityByName(entity.id)\n    })\n\n    this._engine.initLogicSystemManager.add('keyboardmapping', system)\n    return this\n  }\n```\n* and use it in SinglePlayerBuilder->withSystems()",
+          "dateTime": "2024-02-04T23:24:38.737Z"
+        }
+      ]
+    }
+  ]
+}
