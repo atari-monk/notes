@@ -1,0 +1,43 @@
+{
+  "sections": [
+    {
+      "title": "Build a 2D Platformer Game in Unity | Unity Beginner Tutorial",
+      "chats": [
+        {
+          "indexTitle": "Info",
+          "question": "Info",
+          "answer": "[Playlist](https://www.youtube.com/watch?v=Ii-scMenaOQ&list=PLrnPJCHvNZuCVTz6lvhR81nnaf1a-b67U&index=1)\n\n",
+          "dateTime": "2023-12-11T21:07:27.631Z"
+        }
+      ]
+    },
+    {
+      "title": "Tasks",
+      "chats": [
+        {
+          "indexTitle": "Plan Tasks",
+          "question": "Plan Tasks",
+          "answer": "Task:\n1. Prepare \n2. Do 2 pomodoros  \n\nThat for whole tutorial, do notes.  \nPoint is to gain some skill from this.\nGet to know the tool.\n\nTask count it took: 1x",
+          "dateTime": "2023-12-12T16:49:51.779Z"
+        }
+      ]
+    },
+    {
+      "title": "Notes",
+      "chats": [
+        {
+          "indexTitle": "Create Project",
+          "question": "Create Project",
+          "answer": "[github unity_2d_tutorial](https://github.com/atari-monk/unity_2d_tutorial)  \n1. Install Unity Hub manager\n2. Install Unity with optional Visual Studio IDE code editor (Unity Editor Version 2022.3.4f1)  \n3. In Hub Create New Project Button\n4. Settings: 2D, name, path\n5. Scene is like a level. Kepp 2D btn on for 2d view.\n6. Basic Controls:  \n    1. Middle mouse button, or Hand btn on - Pan the view\n    2. Mouse wheel - zoom\n    3. Use Icons (hand, arrows, circle ...) or keys qwerty\n    4. Views are dragable and customizable, Top right, layout menu, set default  ",
+          "dateTime": "2024-02-07T19:49:13.733Z"
+        },
+        {
+          "indexTitle": "Tilemap",
+          "question": "Tilemap",
+          "answer": "1. Window -> Asset Store -> Search Online\n2. Type 0 $ in filter, find Pixel Adventure 1 in search, Open in Unity\n3. In package manager, download, import, keep all selected, import\n4. Now files are displayed in unity, go to assets clict show in explorer to see files in file system\n5. Select Terrain tiles and set Pixels Per Unit to 16, Sprite Mode to multiple, Sprite editor button, apply  \n6. In maximized editor, Slice, Grid by cell size, set 16x16, Slice, Applay (top right), close sprite editor  \n7. In hierarchy, add 2d object, tilemap, rectangular, rename to Terrain  \n8. Window -> 2d -> Tile Palete; create new palete, Create, select Asset folder\n9. Go to Assets find Terrain and drag png on Terrain Palete, create folder Tiles, select it to save tiles there\n10. you can now use tiles from Tile Palette to draw on scene\n11. Use tools in Tile Pallete (they have icons and keys) to select, move, draw rectangle with selected tiles\n12. Now again prepare tilemap for background, set 16 per unit, multiple, add new tilemap  \n13. Now click Sorting Layer, create 2 layers, put them in order of rendering and assign tilemaps to them\n14. Create a object in root of scene hierarchy, 2d obj, sprite, rectangular, F2 player, F to focus, W to move it\n15. Go to character sprites, select all, 16 per unit, applay, select idle, select first frame, drop it on players sprite field\n16. Add Rigidbody 2D component to player  \n17. Add Boxcollider 2D component to player\n18. Add Tilemap Collider 2D component to Terrain\n19. You can hide Terrain with eye icon  \n20. Put Tile Palette tab on right panel so scene is bigger\n21. Add Composite Collider 2D for Terrain, check box Used by Composite in Tilemap Collider 2D, select static Body Type in Rigidbody 2D  \n22. Question mark in circle means link to online docs, component have it\n23. Box near component name is used to check.uncheck renderer, to see collision boundry or whatever\n24. Add script component to player, name it PlayerMovement\n25. Edit -> Preferances -> External Script Editor, I have Open by file extension for some reason\n26. Double click on script to open in ide editor",
+          "dateTime": "2023-12-12T18:38:57.525Z"
+        }
+      ]
+    }
+  ]
+}

@@ -34,18 +34,13 @@ const fileList: IFile[] = []
 fileList.push(
   ...[
     {
-      path: '../json/my_pages.json',
-      name: 'my_pages.json',
-      protected: false,
-    },
-    {
-      path: '../json/to_do.json',
-      name: 'to_do.json',
-      protected: false,
-    },
-    {
       path: '../json/links.json',
       name: 'links.json',
+      protected: false,
+    },
+    {
+      path: '../json/my_pages.json',
+      name: 'my_pages.json',
       protected: false,
     },
     {
@@ -66,6 +61,21 @@ fileList.push(
     {
       path: '../json/js_ts.json',
       name: 'js_ts.json',
+      protected: false,
+    },
+    {
+      path: '../json/unity_2d_tutorial.json',
+      name: 'unity_2d_tutorial.json',
+      protected: false,
+    },
+    {
+      path: '../json/keys.json',
+      name: 'keys.json',
+      protected: false,
+    },
+    {
+      path: '../json/to_do.json',
+      name: 'to_do.json',
       protected: false,
     },
     {

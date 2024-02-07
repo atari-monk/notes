@@ -1,0 +1,37 @@
+{
+  "sections": [
+    {
+      "title": "Visual Studio Code",
+      "chats": [
+        {
+          "indexTitle": "My keys",
+          "question": "Visual Studio Code keys",
+          "answer": "Zen Mode - Ctrl+K Z",
+          "dateTime": "2023-11-01T14:07:10.074Z"
+        }
+      ]
+    },
+    {
+      "title": "Blender",
+      "chats": [
+        {
+          "indexTitle": "My keys",
+          "question": "Blender keys",
+          "answer": "*Bevel the Edges* - Ctrl + B\nAdd loop cuts by mouse wheel\n\n*Invoke the Loop Cut Tool* - Ctrl + R\nAdd loop cuts by mouse wheel\n\n*Animation interpolation* - T\nChoose linear for endless looping animations",
+          "dateTime": "2023-11-14T21:28:10.440Z"
+        }
+      ]
+    },
+    {
+      "title": "Windows",
+      "chats": [
+        {
+          "indexTitle": "Windows",
+          "question": "Windows",
+          "answer": "1. Select window, alt + space, M, arrows to move window  \n2. Switch desktop, ctrl + window key + arrow left or right  ",
+          "dateTime": "2024-02-07T06:36:49.705Z"
+        }
+      ]
+    }
+  ]
+}
