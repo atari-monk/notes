@@ -9205,11 +9205,6 @@ fileList.push(...[
         protected: false,
     },
     {
-        path: '../json/my_pages.json',
-        name: 'my_pages.json',
-        protected: false,
-    },
-    {
         path: '../json/watching.json',
         name: 'watching.json',
         protected: false,
