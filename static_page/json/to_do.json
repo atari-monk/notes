@@ -3,7 +3,7 @@
     {
       "title": "Doc Rules",
       "chats": [
-	    {
+        {
           "indexTitle": "Content",
           "question": "Content",
           "answer": "This is doc for To-Do notes  \nWrite here things you want to do",
@@ -40,8 +40,8 @@
         {
           "indexTitle": "Needed improvements",
           "question": "Needed improvements",
-          "answer": "1. Rename button Choose a JSON file to Open  \n2. Rename button Toggle Dark Mode to Theme  \n3. Add current file name text\n4. Add button Refresh to refresh current file  \n5. Add mobile style and desktop style  \n6. Do not remove inputs from form after submiting it  \n7. Fix light/dark theme style  \n8. Edit Category form editor  \n9. Add date of note creation and update to data and to html pages ui",
-          "dateTime": "2024-02-01T18:20:45.447Z"
+          "answer": "1. Rename button Choose a JSON file to Open  \n2. Rename button Toggle Dark Mode to Theme  \n3. Add current file name text\n4. Add button Refresh to refresh current file  \n5. Add mobile style and desktop style  \n6. Do not remove inputs from form after submiting it  \n7. Fix light/dark theme style  \n8. Edit Category form editor  \n9. Add date of note creation and update to data and to html pages ui  \n10. Create api for notes app  ",
+          "dateTime": "2024-02-08T11:57:18.705Z"
         }
       ]
     },
