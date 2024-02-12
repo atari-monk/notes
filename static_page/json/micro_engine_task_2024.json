@@ -109,6 +109,12 @@
           "question": "Task 48  \nKickball with Z key.",
           "answer": "* Just create simple system, or modify existing ones.  \n  Probably sending event about z key to ball kinematics system.",
           "dateTime": "2024-02-08T11:53:52.780Z"
+        },
+        {
+          "indexTitle": "Task 51",
+          "question": "Task 51  \n* Direction Component  \n* Mouse input system  \n* Integration with PlayerKick ball",
+          "answer": "Introduce Direction Component:  \n1. Create Direction Component class  \n2. Create MouseInput System class  \n3. Update entity_loader_v2 to include Direction  \n4. Add MouseInput to GameSystemBuilder  \n5. Add Direction Data to players in json\n6. Add rendering for Direction \n7. Test game  \n---\n\nMake Direction Component work:\n1. Fix problem of direction changing it's length, depending on how far mouse is from center  \n2. Refactor render system to use start from SystemBase or ManySystemBase  ",
+          "dateTime": "2024-02-12T16:04:44.887Z"
         }
       ]
     }
