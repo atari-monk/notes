@@ -55,6 +55,17 @@
           "dateTime": "2024-02-01T18:15:47.630Z"
         }
       ]
+    },
+    {
+      "title": "Script pomodoro",
+      "chats": [
+        {
+          "indexTitle": "Needed improvements",
+          "question": "Needed improvements",
+          "answer": "1. Name of the task in session or even pomodoro  \n2. Popup when sound is off",
+          "dateTime": "2024-02-16T14:17:51.673Z"
+        }
+      ]
     }
   ]
 }
