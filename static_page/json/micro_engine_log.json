@@ -17,8 +17,8 @@
         {
           "indexTitle": "19",
           "question": "19",
-          "answer": "Refactoring, 3 pomodoros:  \n\n1. Rename file  BaseCollisionDetector to CollisionDetector  \n2. Refactor TopLeftCollisionDetector to use interface IStartable, same as CenterCollisionDetector  \n3. Rename interface ICollisionInfo to ICollision  \n4. Rename file ICollisionInfo to ICollision  \n5. Move file ICollisionEntity to collision folder  \n6. Modiffy ICollisionDetector, use ICollision in it, turned out it's not used currently  \n\nRefactoring, 3 pomodoros:  \n\n1. Modiffy CollisionDetector to use ICollision  ",
-          "dateTime": "2024-02-19T13:59:23.380Z"
+          "answer": "Refactoring, 3 pomodoros:  \n\n1. Rename file  BaseCollisionDetector to CollisionDetector  \n2. Refactor TopLeftCollisionDetector to use interface IStartable, same as CenterCollisionDetector  \n3. Rename interface ICollisionInfo to ICollision  \n4. Rename file ICollisionInfo to ICollision  \n5. Move file ICollisionEntity to collision folder  \n6. Modiffy ICollisionDetector, use ICollision in it, turned out it's not used currently  \n\nRefactoring, 3 pomodoros (1.5 standing):  \n\n1. Modiffy CollisionDetector to use ICollision  \n2. Refactor lib exports  \n3. Better names in ICollisionHandler  \n4. Rename in ICollisionHandler classes  \n5. Use ICollision in detector, new CenterCollision class  \n6. ICollision in systems  ",
+          "dateTime": "2024-02-19T16:12:42.526Z"
         }
       ]
     }
