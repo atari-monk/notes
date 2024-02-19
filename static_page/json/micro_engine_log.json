@@ -1,0 +1,26 @@
+{
+  "sections": [
+    {
+      "title": "File",
+      "chats": [
+        {
+          "indexTitle": "Format",
+          "question": "Format",
+          "answer": "Its a log of activity on micro_engine project:\n1. Section is month.year  \n    * 02.2024\n2. Index Title and Question is day  \n    * 19\n3. Answer contains activity type, time in pomodoros on it, numbered list of what was done   \n    * Refactoring, 3 pomodoros:\n        1. What was done\n        2. ...",
+          "dateTime": "2024-02-19T13:56:33.456Z"
+        }
+      ]
+    },
+    {
+      "title": "02.2024",
+      "chats": [
+        {
+          "indexTitle": "19",
+          "question": "19",
+          "answer": "Refactoring, 3 pomodoros:  \n\n1. Rename file  BaseCollisionDetector to CollisionDetector  \n2. Refactor TopLeftCollisionDetector to use interface IStartable, same as CenterCollisionDetector  \n3. Rename interface ICollisionInfo to ICollision  \n4. Rename file ICollisionInfo to ICollision  \n5. Move file ICollisionEntity to collision folder  \n6. Modiffy ICollisionDetector, use ICollision in it, turned out it's not used currently  \n\nRefactoring, 3 pomodoros:  \n\n1. Modiffy CollisionDetector to use ICollision  ",
+          "dateTime": "2024-02-19T13:59:23.380Z"
+        }
+      ]
+    }
+  ]
+}

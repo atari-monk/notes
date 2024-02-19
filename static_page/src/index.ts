@@ -54,8 +54,13 @@ fileList.push(
       protected: false,
     },
     {
-      path: '../json/micro_engine_code.json',
-      name: 'micro_engine_code.json',
+      path: '../json/micro_engine_log.json',
+      name: 'micro_engine_log.json',
+      protected: false,
+    },
+    {
+      path: '../json/micro_engine_ecs.json',
+      name: 'micro_engine_ecs.json',
       protected: false,
     },
     {
