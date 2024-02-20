@@ -23,8 +23,8 @@
         {
           "indexTitle": "20",
           "question": "20",
-          "answer": "Refactoring, 3 pomodoros:  \n\n1.  Refactored \"Axis-Aligned Bounding Box\" CenterCollision class, to use vectors in new IpRect interface, 2 methods added  \nMuch more readable, maintamable and so on, in one better  \n\nRefactoring, 3 pomodoros:  \n\n1. Yet another refactor of \"Axis-Aligned Bounding Box\" CenterCollision, removed IpRect, using IRect now, collision code is logical now  \n2. Moved api of collision system  \n3. Readed all code and minor refactors, rigidBody is used in handlers!, so do not remove, despite not in collision sytem strictlly  \n4. Updated notes documentig system for readablity (all files on one page) ",
-          "dateTime": "2024-02-20T14:56:25.314Z"
+          "answer": "Refactoring, 3 pomodoros:  \n\n1.  Refactored \"Axis-Aligned Bounding Box\" CenterCollision class, to use vectors in new IpRect interface, 2 methods added  \nMuch more readable, maintamable and so on, in one better  \n\nRefactoring, 3 pomodoros:  \n\n1. Yet another refactor of \"Axis-Aligned Bounding Box\" CenterCollision, removed IpRect, using IRect now, collision code is logical now  \n2. Moved api of collision system  \n3. Readed all code and minor refactors, rigidBody is used in handlers!, so do not remove, despite not in collision sytem strictlly  \n4. Updated micro_engine_ecs documentation (all files on one page, for readablity)  \n\nTutorial, 2 pomodoros:\n\n1. Moving platform  \n2. Enemy\n\nRefactoring, 2 pomodoros:  \n1. Updated micro_engine_ecs documentation  \n2. Refactored collision builder in ball_game",
+          "dateTime": "2024-02-20T23:00:29.932Z"
         }
       ]
     }
