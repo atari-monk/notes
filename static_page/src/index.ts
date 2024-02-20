@@ -88,6 +88,11 @@ fileList.push(
       name: 'p_list.json',
       protected: true,
     },
+    {
+      path: '../json/crazy_thoughts.json',
+      name: 'crazy_thoughts.json',
+      protected: true,
+    },
   ]
 )
 
