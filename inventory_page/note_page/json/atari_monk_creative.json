@@ -1,0 +1,66 @@
+{
+  "sections": [
+    {
+      "title": "About",
+      "chats": [
+        {
+          "indexTitle": "Atari Monk",
+          "question": "Atari Monk",
+          "answer": "Atari Monk is Author of listed creations  \n\n[AtariMonk Games](https://atari-monk.itch.io/)  \n\n[AtariMonk GitHub](https://github.com/atari-monk?tab=repositories)  ",
+          "dateTime": "2024-02-13T16:41:10.096Z"
+        },
+        {
+          "indexTitle": "Art",
+          "question": "Art",
+          "answer": "\"You are a small incrustation on the atropic tides of the universe  \nand the meaning of our existence in some sense is to eat.  \nIt's very disheartening because it means that we are a type of yeast.  \nAll the amazing complexity that we create in our lives and the civilization, whatever,  \nis to create some surfaces on which we can outcompete other kinds of yeast.  \nAnd what we can do is we can do something else. We can serve a conspiracy.  \nFor instance, the arts. It's nicest conspiracy.  \nIt comes from a machine learning system falling in love  \nwith the shape of the modeling function itself.  \nIt's that you start thinking that mental representations are intrinsically important.  \nNow, the purpose of mental representation is to make you eat more, of course, right?  \nIt's a tool for learning, turning food into babies.  \nYes, right. But if you see that the beauty of this thing, and you realize,  \nOh my god, careing for conscious states, it's much more significant than to eat.  \nYou basically turn from an orc to an elf.  \nArt is some kind of truth that captures a certain conscious state, a feeling of what it's like.\"  \n\nJocha Bach  \n",
+          "dateTime": "2024-02-13T15:55:03.021Z"
+        }
+      ]
+    },
+    {
+      "title": "Games",
+      "chats": [
+        {
+          "indexTitle": "ball-game-2",
+          "question": "ball-game-2",
+          "answer": "[ball-game-2](https://atari-monk.itch.io/ball-game-2)  \n* 2 players ball game, pong style",
+          "dateTime": "2024-02-13T16:03:01.921Z"
+        },
+        {
+          "indexTitle": "BEST GAME EVER",
+          "question": "BEST GAME EVER",
+          "answer": "[BEST GAME EVER](https://atari-monk.itch.io/best-game-ever)  \nDone during this tutorial [TUTORIAL](https://www.youtube.com/playlist?list=PLrnPJCHvNZuCVTz6lvhR81nnaf1a-b67U)",
+          "dateTime": "2024-02-13T17:08:27.191Z"
+        }
+      ]
+    },
+    {
+      "title": "Apps",
+      "chats": [
+        {
+          "indexTitle": "Task App",
+          "question": "Task App",
+          "answer": "[Task App](https://red-beach-032340203.3.azurestaticapps.net/)  \n* Web app with project, task, data model web api",
+          "dateTime": "2024-02-13T16:09:46.539Z"
+        }
+      ]
+    },
+    {
+      "title": "Pages",
+      "chats": [
+        {
+          "indexTitle": "Notes3",
+          "question": "Notes3",
+          "answer": "[Notes3](https://atari-monk.github.io/notes/static_page/build/index.html)  \n* Static page with notes using json and md",
+          "dateTime": "2024-02-13T16:18:42.832Z"
+        },
+        {
+          "indexTitle": "Histogram",
+          "question": "Histogram",
+          "answer": "[Histogram 01/2024](https://atari-monk.github.io/notes/histogram/index.html)   ",
+          "dateTime": "2024-02-13T16:24:03.777Z"
+        }
+      ]
+    }
+  ]
+}

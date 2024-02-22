@@ -9249,16 +9249,6 @@ fileList.push(...[
         name: 'to_do.json',
         protected: false,
     },
-    {
-        path: '../json/p_list.json',
-        name: 'p_list.json',
-        protected: true,
-    },
-    {
-        path: '../json/crazy_thoughts.json',
-        name: 'crazy_thoughts.json',
-        protected: true,
-    },
 ]);
 const fileListContainer = document.getElementById('fileListContainer');
 fileList.forEach((file) => {

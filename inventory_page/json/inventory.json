@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "title": "Storage Room",
+      "chats": [
+        {
+          "indexTitle": "### Electric Kettle",
+          "question": "### Electric Kettle",
+          "answer": "#### Junk\n\n![Electric Kettle](inventory/storage_room/electric_kettle_1.jpg)  \n![Electric Kettle Inside](inventory/storage_room/electric_kettle_2.jpg)  \n![Electric Kettle Broken](inventory/storage_room/electric_kettle_3.jpg)  \n\n- **Description:** Czajnik elektryczny, pęknięta plastikowa obudowa  \n- **Status:** Zepsuty złom  \n- **TODO:** Wyszukać jak zutylizować  ",
+          "dateTime": "2024-02-22T12:56:08.008Z"
+        },
+        {
+          "indexTitle": "### Small Water Pump",
+          "question": "### Small Water Pump",
+          "answer": "#### Not very useful gadget\n\n![Small Water Pump](inventory/storage_room/small_water_pump_1.jpg)  \n![Small Water Pump Part](inventory/storage_room/small_water_pump_2.jpg)  \n\n- **Description:** Mała pompka turystyczna do wody  \n- **Status:** Mało użyteczny gadżet  \n- **TODO:** Wywieźć i użyć na działce   ",
+          "dateTime": "2024-02-22T12:55:49.056Z"
+        },
+        {
+          "indexTitle": "### Micro Irigation Set",
+          "question": "### Micro Irigation Set",
+          "answer": "#### Not very useful gadget\n\n![Electric Kettle](inventory/storage_room/micro_irigation_set_1.jpg)  \n![Electric Kettle Inside](inventory/storage_room/micro_irigation_set_2.jpg)  \n![Electric Kettle Broken](inventory/storage_room/micro_irigation_set_3.jpg)  \n\n- **Description:** Mini zestaw do irygacji roślin   \n- **Status:** Mało użyteczny gadżet  \n- **TODO:** Wywieźć i użyć na działce  ",
+          "dateTime": "2024-02-22T12:56:28.279Z"
+        }
+      ]
+    }
+  ]
+}
