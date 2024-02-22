@@ -57,6 +57,9 @@ fileList.forEach((file) => {
   fileListContainer.appendChild(br)
 })
 
+const firstLink = fileListContainer.querySelector('a') as HTMLElement
+firstLink.click()
+
 async function handleLinkClick(file: IFile) {
   if (file.protected) {
     const encodedPassword = 'NkN6bG9uZWs2'

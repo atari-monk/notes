@@ -9218,6 +9218,8 @@ fileList.forEach((file) => {
     const br = document.createElement('br');
     fileListContainer.appendChild(br);
 });
+const firstLink = fileListContainer.querySelector('a');
+firstLink.click();
 async function handleLinkClick(file) {
     if (file.protected) {
         const encodedPassword = 'NkN6bG9uZWs2';
