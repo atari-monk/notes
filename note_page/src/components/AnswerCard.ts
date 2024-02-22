@@ -16,7 +16,7 @@ export class AnswerCard {
 
     card.id = `section-${this.sectionIndex}-question-${this.questionIndex}`
 
-    card.innerHTML += `<a href="#index" class="index">&#9650;</a>`
+    card.innerHTML += `<a href="#index_title" class="index">&#9650;</a>`
     return card
   }
 

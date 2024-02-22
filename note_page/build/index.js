@@ -9071,7 +9071,7 @@ class AnswerCard {
         card.innerHTML += `<p>${this.markdownIt.render(question)}</p><hr />`;
         card.appendChild(this.createDiv(answer));
         card.id = `section-${this.sectionIndex}-question-${this.questionIndex}`;
-        card.innerHTML += `<a href="#index" class="index">&#9650;</a>`;
+        card.innerHTML += `<a href="#index_title" class="index">&#9650;</a>`;
         return card;
     }
     createDiv(answer) {
@@ -9284,6 +9284,10 @@ async function handleLinkClick(file) {
         handleFileLoad(jsonData);
         const currentPage = document.getElementById('currentPage_value');
         currentPage.innerText = file.name;
+        const indexTitleLink = document.getElementById('index_title');
+        if (indexTitleLink) {
+            indexTitleLink.scrollIntoView({ behavior: 'smooth' });
+        }
     }
     catch (error) {
         console.error('Error loading or parsing JSON file:', error.message);
