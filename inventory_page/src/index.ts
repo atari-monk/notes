@@ -82,6 +82,11 @@ async function handleLinkClick(file: IFile) {
     handleFileLoad(jsonData)
     const currentPage = document.getElementById('currentPage_value')
     currentPage!.innerText = file.name
+
+    const indexTitleLink = document.getElementById('index_title')
+    if (indexTitleLink) {
+      indexTitleLink.scrollIntoView({ behavior: 'smooth' })
+    }
   } catch (error: any) {
     console.error('Error loading or parsing JSON file:', error.message)
   }
