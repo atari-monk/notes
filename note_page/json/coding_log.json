@@ -31,6 +31,12 @@
           "question": "21",
           "answer": "Feature, 3 pomodoros:\n\n1. Add Kick component  \n2. Refactor exports in engine project (each module has its file now)   \n\nFeature, 5 pomodoros:\n\n1. Used it in Kick Collision Handler,  \ncomponent removed need to flag switch by sending event  \n2. Stored (cached) kick so it's not searched for evry collision     ",
           "dateTime": "2024-02-21T22:25:42.648Z"
+        },
+        {
+          "indexTitle": "22",
+          "question": "22",
+          "answer": "Refactoring/Feature, 7 pomodoro:    \n\n1. upgraded notes, static pages, inventory page started,  \n2. upgraded menus  \n\nRefactoring, 5 pomodoro:  \n\n1. refactored engine api exports,  \n2. notes in doc file to have code on one page\n",
+          "dateTime": "2024-02-22T23:24:15.985Z"
         }
       ]
     }

@@ -9220,8 +9220,8 @@ fileList.push(...[
         protected: false,
     },
     {
-        path: '../json/micro_engine_log.json',
-        name: 'micro_engine_log.json',
+        path: '../json/coding_log.json',
+        name: 'coding_log.json',
         protected: false,
     },
     {
