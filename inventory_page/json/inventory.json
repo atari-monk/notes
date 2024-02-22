@@ -23,8 +23,8 @@
         {
           "indexTitle": "Foil",
           "question": "Foil",
-          "answer": "#### Packaging  \n\n![Foil](inventory/storage_room/foil.jpg)  \n\n- **Description:** 2 pełne rolki folii, 2 resztki  \n",
-          "dateTime": "2024-02-22T22:56:10.671Z"
+          "answer": "#### Packaging  \n\n![Foil](inventory/storage_room/foil.jpg)  \n\n- **Description:** 2 pełne rolki folii, 2 resztki  \n- **Diameter:** 11 cm  \n- **Length:** 53 cm \n",
+          "dateTime": "2024-02-22T23:09:52.536Z"
         },
         {
           "indexTitle": "Plastic Saw Cover",
@@ -35,8 +35,8 @@
         {
           "indexTitle": "Plastic Box",
           "question": "Plastic Box",
-          "answer": "#### Container\n\n![Plastic Box Front](inventory/storage_room/box_1.jpg)  \n![Plastic Box Top](inventory/storage_room/box_2.jpg)  \n\n- **Description:** Plastikowe pudełko    \n- **Status:** W komórce lokatorskiej    \n- **TODO:**  \n- **Content:** Small Water Pump, Micro Irigation Set  ",
-          "dateTime": "2024-02-22T21:31:31.927Z"
+          "answer": "#### Container\n\n![Plastic Box Front](inventory/storage_room/box_1.jpg)  \n![Plastic Box Top](inventory/storage_room/box_2.jpg)  \n\n- **Description:** Plastikowe pudełko    \n- **Status:** W komórce lokatorskiej  \n- **Content:** Small Water Pump, Micro Irigation Set  \n- **Top:** 38 x 29 cm  \n- **Bottom:** 30 x 23 cm  \n- **Heigth:** 23 cm  ",
+          "dateTime": "2024-02-22T23:12:53.165Z"
         },
         {
           "indexTitle": "### Small Water Pump",
@@ -50,7 +50,7 @@
           "answer": "#### Not very useful gadget\n\n![Micro Irigation Set](inventory/storage_room/micro_irigation_set_1.jpg)  \n\n- **Description:** Mini zestaw do irygacji roślin   \n- **Status:** Mało użyteczny gadżet  \n- **TODO:** Wywieźć i użyć na działce  \n- **Container:** Plastic Box",
           "dateTime": "2024-02-22T23:00:36.207Z"
         },
-		{
+        {
           "indexTitle": "### Electric Kettle",
           "question": "### Electric Kettle",
           "answer": "#### Junk\n\n![Electric Kettle](inventory/storage_room/electric_kettle_1.jpg)  \n![Electric Kettle Inside](inventory/storage_room/electric_kettle_2.jpg)  \n\n- **Description:** Czajnik elektryczny, pęknięta plastikowa obudowa  \n- **Status:** Zepsuty złom  \n- **TODO:** Wyszukać jak zutylizować  ",
