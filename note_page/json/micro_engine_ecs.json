@@ -1,6 +1,166 @@
 {
   "sections": [
     {
+      "title": "Engine API",
+      "chats": [
+        {
+          "indexTitle": "Export",
+          "question": "Export",
+          "answer": "```plaintext\n|-- engine\n|   |-- src\n|       |-- z_export\n|           |-- client.ts\n|           |-- ecs_component.ts\n|           |-- ecs_entity_loader.ts\n|           |-- ecs_entity.ts\n|           |-- ecs_system.ts\n|           |-- ecs\n|           |-- math.ts\n|           |-- multi.ts\n|           |-- parts.ts\n|           |-- server.ts\n|           |-- utils.ts\n|       |-- index.ts\n```",
+          "dateTime": "2024-02-22T20:00:56.297Z"
+        },
+        {
+          "indexTitle": "client",
+          "question": "client",
+          "answer": "```typescript\nexport { default as IClientPlayerManager } from '../client/IPlayerManager'\nexport { default as IClientGameLoop } from '../client/IGameLoop'\n```",
+          "dateTime": "2024-02-22T20:01:54.307Z"
+        },
+        {
+          "indexTitle": "ecs_component",
+          "question": "ecs_component",
+          "answer": "```typescript\nexport { default as ICollider } from '../ecs/component/core/ICollider'\nexport { default as IComponent } from '../ecs/component/core/IComponent'\nexport { default as IPhysicMaterial } from '../ecs/component/core/IPhysicMaterial'\nexport { default as IScoreInfo } from '../ecs/component/core/IScoreInfo'\n\nexport { default as IBoxCollider } from '../ecs/component/IBoxCollider'\nexport { default as ICircleCollider } from '../ecs/component/ICircleCollider'\nexport { default as ICollisionObject } from '../ecs/component/ICollisionObject'\nexport { default as IGameState } from '../ecs/component/IGameState'\nexport { default as ILimitMove } from '../ecs/component/ILimitMove'\nexport { default as IRigidBody } from '../ecs/component/IRigidBody'\nexport { default as ISprite } from '../ecs/component/ISprite'\nexport { default as ITransform } from '../ecs/component/ITransform'\nexport { default as IDirection } from '../ecs/component/IDirection'\n```",
+          "dateTime": "2024-02-22T20:02:20.343Z"
+        },
+        {
+          "indexTitle": "ecs_entity_loader",
+          "question": "ecs_entity_loader",
+          "answer": "```typescript\nexport { default as IComponentMapper } from '../ecs/entity_loader/IComponentMapper'\nexport { default as IEntityDataModel } from '../ecs/entity_loader/IEntityDataModel'\nexport { default as ILevel } from '../ecs/entity_loader/ILevel'\n```",
+          "dateTime": "2024-02-22T20:03:03.273Z"
+        },
+        {
+          "indexTitle": "ecs_entity",
+          "question": "ecs_entity",
+          "answer": "```typescript\nexport { default as IEntity } from '../ecs/entity/IEntity'\nexport { default as IEntityWithComponents } from '../ecs/entity/IEntityWithComponents'\n\nexport { default as IEntityManager } from '../ecs/entity/manager/IEntityManager'\nexport { default as IManager } from '../ecs/entity/manager/IManager'\n```",
+          "dateTime": "2024-02-22T20:03:50.642Z"
+        },
+        {
+          "indexTitle": "ecs_system",
+          "question": "ecs_system",
+          "answer": "```typescript\nexport { default as ICollision } from '../ecs/system/collision/detector/ICollision'\nexport { default as ICollisionAlgorithm } from '../ecs/system/collision/detector/ICollisionAlgorithm'\nexport { default as ICollisionCallback } from '../ecs/system/collision/detector/ICollisionCallback'\nexport { default as ICollisionDetector } from '../ecs/system/collision/detector/ICollisionDetector'\nexport { default as ICollisionEntity } from '../ecs/system/collision/detector/ICollisionEntity'\nexport { default as IRect } from '../ecs/system/collision/detector/IRect'\n\nexport { default as ICollisionHandler } from '../ecs/system/collision/handler/ICollisionHandler'\n\nexport { default as IRegisterEntityById } from '../ecs/system/core/IRegisterEntityById'\nexport { default as IRegisterEntityByName } from '../ecs/system/core/IRegisterEntityByName'\nexport { default as ISubscribeEntity } from '../ecs/system/core/ISubscribeEntity'\nexport { default as ISystem } from '../ecs/system/core/ISystem'\n\nexport { default as IKeyboardEventData } from '../ecs/system/keyboard/IKeyboardEventData'\nexport {\n  KeyActionMap,\n  KeyEvents,\n  KeyActionWithParamMap,\n  KeyboardEvent,\n  KeyboardKey,\n  KeyboardKeys,\n} from '../ecs/system/keyboard/keyboardTypes'\n```",
+          "dateTime": "2024-02-22T20:04:23.473Z"
+        },
+        {
+          "indexTitle": "ecs",
+          "question": "ecs",
+          "answer": "```typescript\nexport { ClassType } from '../ecs/ClassType'\nexport { default as IBuildable } from '../ecs/IBuildable'\nexport { default as IIdentifiable } from '../ecs/IIdentifiable'\nexport { default as INameable } from '../ecs/INameable'\nexport { default as IRenderable } from '../ecs/IRenderable'\nexport { default as IStartable } from '../ecs/IStartable'\nexport { default as IUpdateable } from '../ecs/IUpdateable'\n```",
+          "dateTime": "2024-02-22T20:04:59.869Z"
+        },
+        {
+          "indexTitle": "math",
+          "question": "math",
+          "answer": "```typescript\nexport { default as INeuralNetwork } from '../math/neural_network/INeuralNetwork'\nexport { default as INeuralNetworkOptions } from '../math/neural_network/INeuralNetworkOptions'\nexport { default as INeuralNetworkPrediction } from '../math/neural_network/INeuralNetworkPrediction'\nexport { default as ISimulatedKeyPress } from '../math/neural_network/ISimulatedKeyPress'\n\nexport { default as IImmutableVector2 } from '../math/vector/IImmutableVector2'\nexport { default as IVector2 } from '../math/vector/IVector2'\n\nexport { default as IRandomNumberGenerator } from '../math/IRandomNumberGenerator'\n```",
+          "dateTime": "2024-02-22T20:05:20.606Z"
+        },
+        {
+          "indexTitle": "multi",
+          "question": "multi",
+          "answer": "```typescript\nexport { default as IEngineClientApi } from '../multi/IEngineClientApi'\nexport { default as IEngineServerApi } from '../multi/IEngineServerApi'\nexport { default as IGameClientApi } from '../multi/IGameClientApi'\nexport { default as IGameServerApi } from '../multi/IGameServerApi'\nexport { default as IResult } from '../multi/IResult'\nexport { SocketEvents, SocketEvent } from '../multi/SocketEvents'\n```",
+          "dateTime": "2024-02-22T20:06:19.392Z"
+        },
+        {
+          "indexTitle": "parts",
+          "question": "parts",
+          "answer": "```typescript\nexport { default as IAnimationCallback } from '../animation_manager/IAnimationCallback'\nexport { default as IAnimationManager } from '../animation_manager/IAnimationManager'\n\nexport { default as ICamera } from '../camera/ICamera'\n\nexport { default as IConfigOptions } from '../config_manager/IConfigOptions'\nexport { default as IConfigurationManager } from '../config_manager/IConfigurationManager'\n\nexport { default as ClientsDto } from '../dtos/ClientsDto'\nexport { Direction } from '../dtos/Direction'\nexport { default as IGameFrameDto } from '../dtos/IGameFrameDto'\nexport { default as InputDto } from '../dtos/InputDto'\nexport { default as IObjectDto } from '../dtos/IObjectDto'\n\nexport { default as IEventHandler } from '../event_system/IEventHandler'\nexport { default as IEventSystem } from '../event_system/IEventSystem'\n\nexport { default as IGameLoop } from '../game_loop/IGameLoop'\nexport { default as IRenderCallback } from '../game_loop/IRenderCallback'\nexport { default as IUpdateCallback } from '../game_loop/IUpdateCallback'\n\nexport { default as IInputCallback } from '../input/IInputCallback'\nexport { default as IInputManager } from '../input/IInputManager'\n\nexport { default as ILogger } from '../log_manager/ILogger'\nexport { LogLevel } from '../log_manager/LogLevel'\n\nexport { default as IRenderer } from '../renderer/IRenderer'\nexport { default as IRendererV2 } from '../renderer/IRendererV2'\n\nexport { AnimationType } from '../sprite/AnimationType'\nexport { default as IAnimationConfig } from '../sprite/IAnimationConfig'\nexport { default as IAnimationFrame } from '../sprite/IAnimationFrame'\n\nexport { default as IState } from '../state_machine/IState'\n\nexport { default as IParticle } from '../tech/particle_system/IParticle'\nexport { default as IParticleSystem } from '../tech/particle_system/IParticleSystem'\n\nexport { default as IGridNode } from '../tech/path_finding/IGridNode'\nexport { default as IPathfinding } from '../tech/path_finding/IPathfinding'\nexport { default as IPathfindingResult } from '../tech/path_finding/IPathfindingResult'\n\nexport { default as IResource } from '../tech/resource_manager/IResource'\nexport { default as IResourceManager } from '../tech/resource_manager/IResourceManager'\n\nexport { default as ISaveGameManager } from '../tech/save_game_manager/ISaveGameManager'\n\nexport { default as IScene } from '../tech/scene_manager/IScene'\nexport { default as ISceneManager } from '../tech/scene_manager/ISceneManager'\n\nexport { default as ISoundManager } from '../tech/sound_manager/ISoundManager'\n\nexport { default as IGenericState } from '../tech/state_manager/IGenericState'\nexport { default as IStateManager } from '../tech/state_manager/IStateManager'\n\nexport { default as IUIElement } from '../tech/ui_manager/IUIElement'\nexport { default as IUIManager } from '../tech/ui_manager/IUIManager'\n\nexport { default as ITile } from '../tile_map/ITile'\nexport { default as ITileMap } from '../tile_map/ITileMap'\nexport { default as ITileMapDataFactory } from '../tile_map/ITileMapDataFactory'\n```",
+          "dateTime": "2024-02-22T20:07:11.161Z"
+        },
+        {
+          "indexTitle": "server",
+          "question": "server",
+          "answer": "```typescript\nexport { default as IServerPlayerManager } from '../server/IPlayerManager'\nexport { default as IServerGameLoop } from '../server/IGameLoop'\n```",
+          "dateTime": "2024-02-22T20:07:37.930Z"
+        },
+        {
+          "indexTitle": "utils",
+          "question": "utils",
+          "answer": "```typescript\nexport { default as IFactory } from '../utils/IFactory'\n```",
+          "dateTime": "2024-02-22T20:08:00.406Z"
+        },
+        {
+          "indexTitle": "index",
+          "question": "index",
+          "answer": "```typescript\nexport * from './z_export/client'\nexport * from './z_export/ecs_component'\nexport * from './z_export/ecs_entity_loader'\nexport * from './z_export/ecs_entity'\nexport * from './z_export/ecs_system'\nexport * from './z_export/ecs'\nexport * from './z_export/math'\nexport * from './z_export/multi'\nexport * from './z_export/parts'\nexport * from './z_export/server'\nexport * from './z_export/utils'\n```",
+          "dateTime": "2024-02-22T20:08:25.646Z"
+        }
+      ]
+    },
+    {
+      "title": "Engine",
+      "chats": [
+        {
+          "indexTitle": "Export",
+          "question": "Export",
+          "answer": "```plaintext\n|-- engine\n|   |-- src\n|       |-- z_export\n|           |-- client.ts\n|           |-- ecs_component.ts\n|           |-- ecs_entity_loader.ts\n|           |-- ecs_entity.ts\n|           |-- ecs_system.ts\n|           |-- math.ts\n|           |-- parts.ts\n|           |-- server.ts\n|           |-- single.ts\n|           |-- utils.ts\n|       |-- index.ts\n```",
+          "dateTime": "2024-02-22T17:59:53.504Z"
+        },
+        {
+          "indexTitle": "client",
+          "question": "client",
+          "answer": "```typescript\nexport { default as ClientEngine } from '../client/Engine'\nexport { default as ClientEngineDirector } from '../client/EngineDirector'\n```",
+          "dateTime": "2024-02-22T18:01:50.411Z"
+        },
+        {
+          "indexTitle": "ecs_component",
+          "question": "ecs_component",
+          "answer": "```typescript\nexport { default as Component } from '../ecs/component/core/Component'\nexport { componentType } from '../ecs/component/core/componentType'\n\nexport { default as BoxCollider } from '../ecs/component/BoxCollider'\nexport { default as CircleCollider } from '../ecs/component/CircleCollider'\nexport { default as ClientMovement } from '../ecs/component/ClientMovement'\nexport { default as CollisionObject } from '../ecs/component/CollisionObject'\nexport { default as Direction } from '../ecs/component/Direction'\nexport { default as GameState } from '../ecs/component/GameState'\nexport { default as InsideBoxCollider } from '../ecs/component/InsideBoxCollider'\nexport { default as Kick } from '../ecs/component/Kick'\nexport { default as LimitMove } from '../ecs/component/LimitMove'\nexport { default as Map } from '../ecs/component/Map'\nexport { default as RigidBody } from '../ecs/component/RigidBody'\nexport { default as ServerMovement } from '../ecs/component/ServerMovement'\nexport { default as Sprite } from '../ecs/component/Sprite'\nexport { default as Transform } from '../ecs/component/Transform'\n```",
+          "dateTime": "2024-02-22T18:02:26.098Z"
+        },
+        {
+          "indexTitle": "ecs_entity_loader",
+          "question": "ecs_entity_loader",
+          "answer": "```typescript\nexport { componentList } from '../ecs/entity_loader/componentList'\nexport { default as ComponentMapper } from '../ecs/entity_loader/ComponentMapper'\nexport { default as DataPrinter } from '../ecs/entity_loader/DataPrinter'\nexport { default as EntityComponentCreator } from '../ecs/entity_loader/EntityComponentCreator'\nexport { default as EntityDataManager } from '../ecs/entity_loader/EntityDataManager'\nexport { default as EntityLoaderTester } from '../ecs/entity_loader/EntityLoaderTester'\nexport { default as FileLoader } from '../ecs/entity_loader/FileLoader'\nexport { default as GameData } from '../ecs/entity_loader/GameData'\n```",
+          "dateTime": "2024-02-22T18:03:16.682Z"
+        },
+        {
+          "indexTitle": "ecs_entity",
+          "question": "ecs_entity",
+          "answer": "```typescript\nexport { default as Entity } from '../ecs/entity/Entity'\n\nexport { default as MapManager } from '../ecs/entity/manager/MapManager'\n```",
+          "dateTime": "2024-02-22T18:03:45.762Z"
+        },
+        {
+          "indexTitle": "ecs_system",
+          "question": "ecs_system",
+          "answer": "```typescript\nexport { default as GameStateSystem } from '../ecs/system/GameStateSystem'\nexport { default as KinematicsSystem } from '../ecs/system/KinematicsSystem'\nexport { default as MouseInput } from '../ecs/system/MouseInput'\nexport { default as PlayerKick } from '../ecs/system/PlayerKick'\nexport { default as SpriteStateSystem } from '../ecs/system/SpriteStateSystem'\n\nexport { default as CollisionSystem } from '../ecs/system/collision/CollisionSystem'\nexport { default as InsideBoxCollisionSystem } from '../ecs/system/collision/InsideBoxCollisionSystem'\nexport { default as LimitMoveSystem } from '../ecs/system/collision/LimitMoveSystem'\n\nexport { default as CenterCollision } from '../ecs/system/collision/detector/CenterCollision'\nexport { default as CollisionDetector } from '../ecs/system/collision/detector/CollisionDetector'\nexport { default as TopLeftCollision } from '../ecs/system/collision/detector/TopLeftCollision'\n\nexport { default as ISystemManager } from '../ecs/system/core/ISystemManager'\nexport { default as SystemManager } from '../ecs/system/core/SystemManager'\n\nexport { default as KeyboardMapping } from '../ecs/system/keyboard/KeyboardMapping'\n\nexport { default as EntityMovement } from '../ecs/system/movement/EntityMovement'\nexport { default as StepMovement } from '../ecs/system/movement/StepMovement'\n\nexport { default as DebugRenderer } from '../ecs/system/renderer/DebugRenderer'\nexport { default as MapRenderer } from '../ecs/system/renderer/MapRenderer'\nexport { default as ScoreRenderer } from '../ecs/system/renderer/ScoreRenderer'\nexport { default as SpriteRenderer } from '../ecs/system/renderer/SpriteRenderer'\n```",
+          "dateTime": "2024-02-22T19:20:13.340Z"
+        },
+        {
+          "indexTitle": "math",
+          "question": "math",
+          "answer": "```typescript\nexport { default as ImmutableVector2 } from '../math/vector/ImmutableVector2'\nexport { default as Vector2 } from '../math/vector/Vector2'\nexport { default as NeuralNetwork } from '../math/NeuralNetwork'\nexport { default as RandomNumberGenerator } from '../math/RandomNumberGenerator'\n```",
+          "dateTime": "2024-02-22T19:21:16.350Z"
+        },
+        {
+          "indexTitle": "parts",
+          "question": "parts",
+          "answer": "```typescript\nexport { default as IEngineConfigOptions } from '../config_manager/IEngineConfigOptions'\nexport { default as ConfigManager } from '../config_manager/ConfigManager'\n\nexport { default as GameFrameDto } from '../dto/GameFrameDto'\n\nexport { EventNames } from '../event_system/EventNames'\nexport { default as EventSystem } from '../event_system/EventSystem'\n\nexport { default as InputManager } from '../input/InputManager'\n\nexport { default as LogManager } from '../log_manager/LogManager'\n\nexport { default as SpriteAnimator } from '../sprite/SpriteAnimator'\n\nexport { default as MoveState } from '../state_machine/MoveState'\nexport { default as IdleState } from '../state_machine/IdleState'\n\nexport { default as Grid } from '../tech/path_finding/Grid'\nexport { default as Pathfinding } from '../tech/path_finding/Pathfinding'\n\nexport { default as SceneManager } from '../tech/scene_manager/SceneManager'\n\nexport { default as StateManager } from '../tech/state_manager/StateManager'\n```",
+          "dateTime": "2024-02-22T19:21:39.252Z"
+        },
+        {
+          "indexTitle": "server",
+          "question": "server",
+          "answer": "```typescript\nexport { default as ServerEngineDirector } from '../server/EngineDirector'\n```",
+          "dateTime": "2024-02-22T19:22:01.014Z"
+        },
+        {
+          "indexTitle": "single",
+          "question": "single",
+          "answer": "```typescript\nexport { default as SingleEngine } from '../single/Engine'\nexport { default as SingleEngineBuilder } from '../single/EngineBuilder'\nexport { default as EngineDirector } from '../single/EngineDirector'\nexport { EntityId } from '../single/EntityId'\n```",
+          "dateTime": "2024-02-22T19:22:22.110Z"
+        },
+        {
+          "indexTitle": "utils",
+          "question": "utils",
+          "answer": "```typescript\nexport { default as StringManipulator } from '../utils/StringManipulator'\n\nexport { default as ArrayDataLoader } from '../utils/data_loader/ArrayDataLoader'\nexport { default as JsonObjectLoader } from '../utils/data_loader/JsonObjectLoader'\n```",
+          "dateTime": "2024-02-22T19:22:52.128Z"
+        },
+        {
+          "indexTitle": "index",
+          "question": "index",
+          "answer": "```typescript\nexport * from './z_export/client'\nexport * from './z_export/ecs_component'\nexport * from './z_export/ecs_entity_loader'\nexport * from './z_export/ecs_entity'\nexport * from './z_export/ecs_system'\nexport * from './z_export/math'\nexport * from './z_export/parts'\nexport * from './z_export/server'\nexport * from './z_export/single'\nexport * from './z_export/utils'\n```",
+          "dateTime": "2024-02-22T19:23:16.389Z"
+        }
+      ]
+    },
+    {
       "title": "Entity",
       "chats": [
         {
@@ -44,16 +204,27 @@
           "dateTime": "2024-02-08T22:59:08.234Z"
         },
         {
-          "indexTitle": "KeyboardMappingSystem",
-          "question": "KeyboardMappingSystem",
-          "answer": "* Mapping keyboard keys to events  \n```plaintext\n|-- engine_api/\n|   |-- src/\n```\n```plaintext\n|-- engine/\n|   |-- src/\n|       |--ecs\n|           |--system\n|               |--keyboard\n|                   |--KeyboardMappingSubSystem.ts\n|                   |--KeyboardMappingSystem.ts\n|                   |--keyboardTypes.ts\n```\n```typescript\nexport type KeyAction = () => void\n\nexport type KeyActionMap = { [key: string]: KeyAction }\n\nexport type KeyEvent = 'KeyDown' | 'KeyUp'\n\nexport const KeyEvents: { [key in KeyEvent]: key } = {\n  KeyDown: 'KeyDown',\n  KeyUp: 'KeyUp',\n}\n\nexport type KeyActionWithParam<T> = (data: T) => void\n\nexport type KeyActionWithParamMap<T> = { [key: string]: KeyActionWithParam<T> }\n\nexport const KeyboardEvent = 'KeyboardEvent'\n\nexport type KeyboardKey = 'q' | 'e' | 'z' | 'x'\n\nexport const KeyboardKeys: { [key in KeyboardKey]: key } = {\n  q: 'q',\n  e: 'e',\n  z: 'z',\n  x: 'x',\n}\n```\n```typescript\nimport { KeyboardKey } from './keyboardTypes'\n\nexport default interface IKeyboardEventData {\n  entityId: string\n  key: KeyboardKey\n}\n```\n```typescript\nimport { IEntity } from 'engine_api'\n\nexport default interface IKeyboardMappingSubSystem {\n  subscribeInput(entity: IEntity): void\n  unsubscribeInput(): void\n}\n```\n```typescript\nimport { IInputManager, IEventSystem, IEntity } from 'engine_api'\nimport {\n  KeyActionWithParamMap,\n  KeyEvents,\n  KeyboardEvent,\n  KeyboardKeys,\n} from './keyboardTypes'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport IKeyboardEventData from './IKeyboardEventData'\n\nexport default class KeyboardMappingSubSystem\n  implements IKeyboardMappingSubSystem\n{\n  private _keyActions: KeyActionWithParamMap<string>\n  private _keyDownCallback!: (key: string) => void\n\n  constructor(\n    private readonly _inputManager: IInputManager,\n    private readonly _eventSystem: IEventSystem\n  ) {\n    this._keyActions = this.initKeyAction()\n  }\n\n  private initKeyAction() {\n    return {\n      q: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.q,\n        } as IKeyboardEventData),\n      e: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.e,\n        } as IKeyboardEventData),\n      z: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.z,\n        } as IKeyboardEventData),\n      x: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.x,\n        } as IKeyboardEventData),\n    } as KeyActionWithParamMap<string>\n  }\n\n  subscribeInput(entity: IEntity): void {\n    this._keyDownCallback = (inputKey: string) => {\n      const key = inputKey.toLowerCase()\n      if (this.isKeyMapped(key)) return\n      this._keyActions[key](entity.id)\n    }\n\n    this._inputManager.subscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  unsubscribeInput() {\n    this._inputManager.unsubscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  private isKeyMapped(key: string) {\n    return !this._keyActions.hasOwnProperty(key)\n  }\n}\n```\n```typescript\nimport { IFactory, IInputManager, IEventSystem } from 'engine_api'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport KeyboardMappingSubSystem from './KeyboardMappingSubSystem'\n\nexport default class KeyboardMappingSubSystemFactory\n  implements IFactory<IKeyboardMappingSubSystem>\n{\n  constructor(\n    private readonly _input: IInputManager,\n    private readonly _eventSystem: IEventSystem\n  ) {}\n\n  create(): IKeyboardMappingSubSystem {\n    return new KeyboardMappingSubSystem(this._input, this._eventSystem)\n  }\n}\n```\n```typescript\nimport { IEntityManager, IEntity, IManager, IFactory } from 'engine_api'\nimport InitLogicSystemBase from '../base/init_logic/InitLogicSystemBase'\nimport IKeyboardMappingSubSystem from './IKeyboardMappingSubSystem'\nimport MapManager from '../../entity/manager/MapManager'\n\nexport default class KeyboardMappingSystem extends InitLogicSystemBase {\n  private _subSystemManager: IManager<IKeyboardMappingSubSystem> =\n    new MapManager<IKeyboardMappingSubSystem>()\n\n  constructor(\n    entityManager: IEntityManager,\n    private readonly _subSystemFactory: IFactory<IKeyboardMappingSubSystem>\n  ) {\n    super(entityManager)\n  }\n\n  initLogic(entity: IEntity): void {\n    const subSystem = this._subSystemFactory.create()\n    subSystem.subscribeInput(entity)\n    this._subSystemManager.add(entity.id, subSystem)\n  }\n\n  unsubscribe(entity: IEntity) {\n    const subSystem = this._subSystemManager.getStrict(entity.id)\n    subSystem.unsubscribeInput()\n  }\n}\n```\n* GameSystemBuilder, use it in SinglePlayerBuilder->withSystems()\n```typescript\nwithKeyboardMapping() {\n    const system = new KeyboardMappingSystem(\n      this._entityManager,\n      new KeyboardMappingSubSystemFactory(\n        this._engine.input,\n        this._engine.eventSystem\n      )\n    )\n\n    const { player1, player2 } = this._entityList\n    ;[player1, player2].forEach((entity) => {\n      system.registerEntityByName(entity.id)\n    })\n\n    this._engine.initLogicSystemManager.add('keyboardmapping', system)\n    return this\n  }\n```",
-          "dateTime": "2024-02-12T12:24:58.651Z"
-        },
-        {
           "indexTitle": "MouseInput",
           "question": "MouseInput",
           "answer": "```typescript\nimport { IEntity, IManager } from 'engine_api'\nimport Direction from '../component/Direction'\nimport SystemBase from './core/SystemBase'\n\nconst MOUSE_MOVE_EVENT_TYPE = 'mousemove'\n\nexport class MouseInput extends SystemBase {\n  private _direction!: Direction\n\n  constructor(entityManager: IManager<IEntity>) {\n    super(entityManager)\n    this.initializeMouseInput()\n  }\n\n  start(): void {\n    this._direction = this._entity.getComponentStrict(Direction)\n  }\n\n  private initializeMouseInput() {\n    document.addEventListener(\n      MOUSE_MOVE_EVENT_TYPE,\n      this.handleMouseMove.bind(this)\n    )\n  }\n\n  private handleMouseMove(event: MouseEvent) {\n    const mouseX = event.clientX\n    const mouseY = event.clientY\n\n    const directionX = mouseX - window.innerWidth / 2\n    const directionY = mouseY - window.innerHeight / 2\n\n    this._direction.direction.x = directionX\n    this._direction.direction.y = directionY\n  }\n\n  unsubscribe() {\n    document.removeEventListener(\n      MOUSE_MOVE_EVENT_TYPE,\n      this.handleMouseMove.bind(this)\n    )\n  }\n}\n```",
           "dateTime": "2024-02-12T14:56:00.898Z"
+        }
+      ]
+    },
+	{
+      "title": "System->Keyboard",
+      "chats": [
+        {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```plaintext\n|-- engine\n|   |-- src\n|       |-- ecs\n|           |-- system\n|               |-- keyboard\n|                   |-- IKeyboardEventData.ts\n|                   |-- keyboardTypes.ts\n```\n```typescript\nimport { KeyboardKey } from './keyboardTypes'\n\nexport default interface IKeyboardEventData {\n  entityId: string\n  key: KeyboardKey\n}\n```\n```typescript\nexport type KeyAction = () => void\n\nexport type KeyActionMap = { [key: string]: KeyAction }\n\nexport type KeyEvent = 'KeyDown' | 'KeyUp'\n\nexport const KeyEvents: { [key in KeyEvent]: key } = {\n  KeyDown: 'KeyDown',\n  KeyUp: 'KeyUp',\n}\n\nexport type KeyActionWithParam<T> = (data: T) => void\n\nexport type KeyActionWithParamMap<T> = { [key: string]: KeyActionWithParam<T> }\n\nexport const KeyboardEvent = 'KeyboardEvent'\n\nexport type KeyboardKey = 'q' | 'e' | 'z' | 'x'\n\nexport const KeyboardKeys: { [key in KeyboardKey]: key } = {\n  q: 'q',\n  e: 'e',\n  z: 'z',\n  x: 'x',\n}\n```\n",
+          "dateTime": "2024-02-23T10:12:58.094Z"
+        },
+        {
+          "indexTitle": "KeyboardMapping",
+          "question": "KeyboardMapping",
+          "answer": "```plaintext\n|-- engine\n|   |-- src\n|       |-- ecs\n|           |-- system\n|               |-- keyboard.ts\n|                   |-- KeyboardMapping.ts\n```\n```typescript\nimport {\n  IInputManager,\n  IEventSystem,\n  IEntity,\n  ISubscribeEntity,\n  IEntityManager,\n  IKeyboardEventData,\n  KeyboardKeys,\n  KeyActionWithParamMap,\n  KeyboardEvent,\n  KeyEvents,\n} from 'engine_api'\nimport SystemBase from '../core/SystemBase'\n\nexport default class KeyboardMapping\n  extends SystemBase\n  implements ISubscribeEntity\n{\n  private _keyActions: KeyActionWithParamMap<string>\n  private _keyDownCallback!: (key: string) => void\n\n  constructor(\n    entityManager: IEntityManager,\n    private readonly _inputManager: IInputManager,\n    private readonly _eventSystem: IEventSystem\n  ) {\n    super(entityManager)\n    this._keyActions = this.initKeyAction()\n  }\n\n  private initKeyAction() {\n    return {\n      q: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.q,\n        } as IKeyboardEventData),\n      e: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.e,\n        } as IKeyboardEventData),\n      z: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.z,\n        } as IKeyboardEventData),\n      x: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KeyboardKeys.x,\n        } as IKeyboardEventData),\n    } as KeyActionWithParamMap<string>\n  }\n\n  start(): void {\n    this.subscribe(this._entity)\n  }\n\n  subscribe(entity: IEntity): void {\n    this._keyDownCallback = (inputKey: string) => {\n      const key = inputKey.toLowerCase()\n      if (this.isKeyMapped(key)) return\n      this._keyActions[key](entity.id)\n    }\n\n    this._inputManager.subscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  unsubscribe() {\n    this._inputManager.unsubscribeInputEvent(\n      KeyEvents.KeyDown,\n      this._keyDownCallback\n    )\n  }\n\n  private isKeyMapped(key: string) {\n    return !this._keyActions.hasOwnProperty(key)\n  }\n}\n```",
+          "dateTime": "2024-02-23T10:16:03.712Z"
         }
       ]
     },

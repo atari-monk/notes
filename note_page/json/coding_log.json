@@ -37,6 +37,12 @@
           "question": "22",
           "answer": "Refactoring/Feature, 7 pomodoro:    \n\n1. upgraded notes, static pages, inventory page started,  \n2. upgraded menus  \n\nRefactoring, 5 pomodoro:  \n\n1. refactored engine api exports,  \n2. notes in doc file to have code on one page\n",
           "dateTime": "2024-02-22T23:24:15.985Z"
+        },
+        {
+          "indexTitle": "23",
+          "question": "23",
+          "answer": "Feature, 1 pomodoro\n\n1. remap keys so that kick and dribble has keys mapped for both players",
+          "dateTime": "2024-02-23T10:07:17.698Z"
         }
       ]
     }
