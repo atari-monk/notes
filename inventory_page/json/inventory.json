@@ -35,7 +35,7 @@
         {
           "indexTitle": "Plastic Box",
           "question": "Plastic Box",
-          "answer": "#### Container\n\n![Plastic Box Front](inventory/storage_room/box_1.jpg)  \n![Plastic Box Top](inventory/storage_room/box_2.jpg)  \n\n- **Description:** Plastikowe pudełko    \n- **Content:** Small Water Pump, Micro Irigation Set  \n- **Top:** 38 x 29 cm  \n- **Bottom:** 30 x 23 cm  \n- **Heigth:** 23 cm  ",
+          "answer": "#### Container\n\n![Plastic Box Front](inventory/storage_room/box_1.jpg)  \n![Plastic Box Top](inventory/storage_room/box_2.jpg)  \n\n- **Description:** Plastikowe pudełko    \n- **Status:** W komórce lokatorskiej  \n- **Content:** Small Water Pump, Micro Irigation Set  \n- **Top:** 38 x 29 cm  \n- **Bottom:** 30 x 23 cm  \n- **Heigth:** 23 cm  ",
           "dateTime": "2024-02-22T23:12:53.165Z"
         },
         {
@@ -55,6 +55,77 @@
           "question": "### Electric Kettle",
           "answer": "#### Junk\n\n![Electric Kettle](inventory/storage_room/electric_kettle_1.jpg)  \n![Electric Kettle Inside](inventory/storage_room/electric_kettle_2.jpg)  \n\n- **Description:** Czajnik elektryczny, pęknięta plastikowa obudowa  \n- **Status:** Zepsuty złom  \n- **TODO:** Wyszukać jak zutylizować  ",
           "dateTime": "2024-02-22T22:56:54.549Z"
+        }
+      ]
+    },
+    {
+      "title": "Ikea Wardrobe",
+      "chats": [
+        {
+          "indexTitle": "Black Cardboard Box",
+          "question": "Black Cardboard Box",
+          "answer": "#### Container\n\n![Black Cardboard Box](inventory/ikea_wardrobe/black_box.jpg)\n\n- **Description:**  Black cardboard box  ",
+          "dateTime": "2024-02-24T19:05:20.657Z"
+        },
+        {
+          "indexTitle": "Camera Holder",
+          "question": "Camera Holder",
+          "answer": "#### Part\n\n![Camera Holder](inventory/ikea_wardrobe/camera_holder.jpg)\n\n- **Description:** Mount for Camera",
+          "dateTime": "2024-02-24T19:05:37.927Z"
+        },
+        {
+          "indexTitle": "Erasers",
+          "question": "Erasers",
+          "answer": "#### Container\n\n![Erasers](inventory/ikea_wardrobe/erasers.jpg)\n\n- **Description:**  New Erasers  ",
+          "dateTime": "2024-02-24T19:05:51.925Z"
+        },
+        {
+          "indexTitle": "Glasses Cleaners",
+          "question": "Glasses Cleaners",
+          "answer": "#### Cloths\n\n![Glasses Cleaners](inventory/ikea_wardrobe/glasses_cleaners.jpg)\n\n- **Description:**  Spare glasses cleaning cloths  ",
+          "dateTime": "2024-02-24T19:06:05.044Z"
+        },
+        {
+          "indexTitle": "Allen Keys",
+          "question": "Allen Keys",
+          "answer": "#### Metal Tools\n\n![Precise Allen Keys](inventory/ikea_wardrobe/imbus_1.jpg)  \n![Precise Allen Keys](inventory/ikea_wardrobe/imbus_2.jpg)  \n![Bike Allen Keys](inventory/ikea_wardrobe/imbus_3.jpg)  \n![Magnus Allen Keys](inventory/ikea_wardrobe/imbus_4.jpg)  \n![Bike Allen Keys](inventory/ikea_wardrobe/imbus_5.jpg)  \n![Bike Allen Keys](inventory/ikea_wardrobe/imbus_6.jpg)  \n![Ikea Allen Keys](inventory/ikea_wardrobe/imbus_7.jpg)  ",
+          "dateTime": "2024-02-24T19:08:19.738Z"
+        },
+        {
+          "indexTitle": "Knife",
+          "question": "Knife",
+          "answer": "#### Metal Tool\n\n![Knife](inventory/ikea_wardrobe/knife_1.jpg)  \n![Knife](inventory/ikea_wardrobe/knife_2.jpg)  \n\n- **Description:** A souvenir from a friend",
+          "dateTime": "2024-02-24T19:08:43.332Z"
+        },
+        {
+          "indexTitle": "Measuring Tape",
+          "question": "Measuring Tape",
+          "answer": "#### Tool\n\n![Measuring Tape](inventory/ikea_wardrobe/measuring_tape.jpg)  ",
+          "dateTime": "2024-02-24T19:09:03.353Z"
+        },
+        {
+          "indexTitle": "Micro Memory",
+          "question": "Micro Memory",
+          "answer": "#### Electronics\n\n![Micro Memory](inventory/ikea_wardrobe/micro_memory_1.jpg)  \n![Micro Memory](inventory/ikea_wardrobe/micro_memory_2.jpg)  \n\n- **TODO:** Check if i have use for it",
+          "dateTime": "2024-02-24T19:09:25.506Z"
+        },
+        {
+          "indexTitle": "Scriber Part",
+          "question": "Scriber Part",
+          "answer": "#### Part\n\n![Scriber Part](inventory/ikea_wardrobe/scriber_part.jpg)  \n\n- **Description:**  Spare part of usb drawing tablet  ",
+          "dateTime": "2024-02-24T19:01:10.107Z"
+        },
+        {
+          "indexTitle": "Soldering Tool",
+          "question": "Soldering Tool",
+          "answer": "#### Metal Tool\n\n![Soldering Tool](inventory/ikea_wardrobe/soldering_tool.jpg)  ",
+          "dateTime": "2024-02-24T19:02:44.016Z"
+        },
+        {
+          "indexTitle": "Solar Electronics",
+          "question": "Solar Electronics",
+          "answer": "#### Electronic Part\n\n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_1.jpg)  \n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_2.jpg)  \n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_3.jpg)  \n\n- **Container:** Black Cardboard Box ",
+          "dateTime": "2024-02-24T19:11:41.241Z"
         }
       ]
     }
