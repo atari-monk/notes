@@ -1,13 +1,13 @@
 {
   "sections": [
     {
-      "title": "File",
+      "title": "Coding Log",
       "chats": [
         {
-          "indexTitle": "Format",
-          "question": "Format",
-          "answer": "Its a log of activity on micro_engine project:\n1. Section is month.year  \n    * 02.2024\n2. Index Title and Question is day  \n    * 19\n3. Answer contains activity type, time in pomodoros on it, numbered list of what was done   \n    * Refactoring, 3 pomodoros:\n        1. What was done\n        2. ...",
-          "dateTime": "2024-02-19T13:56:33.456Z"
+          "indexTitle": "File Format",
+          "question": "File Format",
+          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:** activity type, time in pomodoros  \nnumbered list of what was done  ",
+          "dateTime": "2024-02-25T17:40:49.311Z"
         }
       ]
     },
@@ -43,6 +43,12 @@
           "question": "23",
           "answer": "Feature, 1 pomodoro\n\n1. remap keys so that kick and dribble has keys mapped for both players",
           "dateTime": "2024-02-23T10:07:17.698Z"
+        },
+        {
+          "indexTitle": "25",
+          "question": "25",
+          "answer": "Feature\n\n1. remap keys so that kick and dribble has keys mapped for both players  \nadded some keys byt not ideal for four hands on one keyboard  ",
+          "dateTime": "2024-02-25T17:20:50.585Z"
         }
       ]
     }
