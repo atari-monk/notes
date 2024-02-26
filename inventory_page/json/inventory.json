@@ -4,10 +4,10 @@
       "title": "File",
       "chats": [
         {
-          "indexTitle": "Format",
-          "question": "Format",
-          "answer": "```plaintext\nIndex Title and Question:\n### Title\n\nQuestion:\n#### Category\n\n![Image Text](inventory/storage_room/image_1.jpg)\n\n- **Description:** Opis pl  \n- **Status:** Status pl  \n- **TODO:** Akcja\n```",
-          "dateTime": "2024-02-22T21:21:36.630Z"
+          "indexTitle": "File Format",
+          "question": "File Format",
+          "answer": "```plaintext\n|||\n| ------:|:-----------|\n| **Category:**||\n| **Image_1:**|![Image Text](inventory/storage_room/image_1.jpg)|\n| **Description:**||\n| **Status:**||\n| **TODO:**||\n---\n```",
+          "dateTime": "2024-02-26T12:44:08.416Z"
         },
         {
           "indexTitle": "Image",
@@ -126,6 +126,12 @@
           "question": "Solar Electronics",
           "answer": "#### Electronic Part\n\n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_1.jpg)  \n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_2.jpg)  \n![Solar Electronics](inventory/ikea_wardrobe/solar_electronics_3.jpg)  \n\n- **Container:** Black Cardboard Box ",
           "dateTime": "2024-02-24T19:11:41.241Z"
+        },
+        {
+          "indexTitle": "Seeds_2024",
+          "question": "Seeds_2024",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Seeds|\n| **Image_1:**|![Image Text](inventory/ikea_wardrobe/seeds_2024_1.jpg)|\n| **Image_2:**|![Image Text](inventory/ikea_wardrobe/seeds_2024_2.jpg)|\n| **Image_3:**|![Image Text](inventory/ikea_wardrobe/seeds_2024_3.jpg)|\n| **Description:**|Seeds for season 2024|\n| **Status:**||\n| **TODO:**|Prepare soil and plant in couple of days|\n---\n",
+          "dateTime": "2024-02-26T12:46:48.500Z"
         }
       ]
     }
