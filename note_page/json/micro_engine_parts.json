@@ -1,0 +1,33 @@
+{
+  "sections": [
+    {
+      "title": "Config",
+      "chats": [
+        {
+          "indexTitle": "Engine API",
+          "question": "Engine API",
+          "answer": "```typescript\nexport default interface IConfigOptions {\n  [key: string]: boolean | string | number\n}\n```\n```typescript\nimport IConfigOptions from './IConfigOptions'\n\nexport default interface IConfigurationManager<T extends IConfigOptions> {\n  getConfig(): T\n  updateConfig(newConfig: Partial<T>): void\n  loadConfigFromFile(filePath: string): Promise<void>\n}\n```\n```typescript\nimport IConfigOptions from './IConfigOptions'\n\nexport default interface IEngineConfigOptions extends IConfigOptions {\n  singlePlayerMode: boolean\n  canvasId: string\n  dataPath: string\n  stepMovement: boolean\n  enableCamera: boolean\n  serverHost: string\n}\n```",
+          "dateTime": "2024-02-26T13:18:03.008Z"
+        },
+        {
+          "indexTitle": "Engine",
+          "question": "Engine",
+          "answer": "```typescript\nimport { IConfigOptions, IConfigurationManager } from 'engine_api'\n\nexport default class ConfigManager<T extends IConfigOptions>\n  implements IConfigurationManager<T>\n{\n  private config: T\n\n  constructor(initialConfig: T) {\n    this.config = { ...initialConfig }\n  }\n\n  getConfig(): T {\n    return { ...this.config }\n  }\n\n  updateConfig(newConfig: Partial<T>): void {\n    this.config = { ...this.config, ...newConfig }\n  }\n  \n  async loadConfigFromFile(filePath: string): Promise<void> {\n    try {\n      const response = await fetch(filePath)\n      const parsedConfig = await response.json()\n      this.config = { ...this.config, ...parsedConfig }\n    } catch (error) {\n      console.error('Error loading config from file:', (error as Error).message)\n    }\n  }\n}\n```",
+          "dateTime": "2024-02-26T13:19:02.760Z"
+        },
+        {
+          "indexTitle": "Ball Game",
+          "question": "Ball Game",
+          "answer": "GameModeBuilder:  \n```typescript\nasync withConfig(config: IEngineConfigOptions) {\n    this._configManager = new ConfigManager<IEngineConfigOptions>(config)\n    await this._configManager.loadConfigFromFile('data/config.json')\n    this._config = this._configManager.getConfig()\n    this._configInitialized = true\n  }\n```\nBallGameBuilder:  \n```typescript\nasync withGameMode(config: IEngineConfigOptions) {\n    this._initializationChecker.assertInitialized('withGameMode')\n    const gameModeBuilder = new GameModeBuilder()\n    await gameModeBuilder.withConfig(config)\n    const engine = gameModeBuilder.getEngine(this._gameData)\n    if (engine instanceof SingleEngine) {\n      this._singleEngine = engine\n    }\n    if (engine instanceof ClientEngine) {\n      this._multiEngine = engine\n    }\n    this._gameModeInitialized = true\n  }\n```",
+          "dateTime": "2024-02-26T13:20:48.596Z"
+        },
+        {
+          "indexTitle": "Desktop Ball Game",
+          "question": "Desktop Ball Game",
+          "answer": "index:  \n```typescript\n const defaultConfig: IEngineConfigOptions = {\n  canvasId: 'canvas',\n  dataPath: 'data/entityData.json',\n  singlePlayerMode: true,\n  stepMovement: false,\n  enableCamera: false,\n  serverHost: 'http://localhost:3001/',\n}\n```\nconfig.json:  \n```typescript\n{\n  \"canvasId\": \"canvas\",\n  \"dataPath\": \"data/entityData.json\",\n  \"singlePlayerMode\": true,\n  \"stepMovement\": false,\n  \"enableCamera\": false,\n  \"serverHost\": \"http://localhost:3001/\"\n}\n```",
+          "dateTime": "2024-02-26T13:22:43.561Z"
+        }
+      ]
+    }
+  ]
+}

@@ -6,8 +6,8 @@
         {
           "indexTitle": "File Format",
           "question": "File Format",
-          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:** activity type, time in pomodoros  \nnumbered list of what was done  ",
-          "dateTime": "2024-02-25T17:40:49.311Z"
+          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|||\n| ------:|:-----------|\n| **Type:**||\n| **Time:**||\n| **Task:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
+          "dateTime": "2024-02-25T21:46:45.094Z"
         }
       ]
     },
@@ -47,8 +47,14 @@
         {
           "indexTitle": "25",
           "question": "25",
-          "answer": "Feature\n\n1. remap keys so that kick and dribble has keys mapped for both players  \nadded some keys byt not ideal for four hands on one keyboard  ",
-          "dateTime": "2024-02-25T17:20:50.585Z"
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|~1 hour|\n| **Task:**|Remap keys so that kick and dribble have keys mapped for both players|\n| **Result:**|Added ability to map keys [ qerf ] and [/.,]|\n| **Difficulty:**|Easy but tedious and boring|\n| **Next:**|Keys are not ideal for play mode when four hands on one keyboard|\n---\n|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|~3 pomodoro|\n| **Task:**|Load config from json|\n| **Result 1:**|Async loading config from json|\n| **Result 2:**|Moved inferface to engine_api|\n| **Result 3:**|Used CopyPlugin in webconfig, to remove assets, css, json data from imports|\n| **Difficulty:**|Easy but tedious|\n| **Next:**|Problem is to define what should be in config and what in components data|\n---\n",
+          "dateTime": "2024-02-25T23:30:20.840Z"
+        },
+        {
+          "indexTitle": "26",
+          "question": "26",
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|1 pomodoro|\n| **Task:**|Make sprites flip on left right|\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n",
+          "dateTime": "2024-02-26T13:10:11.703Z"
         }
       ]
     }

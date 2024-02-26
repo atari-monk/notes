@@ -9230,6 +9230,11 @@ fileList.push(...[
         protected: false,
     },
     {
+        path: '../json/micro_engine_parts.json',
+        name: 'micro_engine_parts.json',
+        protected: false,
+    },
+    {
         path: '../json/js_ts.json',
         name: 'js_ts.json',
         protected: false,
