@@ -33,17 +33,6 @@
           "dateTime": "2024-02-13T17:53:06.554Z"
         }
       ]
-    },
-    {
-      "title": "My Pages",
-      "chats": [
-        {
-          "indexTitle": "My Pages",
-          "question": "My Pages",
-          "answer": "* [Notes_ver3 (this page)](https://atari-monk.github.io/notes/static_page/build/index.html)  \n* [Task Page](https://red-beach-032340203.3.azurestaticapps.net/)  \n* [AtariMonk GitHub](https://github.com/atari-monk?tab=repositories)  \n* [Histogram](https://atari-monk.github.io/notes/histogram/index.html)  \n    * prosta stronka wygenerowana chagpt w 10 min  \n    * simple graph generated with chatgpt in 10 min  ",
-          "dateTime": "2024-02-07T20:24:26.410Z"
-        }
-      ]
     }
   ]
 }
