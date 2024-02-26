@@ -53,8 +53,8 @@
         {
           "indexTitle": "26",
           "question": "26",
-          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|1 pomodoro|\n| **Task:**|Make sprites flip on left right|\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n",
-          "dateTime": "2024-02-26T13:10:11.703Z"
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|1 pomodoro|\n| **Task:**|Make sprites flip on left right|\n| **Result_1:**|Refactored renderer. Removed non vector. Renamed the one with vector to main one|\n| **Result_2:**|In EntityMovement system, on left, right, fliped flag in sprite compoenent, this feeds to renderer|\n| **Difficulty:**|Easy|\n| **Next:**|Now Center of kick collision box must be mirrored along player position|\n---\n|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|3 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, right|\n| **Result_1:**|Failed to do task|\n| **Result_2:**|Used only player1 entity to do test on smaller set|\n| **Result_3:**|Added null checks to system builder, that worked only on full data before|\n| **Difficulty:**|Easy but tiring|\n| **Next:**|This task is still todo|\n---\n",
+          "dateTime": "2024-02-26T22:30:40.804Z"
         }
       ]
     }
