@@ -55,6 +55,18 @@
           "question": "26",
           "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|1 pomodoro|\n| **Task:**|Make sprites flip on left right|\n| **Result_1:**|Refactored renderer. Removed non vector. Renamed the one with vector to main one|\n| **Result_2:**|In EntityMovement system, on left, right, fliped flag in sprite compoenent, this feeds to renderer|\n| **Difficulty:**|Easy|\n| **Next:**|Now Center of kick collision box must be mirrored along player position|\n---\n|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|3 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, right|\n| **Result_1:**|Failed to do task|\n| **Result_2:**|Used only player1 entity to do test on smaller set|\n| **Result_3:**|Added null checks to system builder, that worked only on full data before|\n| **Difficulty:**|Easy but tiring|\n| **Next:**|This task is still todo|\n---\n",
           "dateTime": "2024-02-26T22:30:40.804Z"
+        },
+        {
+          "indexTitle": "27",
+          "question": "27",
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|9 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, right|\n| **Result_1:**|Failed this task|\n| **Result_2:**|Introduced system for list of registered entities|\n| **Result_3:**|Refactored movement system to use it|\n| **Result_4:**|Old classes still exist for now|\n| **Result_5:**|Added Sprite flip system on new base|\n| **Difficulty:**|Medium, confusing|\n| **Next:**|Do player flip, add direction and kick box|\n---\n",
+          "dateTime": "2024-02-28T10:09:58.772Z"
+        },
+        {
+          "indexTitle": "28",
+          "question": "28",
+          "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|6 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, righ|\n| **Result_1:**|Added FlipBox in ball_game to flip kick box and direction on left right|\n| **Result_2:**|Markers component|\n| **Result_3:**|Updated center in collision algo when flip occures, this is to lame ? or efficient ?|\n| **Difficulty:**|Medium|\n| **Next:**|This is to complex, maybe put some data in component and update it evry frame so no events needed ?|\n---\n\n|||\n| ------:|:-----------|\n| **Project:**|3d_unity|\n| **Type:**|Tutorial|\n| **Time:**|2 pomodoro|\n| **Task:**|Add Level 2|\n| **Result:**|Done|\n| **Difficulty:**|Easy but lot clicking|\n| **Next:**|Next part|\n---\n",
+          "dateTime": "2024-02-28T23:08:47.361Z"
         }
       ]
     }
