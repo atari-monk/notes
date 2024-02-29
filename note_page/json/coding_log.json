@@ -6,8 +6,8 @@
         {
           "indexTitle": "File Format",
           "question": "File Format",
-          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|||\n| ------:|:-----------|\n| **Type:**||\n| **Time:**||\n| **Task:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
-          "dateTime": "2024-02-25T21:46:45.094Z"
+          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|||\n| ------:|:-----------|\n| **Project:**||\n| **Type:**||\n| **CommitsNr:**||\n| **Time:**||\n| **TaskNr:**||\n| **Task:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
+          "dateTime": "2024-02-29T15:21:24.362Z"
         }
       ]
     },
@@ -67,6 +67,12 @@
           "question": "28",
           "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|6 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, righ|\n| **Result_1:**|Added FlipBox in ball_game to flip kick box and direction on left right|\n| **Result_2:**|Markers component|\n| **Result_3:**|Updated center in collision algo when flip occures, this is to lame ? or efficient ?|\n| **Difficulty:**|Medium|\n| **Next:**|This is to complex, maybe put some data in component and update it evry frame so no events needed ?|\n---\n\n|||\n| ------:|:-----------|\n| **Project:**|3d_unity|\n| **Type:**|Tutorial|\n| **Time:**|2 pomodoro|\n| **Task:**|Add Level 2|\n| **Result:**|Done|\n| **Difficulty:**|Easy but lot clicking|\n| **Next:**|Next part|\n---\n",
           "dateTime": "2024-02-28T23:08:47.361Z"
+        },
+        {
+          "indexTitle": "29",
+          "question": "29",
+          "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|4 pomodoro|\n| **TaskNr:**|56|\n| **Task:**|Add BallDribble system|\n| **Result:**|Added BallDrible|\n| **Difficulty:**|Medium, still not rutine|\n| **Next:**|It needs improvements, especially on flip|\n---\n|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **CommitsNr:**|5|\n| **PomodoroNr:**|8|\n| **TaskNr:**|57|\n| **Task:**|Create and on/off debug renderings with key|\n| **Result_1:**|Extract MarkersRenderer system|\n| **Result_2:**|Extract methods in MarkersRenderer|\n| **Result_3:**|Proj node_test for jsonToMapTest|\n| **Result_4:**|In engine, component with map and json mapping|\n| **Result_5:**|In ball_game, markers renderer|\n| **Difficulty:**|Medium, developing style|\n| **Next:**|This is part 1, no on/off yet|\n---\n",
+          "dateTime": "2024-02-29T19:43:01.778Z"
         }
       ]
     }
