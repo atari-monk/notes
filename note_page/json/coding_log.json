@@ -6,8 +6,8 @@
         {
           "indexTitle": "File Format",
           "question": "File Format",
-          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|||\n| ------:|:-----------|\n| **Project:**||\n| **Type:**||\n| **CommitsNr:**||\n| **Time:**||\n| **TaskNr:**||\n| **Task:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
-          "dateTime": "2024-02-29T15:21:24.362Z"
+          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|Task||\n| ------:|:-----------|\n| **Project:**||\n| **TaskNr:**||\n| **TaskType:**||\n| **Description:**||\n| **CommitsNr:**||\n| **PomodoroNr:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
+          "dateTime": "2024-03-01T14:49:52.802Z"
         }
       ]
     },
@@ -73,6 +73,17 @@
           "question": "29",
           "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|4 pomodoro|\n| **TaskNr:**|56|\n| **Task:**|Add BallDribble system|\n| **Result:**|Added BallDrible|\n| **Difficulty:**|Medium, still not rutine|\n| **Next:**|It needs improvements, especially on flip|\n---\n|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **CommitsNr:**|6|\n| **PomodoroNr:**|9|\n| **TaskNr:**|57|\n| **Task:**|Create and on/off debug renderings with key|\n| **Result_1:**|Extract MarkersRenderer system|\n| **Result_2:**|Extract methods in MarkersRenderer|\n| **Result_3:**|Proj node_test for jsonToMapTest|\n| **Result_4:**|In engine, component with map and json mapping|\n| **Result_5:**|In ball_game, markers renderer|\n| **Result_6:**|In ball_game, added markers to markers renderer|\n| **Difficulty:**|Medium, developing style|\n| **Next:**|This is part 1, no on/off yet|\n---\n",
           "dateTime": "2024-02-29T23:10:31.849Z"
+        }
+      ]
+    },
+    {
+      "title": "03.2024",
+      "chats": [
+        {
+          "indexTitle": "1",
+          "question": "1",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Refactor|\n| **Description:**|Create best drawPoint method in ts i could|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|3|\n| **Result:**|Method that has each option optional|\n| **Difficulty:**|Easy but painly|\n| **Next:**|More?|\n---\n",
+          "dateTime": "2024-03-01T14:52:12.770Z"
         }
       ]
     }
