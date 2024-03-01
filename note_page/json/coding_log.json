@@ -82,8 +82,8 @@
         {
           "indexTitle": "1",
           "question": "1",
-          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Refactor|\n| **Description:**|Create best drawPoint method in ts i could|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|3|\n| **Result:**|Method that has each option optional|\n| **Difficulty:**|Easy but painly|\n| **Next:**|More?|\n---\n",
-          "dateTime": "2024-03-01T14:52:12.770Z"
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Refactor|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|4|\n| **PomodoroNr:**|5.6|\n| **Result_1:**|Create best drawPoint method in ts i could, that has each option optional|\n| **Result_2:**|Cleanup MarkersRenderer|\n| **Result_3:**|On/Off added to MarkersRenderer on level of component|\n| **Difficulty:**|Easy but painfull|\n| **Next:**|On/Off on config|\n---\n",
+          "dateTime": "2024-03-01T21:32:17.057Z"
         }
       ]
     }
