@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "title": "Mapping key to action",
+      "chats": [
+        {
+          "indexTitle": "Add Key Type",
+          "question": "Add Key Type",
+          "answer": "1. In keyboardTypes add new KEY_ to const, KeyboardKey, KeyboardKeys  \n```plaintext  \n|-- engine_api\n|   |-- src\n|       |-- ecs\n|           |-- keyboard\n|               |-- keyboardTypes.ts\n```\n2. Export Key const  in z_export->esc_system.ts\n```typescript\nexport {\n  KEY_,\n  .\n  .\n  . \n} from '../ecs/system/keyboard/keyboardTypes'\n```\n3. Run command to propagate it in engine,  ball_game, desktop_ball_game\n```bash\nnpm run i-lib\n```",
+          "dateTime": "2024-03-02T16:55:53.390Z"
+        },
+        {
+          "indexTitle": "Add Key to KeyboardMapping system",
+          "question": "Add Key to KeyboardMapping system",
+          "answer": "1. Add mapping of key to action, witch is sending event using event System,  method  \ninitKeyAction.\n```plaintext\n|-- engine\n|   |-- src\n|       |-- ecs\n|           |-- system\n|               |-- keyboard\n|                   |-- KeyboardMapping.ts\n```\n```typescript\n[KEY_]: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KEY_,\n        } as IKeyboardEventData),\n```",
+          "dateTime": "2024-03-02T16:57:56.114Z"
+        },
+        {
+          "indexTitle": "Use added key",
+          "question": "Use added key",
+          "answer": "1. In your chosen system make sure you have eventSystem dependency  \n```typescript\nconstructor(\n    entityManager: IEntityManager,\n    private readonly _eventSystem: IEventSystem\n  ) {\n    super(entityManager)\n  }\n```\n2. Subscribe to KeyboardEvent.  \n```typescript\nthis._eventSystem.subscribe(KeyboardEvent, this.handlerName.bind(this))\n```\nYou may need to import KeyboardEvent mannually  \n```typescript\nimport {\n  KeyboardEvent,\n} from 'engine_api'\n```\n3. Define event handler, for example  \n```typescript\n private handlerName(data: IKeyboardEventData) {\n    //check event data, key, component data\n    if (\n      this._entity.id !== data.entityId ||\n      !this._actionComponent.enableAction ||\n      data.key !== this._action.key\n    )\n      return\n\n   //action logic\n  }\n```",
+          "dateTime": "2024-03-02T17:23:42.015Z"
+        }
+      ]
+    }
+  ]
+}
