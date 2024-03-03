@@ -9225,6 +9225,11 @@ fileList.push(...[
         protected: false,
     },
     {
+        path: '../json/micro_engine_step_by_step.json',
+        name: 'micro_engine_step_by_step.json',
+        protected: false,
+    },
+    {
         path: '../json/micro_engine_ecs.json',
         name: 'micro_engine_ecs.json',
         protected: false,
