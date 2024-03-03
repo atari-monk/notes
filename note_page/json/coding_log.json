@@ -90,6 +90,12 @@
           "question": "2",
           "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Feature|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|4|\n| **Result_1:**|We created step by step note how to add new key mapping|\n| **Result_2:**|Keyboard mapping is done for 2 players, we need mapping for game|\n| **Result_3:**|Markers can be switched with i|\n| **Difficulty:**|Medium, with notes|\n| **Next:**|Do same for vectors and boxes|\n---\n",
           "dateTime": "2024-03-02T21:07:06.261Z"
+        },
+        {
+          "indexTitle": "3",
+          "question": "3",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Feature|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Extracted MarkersKeyboard from MarkersRenderer class, to have SRP|\n| **Difficulty:**|Easy but grindy|\n| **Next:**|Go to next feature at last!|\n---\n",
+          "dateTime": "2024-03-03T18:30:45.037Z"
         }
       ]
     }
