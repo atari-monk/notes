@@ -44,6 +44,11 @@ fileList.push(
       protected: false,
     },
     {
+      path: '../json/sleep_log.json',
+      name: 'sleep_log.json',
+      protected: false,
+    },
+    {
       path: '../json/video_watching_log.json',
       name: 'video_watching_log.json',
       protected: false,
