@@ -28,6 +28,35 @@
           "dateTime": "2024-03-03T18:39:31.047Z"
         }
       ]
+    },
+    {
+      "title": "Upgrading Systems",
+      "chats": [
+	    {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```typescript\nexport default interface IStartable {\n  start(): void\n}\n```\n```typescript\nexport default interface IUpdateable {\n  update(deltaTime: number): void\n}\n```\n```typescript\nexport default interface IRenderable {\n  render(deltaTime: number): void\n}\n```\n```typescript\nimport IEntity from '../../entity/IEntity'\n\nexport default interface IRegisterEntityById {\n  registerEntityById(entity: IEntity): void\n}\n```\n```typescript\nimport IRenderable from '../../IRenderable'\nimport IStartable from '../../IStartable'\nimport IUpdateable from '../../IUpdateable'\nimport IRegisterEntityById from './IRegisterEntityById'\n\nexport default interface ISystem\n  extends IStartable,\n    IUpdateable,\n    IRenderable,\n    IRegisterEntityById {}\n```\n```typescript\nimport IEntity from '../../entity/IEntity'\n\nexport default interface IRegisterEntitiesById {\n  registerEntitiesById(entitys: IEntity[]): void\n}\n```\n```typescript\nimport IRegisterEntitiesById from './IRegisterEntitiesById'\nimport ISystem from './ISystem'\n\nexport default interface IMultiSystem extends ISystem, IRegisterEntitiesById {}\n```",
+          "dateTime": "2024-03-06T12:01:26.727Z"
+        },
+        {
+          "indexTitle": "System",
+          "question": "System",
+          "answer": "```typescript\nimport { IEntity, IManager, ISystem } from 'engine_api'\n\nexport default abstract class SystemBase implements ISystem {\n  protected _entity!: IEntity\n\n  constructor(protected readonly _entityManager: IManager<IEntity>) {}\n\n  registerEntityById(entityId: string): void {\n    this._entity = this._entityManager.getStrict(entityId)\n  }\n\n  start() {}\n\n  update(_deltaTime: number) {}\n\n  render(_deltaTime: number) {}\n}\n```",
+          "dateTime": "2024-03-06T11:33:31.985Z"
+        },
+        {
+          "indexTitle": "MultiSystem ",
+          "question": "MultiSystem ",
+          "answer": "```typescript\nimport { IEntity, IManager, ISystem } from 'engine_api'\n\nexport default abstract class MultiSystem implements ISystem {\n  protected _entities: IEntity[] = []\n\n  constructor(protected readonly _entityManager: IManager<IEntity>) {}\n\n  registerEntityById(entityId: string): void {\n    this._entities.push(this._entityManager.getStrict(entityId))\n  }\n\n  start() {\n    this._entities.forEach((entity) => {\n      this.startEntity(entity)\n    })\n  }\n\n  protected startEntity(_entity: IEntity) {}\n\n  update(deltaTime: number) {\n    this._entities.forEach((entity) => {\n      this.updateEntity(entity, deltaTime)\n    })\n  }\n\n  protected updateEntity(_entity: IEntity, _deltaTime: number) {}\n\n  render(_deltaTime: number) {\n    this._entities.forEach((entity) => {\n      this.renderEntity(entity, _deltaTime)\n    })\n  }\n\n  protected renderEntity(_entity: IEntity, _deltaTime: number) {}\n}\n```",
+          "dateTime": "2024-03-06T11:34:27.102Z"
+        },
+        {
+          "indexTitle": "Inquiry",
+          "question": "Inquiry",
+          "answer": "I have systems in my ecs engine in ts that i want to be inspired by unity.  \nI think MultiSystem is upgrade compared to System dont you think ?  \n\n* The MultiSystem seems to handle multiple entities, making it more versatile compared to the single-entity handling in SystemBase.",
+          "dateTime": "2024-03-06T11:56:53.637Z"
+        }
+      ]
     }
   ]
 }
