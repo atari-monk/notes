@@ -120,6 +120,12 @@
           "question": "7",
           "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|65|\n| **TaskType:**|Feature|\n| **Description:**|Introduce demo project with configurations so all systems and components are tested|\n| **CommitsNr:**|11|\n| **PomodoroNr:**|8|\n| **Result_1:**|Add Game class and move it from Game up to Engine|\n| **Result_2:**|Add ability to change data with config. InitializationChecker refactor.|\n| **Result_3:**|Add ability to change data with config. Dependency inversion|\n| **Result_4:**|Add ability to change data with config. Failed. A lot of refactoring instead. That means something was in a way.|\n| **Difficulty:**|Hard|\n| **Next:**|Find out if after refactoring it is possible ?|\n---\n",
           "dateTime": "2024-03-07T15:24:40.920Z"
+        },
+        {
+          "indexTitle": "8",
+          "question": "8",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor some systems|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Refactor DebugRenderer to MultiSystem|\n| **Difficulty:**|Easy|\n| **Next:**|Upgrade systems|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**||\n| **TaskNr:**||\n| **TaskType:**||\n| **Description:**||\n| **CommitsNr:**||\n| **PomodoroNr:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n",
+          "dateTime": "2024-03-08T15:37:03.752Z"
         }
       ]
     }
