@@ -134,6 +134,23 @@
           "dateTime": "2024-02-26T12:46:48.500Z"
         }
       ]
+    },
+    {
+      "title": "Sliding Door Wardrobe 2",
+      "chats": [
+        {
+          "indexTitle": "Analog hdmi Cable",
+          "question": "Analog hdmi Cable",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Cable|\n| **Image_1:**|![Analog hdmi Cable](inventory/sliding_door_wardrobe_2/analog_hdmi_cable.jpg)|\n| **Description:**|Analog cable with coverter from analog on monitor to hdmi on computer|\n| **Status:**|Not great in use, switching screen is problematic, quality is soso, view needs manual calibration|\n---\n",
+          "dateTime": "2024-03-08T17:59:08.928Z"
+        },
+        {
+          "indexTitle": "Audio Jack Cable 1",
+          "question": "Audio Jack Cable 1",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Cable|\n| **Image_1:**|![Audio Jack Cable 1](inventory/sliding_door_wardrobe_2/audio_jack_cable.jpg)|\n| **Description:**|Thin audio jack cable|\n| **Status:**|I think it works|\n---",
+          "dateTime": "2024-03-08T18:02:47.805Z"
+        }
+      ]
     }
   ]
 }
