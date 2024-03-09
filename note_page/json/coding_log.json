@@ -124,8 +124,14 @@
         {
           "indexTitle": "8",
           "question": "8",
-          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor some systems|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Refactor DebugRenderer to MultiSystem|\n| **Difficulty:**|Easy|\n| **Next:**|Upgrade systems|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**||\n| **TaskNr:**||\n| **TaskType:**||\n| **Description:**||\n| **CommitsNr:**||\n| **PomodoroNr:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n",
-          "dateTime": "2024-03-08T15:37:03.752Z"
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor some systems|\n| **CommitsNr:**|10|\n| **PomodoroNr:**|7|\n| **Result_1:**|Add automation scripts|\n| **Result_2:**|Refactor DebugRenderer to MultiSystem|\n| **Result_3:**|Update system builder to use config|\n| **Difficulty:**|Manageable but to slow|\n| **Next:**|Upgrade systems, fix StepMovement, Movement|\n---\n",
+          "dateTime": "2024-03-08T22:33:09.463Z"
+        },
+        {
+          "indexTitle": "9",
+          "question": "9",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem base for StepMovement|\n| **CommitsNr:**|3|\n| **PomodoroNr:**|3|\n| **Result:**|Also fixed its builder|\n| **Difficulty:**|Easy|\n| **Next:**|More of similar|\n---\n",
+          "dateTime": "2024-03-09T21:17:27.399Z"
         }
       ]
     }
