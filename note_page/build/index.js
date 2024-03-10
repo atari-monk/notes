@@ -9264,6 +9264,11 @@ fileList.push(...[
         name: 'to_do.json',
         protected: false,
     },
+    {
+        path: '../json/quotes.json',
+        name: 'quotes.json',
+        protected: false,
+    },
 ]);
 const fileListContainer = document.getElementById('fileListContainer');
 fileList.forEach((file) => {
