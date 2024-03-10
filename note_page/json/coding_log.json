@@ -132,6 +132,12 @@
           "question": "9",
           "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem base for StepMovement|\n| **CommitsNr:**|3|\n| **PomodoroNr:**|3|\n| **Result:**|Also fixed its builder|\n| **Difficulty:**|Easy|\n| **Next:**|More of similar|\n---\n",
           "dateTime": "2024-03-09T21:17:27.399Z"
+        },
+        {
+          "indexTitle": "10",
+          "question": "10",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem for movement folder|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|4|\n| **Result:**|Applied new System to all movements, tested 2 possible to test|\n| **Difficulty:**|Medium|\n| **Next:**|More refactoring|\n---\n",
+          "dateTime": "2024-03-10T15:41:50.207Z"
         }
       ]
     }
