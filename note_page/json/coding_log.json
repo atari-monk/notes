@@ -138,6 +138,12 @@
           "question": "10",
           "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem for movement folder|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|4|\n| **Result:**|Applied new System to all movements, tested 2 possible to test|\n| **Difficulty:**|Medium|\n| **Next:**|More refactoring|\n---\n",
           "dateTime": "2024-03-10T15:41:50.207Z"
+        },
+        {
+          "indexTitle": "11",
+          "question": "11",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor KinematicsSystem|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|8|\n| **Result_1:**|KinematicsSystem rebased to new base|\n| **Result_2:**|PlayerKick rebased to new base, problem setting cache|\n| **Difficulty:**|Medium but long|\n| **Next:**||\n---\n",
+          "dateTime": "2024-03-11T23:25:09.694Z"
         }
       ]
     }
