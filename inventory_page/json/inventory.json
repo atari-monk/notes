@@ -224,20 +224,43 @@
         {
           "indexTitle": "Carpentry Clamps",
           "question": "Carpentry Clamps",
-          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tool|\n| **Image_1:**|![Carpentry Clamps](inventory/green_tool_box/carpentry_clamps_1.jpg)|\n| **Image_2:**|![Carpentry Clamps](inventory/green_tool_box/carpentry_clamps_2.jpg)|\n| **Description:**|Carpentry Clamps|\n| **Status:**|Very Usefull|\n---\n",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tool|\n| **Image_1:**|![Carpentry Clamps](inventory/tool_box_green/carpentry_clamps_1.jpg)|\n| **Image_2:**|![Carpentry Clamps](inventory/tool_box_green/carpentry_clamps_2.jpg)|\n| **Description:**|Carpentry Clamps|\n| **Status:**|Very Usefull|\n---\n",
           "dateTime": "2024-03-10T21:03:35.774Z"
         },
         {
           "indexTitle": "Tools",
           "question": "Tools",
-          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tools|\n| **Image_1:**|![Image Text](inventory/green_tool_box/tools_1.jpg)|\n| **Image_1:**|![Image Text](inventory/green_tool_box/tools_2.jpg)|\n| **Description:**|img1: 3 x hair saw blade, set of cutting blades, screwdriver heads, small screwdriver, drill holder for wheel with sandpaper, 3 x flat wrench. img2: 3 x screwdriver, 2 x boxes, cap on bike tire valve|\n---\n",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tools|\n| **Image_1:**|![Image Text](inventory/tool_box_green/tools_1.jpg)|\n| **Image_1:**|![Image Text](inventory/tool_box_green/tools_2.jpg)|\n| **Description:**|img1: 3 x hair saw blade, set of cutting blades, screwdriver heads, small screwdriver, drill holder for wheel with sandpaper, 3 x flat wrench. img2: 3 x screwdriver, 2 x boxes, cap on bike tire valve|\n---\n",
           "dateTime": "2024-03-10T21:13:15.269Z"
         },
         {
           "indexTitle": "Tools",
           "question": "Tools",
-          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tools|\n| **Image_1:**|![Glowes](inventory/green_tool_box/glowes.jpg)|\n| **Image_2:**|![Template](inventory/green_tool_box/template.jpg)|\n| **Image_3:**|![Wheels](inventory/green_tool_box/wheels.jpg)|\n| **Image_4:**|![Measure Tape](inventory/green_tool_box/measure_tape.jpg)|\n| **Image_5:**|![Spatula](inventory/green_tool_box/spatula.jpg)|\n| **Description:**|glowes, template for arc, wheels, measure tape, nails, holding tape, spatula, bit drill holder|\n---\n",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Tools|\n| **Image_1:**|![Glowes](inventory/tool_box_green/glowes.jpg)|\n| **Image_2:**|![Template](inventory/tool_box_green/template.jpg)|\n| **Image_3:**|![Wheels](inventory/tool_box_green/wheels.jpg)|\n| **Image_4:**|![Measure Tape](inventory/tool_box_green/measure_tape.jpg)|\n| **Image_5:**|![Spatula](inventory/tool_box_green/spatula.jpg)|\n| **Description:**|glowes, template for arc, wheels, measure tape, nails, holding tape, spatula, bit drill holder|\n---\n",
           "dateTime": "2024-03-10T21:35:45.211Z"
+        }
+      ]
+    },
+    {
+      "title": "Tool Box Small",
+      "chats": [
+        {
+          "indexTitle": "Bits",
+          "question": "Bits",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Metal Tool|\n| **Image_1:**|![Bits1](inventory/tool_box_small/bit_screwdriver.jpg)|\n| **Image_2:**|![Bits2](inventory/tool_box_small/bit_sockets.jpg)|\n| **Image_3:**|![Bits3](inventory/tool_box_small/bits_torx.jpg)|\n| **Description:**|Bits|\n| **Status:**|They break pretty fast|\n---\n",
+          "dateTime": "2024-03-12T21:35:22.110Z"
+        },
+        {
+          "indexTitle": "Drills",
+          "question": "Drills",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Metal Tools|\n| **Image_1:**|![Drill1](inventory/tool_box_small/drills_wood.jpg)|\n| **Image_2:**|![Drill2](inventory/tool_box_small/drills_metal.jpg)|\n| **Image_3:**|![Drill3](inventory/tool_box_small/drills_countersink.jpg)|\n| **Image_4:**|![Drill4](inventory/tool_box_small/drills_big_wood.jpg)|\n| **Image_5:**|![Drill5](inventory/tool_box_small/center_punch.jpg)|\n| **Image_6:**|![Drill6](inventory/tool_box_small/drill_square_1.jpg)|\n| **Image_7:**|![Drill7](inventory/tool_box_small/drill_square_2.jpg)|\n| **Image_8:**|![Drill8](inventory/tool_box_small/carpenter_pencil.jpg)|\n| **Image_9:**|![Drill9](inventory/tool_box_small/eraser.jpg)|\n| **Image_10:**|![Drill10](inventory/tool_box_small/try_square_1.jpg)|\n| **Image_11:**|![Drill11](inventory/tool_box_small/try_square_2.jpg)|\n| **Image_12:**|![Drill12](inventory/tool_box_small/meter_metal.jpg)|\n| **Image_13:**|![Drill13](inventory/tool_box_small/mater_plastic.jpg)|\n| **Image_14:**|![Drill14](inventory/tool_box_small/meter_tape.jpg)|\n| **Image_15:**|![Drill15](inventory/tool_box_small/pencil_sharpener.jpg)|\n| **Description:**|Drilling tools kit|\n| **Status:**|Need more 3mm wood pilot drills|\n---\n",
+          "dateTime": "2024-03-12T21:40:52.784Z"
+        },
+        {
+          "indexTitle": "Boxes",
+          "question": "Boxes",
+          "answer": "|||\n| ------:|:-----------|\n| **Category:**|Container|\n| **Image_1:**|![Box1](inventory/tool_box_small/tool_box_small.jpg)|\n| **Image_2:**|![Box2](inventory/tool_box_small/sawing_kit_1.jpg)|\n| **Image_3:**|![Box3](inventory/tool_box_small/sawing_kit_2.jpg)|\n| **Image_4:**|![Box4](inventory/tool_box_small/sawing_kit_3.jpg)|\n| **Description:**|Plastic tool boxes|\n| **Container:**|kea Wardrobe|\n---\n|||\n| ------:|:-----------|\n| **Category:**|Misc Tools|\n| **Image_1:**|![Box1](inventory/tool_box_small/gloves_garden_1.jpg)|\n| **Image_2:**|![Box2](inventory/tool_box_small/gloves_garden_2.jpg)|\n| **Image_2:**|![Box2](inventory/tool_box_small/plastic_cover.jpg)|\n| **Description:**|Misc tools|\n| **Container:**|Plastic tool boxes|\n---",
+          "dateTime": "2024-03-12T21:47:09.449Z"
         }
       ]
     }
