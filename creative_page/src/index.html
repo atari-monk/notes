@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atari Monk Note</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css"
+    />
+  </head>
+  <body class="dark-mode">
+    <div class="row-container">
+      <button id="darkModeButton">Toggle Dark Mode</button>
+    </div>
+
+    <div id="fileListContainer">
+      <p>Pages:</p>
+    </div>
+
+    <div id="index_title">
+      <a href="#index_title" id="indexLink">Index</a>
+    </div>
+    <a href="#fileListContainer">&#9650;</a>
+    <div id="currentPage">
+      <p>CurrentPage:</p>
+      <p id="currentPage_value"></p>
+    </div>
+    <div id="index"></div>
+    <a href="#fileListContainer">&#9650;</a>
+
+    <hr />
+    <div id="jsonContainer"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
