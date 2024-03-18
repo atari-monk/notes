@@ -1,5 +1,10 @@
 build
 node_modules
+
 !note_page/build/
+
+!creative_page/build/
+
 !inventory_page/build/
+
 !pastime_page/build/
