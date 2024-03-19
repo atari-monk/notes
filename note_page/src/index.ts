@@ -34,11 +34,6 @@ const fileList: IFile[] = []
 fileList.push(
   ...[
     {
-      path: '../json/atari_monk_creative.json',
-      name: 'atari_monk_creative.json',
-      protected: false,
-    },
-    {
       path: '../json/links.json',
       name: 'links.json',
       protected: false,
