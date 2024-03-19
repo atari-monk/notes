@@ -4,10 +4,10 @@
       "title": "About",
       "chats": [
         {
-          "indexTitle": "Atari Monk",
-          "question": "Atari Monk",
-          "answer": "Atari Monk is Author of listed creations  \n\n[AtariMonk Games](https://atari-monk.itch.io/)  \n\n[AtariMonk GitHub](https://github.com/atari-monk?tab=repositories)  ",
-          "dateTime": "2024-02-13T16:41:10.096Z"
+          "indexTitle": "Developer",
+          "question": "Developer",
+          "answer": "Atari Monk  \n\n* [Games](https://atari-monk.itch.io/)  \n* [GitHub](https://github.com/atari-monk?tab=repositories)  ",
+          "dateTime": "2024-03-19T13:13:15.687Z"
         },
         {
           "indexTitle": "Art",
@@ -21,16 +21,52 @@
       "title": "Games",
       "chats": [
         {
-          "indexTitle": "ball-game-2",
-          "question": "ball-game-2",
-          "answer": "[ball-game-2](https://atari-monk.itch.io/ball-game-2)  \n* 2 players ball game, pong style",
-          "dateTime": "2024-02-13T16:03:01.921Z"
+          "indexTitle": "ball_game_1",
+          "question": "[ball_game_1](https://kind-moss-0f787ca03.3.azurestaticapps.net/)  ",
+          "answer": "* This taught me, that server should contain game and synchronize clients\n* Here game code was on clients and server was synchronizing, witch turned out incalculable for me",
+          "dateTime": "2024-03-19T13:19:12.050Z"
         },
         {
-          "indexTitle": "BEST GAME EVER",
-          "question": "BEST GAME EVER",
-          "answer": "[BEST GAME EVER](https://atari-monk.itch.io/best-game-ever)  \nDone during this tutorial [TUTORIAL](https://www.youtube.com/playlist?list=PLrnPJCHvNZuCVTz6lvhR81nnaf1a-b67U)",
-          "dateTime": "2024-02-13T17:08:27.191Z"
+          "indexTitle": "ball_game_2",
+          "question": "[ball_game_2](https://atari-monk.itch.io/ball-game-2)  ",
+          "answer": "* 2 players ball game, pong style",
+          "dateTime": "2024-03-19T13:20:22.055Z"
+        },
+        {
+          "indexTitle": "ball_game_2.5",
+          "question": "[ball_game_2.5](https://polite-bush-063bc3b03.3.azurestaticapps.net/)",
+          "answer": "* Mobile multiplayer version\n* This taught me that engine provides organization and tools\n* Otherwise spaghetti code complexity",
+          "dateTime": "2024-03-19T13:21:10.756Z"
+        },
+        {
+          "indexTitle": "pong",
+          "question": "[pong](https://atari-monk.github.io/js-pong-page/pong.html)  \n[pong project](https://atari-monk.github.io/js-pong-page/)",
+          "answer": "* My pong\n* Two players with mouse and arrows on same pc",
+          "dateTime": "2024-03-19T14:18:47.431Z"
+        },
+        {
+          "indexTitle": "best_game_ever",
+          "question": "[best_game_ever](https://atari-monk.itch.io/best-game-ever)  ",
+          "answer": "* Done during this [TUTORIAL](https://www.youtube.com/playlist?list=PLrnPJCHvNZuCVTz6lvhR81nnaf1a-b67U)",
+          "dateTime": "2024-03-19T13:22:33.775Z"
+        },
+        {
+          "indexTitle": "pokemon",
+          "question": "[pokemon](https://atari-monk.github.io/pokemon-tutorial/)",
+          "answer": "* Coded during [Tutorial](https://youtu.be/yP5DKzriqXA?feature=shared)\n* Go walk on grass to start fight",
+          "dateTime": "2024-03-19T13:46:15.224Z"
+        },
+        {
+          "indexTitle": "dog_game",
+          "question": "[dog_game](https://atari-monk.github.io/js-game-beginner/)",
+          "answer": "* Page Coded during [Tutorial](https://youtu.be/GFO_txvwK_c?feature=shared)\n* Js only ",
+          "dateTime": "2024-03-19T14:01:41.778Z"
+        },
+        {
+          "indexTitle": "arkanoid",
+          "question": "[arkanoid](https://atari-monk.github.io/js-pong-page/arkanoid.html)",
+          "answer": "* Classic done with [Tutorial](https://compucademy.net/html5-breakout-game/?utm_content=cmp-true)",
+          "dateTime": "2024-03-19T14:33:35.149Z"
         }
       ]
     },
@@ -38,10 +74,10 @@
       "title": "Apps",
       "chats": [
         {
-          "indexTitle": "Task App",
-          "question": "Task App",
-          "answer": "[Task App](https://red-beach-032340203.3.azurestaticapps.net/)  \n* Web app with project, task, data model web api",
-          "dateTime": "2024-02-13T16:09:46.539Z"
+          "indexTitle": "task_app",
+          "question": "[task_app](https://red-beach-032340203.3.azurestaticapps.net/) ",
+          "answer": "* Goodle Login service, Web api, MongoDb, React \n* Data on Project and Task model",
+          "dateTime": "2024-03-19T13:28:16.686Z"
         }
       ]
     },
@@ -49,15 +85,33 @@
       "title": "Pages",
       "chats": [
         {
-          "indexTitle": "Notes3",
-          "question": "Notes3",
-          "answer": "[Notes3](https://atari-monk.github.io/notes/static_page/build/index.html)  \n* Static page with notes using json and md",
-          "dateTime": "2024-02-13T16:18:42.832Z"
+          "indexTitle": "notes_2",
+          "question": "[notes_2](https://atari-monk.github.io/atari-monk-notes/)",
+          "answer": "* Second page with notes\n* Learned that api with md is simplest and best, witch later chatgtp page proved",
+          "dateTime": "2024-03-19T13:24:49.331Z"
         },
         {
-          "indexTitle": "Histogram",
-          "question": "Histogram",
-          "answer": "[Histogram 01/2024](https://atari-monk.github.io/notes/histogram/index.html)   ",
+          "indexTitle": "notes_3",
+          "question": "[notes_3](https://atari-monk.github.io/notes/note_page/build/index.html)",
+          "answer": "* Static page with notes using json and md\n[Inventory](https://atari-monk.github.io/notes/inventory_page/build/index.html)",
+          "dateTime": "2024-03-19T13:25:35.562Z"
+        },
+        {
+          "indexTitle": "wood_stock_app",
+          "question": "[wood_stock_app](https://green-beach-088189603.3.azurestaticapps.net/)",
+          "answer": "* Simple react app, web api, mongodb\n* To collect wood stock data",
+          "dateTime": "2024-03-19T13:32:19.430Z"
+        },
+        {
+          "indexTitle": "socket_io_chat",
+          "question": "[socket_io_chat](https://atari-monk.github.io/samples/socket-io-client/client.html)",
+          "answer": "* Server and clinet for simple chat\n* Server wakes up minutes long",
+          "dateTime": "2024-03-19T13:38:45.194Z"
+        },
+        {
+          "indexTitle": "histogram",
+          "question": "histogram",
+          "answer": "[histogram 01/2024](https://atari-monk.github.io/notes/histogram/index.html)   ",
           "dateTime": "2024-02-13T16:24:03.777Z"
         }
       ]
