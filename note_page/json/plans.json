@@ -1,0 +1,26 @@
+{
+  "sections": [
+    {
+      "title": "Plans",
+      "chats": [
+        {
+          "indexTitle": "Micro Engine",
+          "question": "14.11.2023\nMicro Engine",
+          "answer": "* I have new idea to start project of 'micro-engine'\n1. To prototype small games it would be nice to not start always from scratch\n2. I am thinking of small custom engine\n3. It's point would be to have small, well documented set of features that enables to prototype new game ideas faster\n4. Just a technology that can be a backbone of my games\n5. It's containing all my technical abilityies, that my games just use, sounds cool, gives power\n6. It will decouple technology from game, giving me more precision, repeatablity, scalability and so on\n7. It's just a natural step",
+          "dateTime": "2023-11-14T14:44:29.241Z"
+        }
+      ]
+    },
+    {
+      "title": "03.2024",
+      "chats": [
+        {
+          "indexTitle": "21",
+          "question": "21",
+          "answer": "1. Soccer game development (focused on game mechanics) - 2 hours starting at 11:00.\n2. Adding the pool project and 3D Unity project to your portfolio page - 1 hour.\n3. Learning React and taking notes - 1 hour.\n4. Working on your inventory page - 1 hour.\n5. Sending out your CV - 1 hour.\n\nTotal allocated time: 6 hours.",
+          "dateTime": "2024-03-21T11:58:15.981Z"
+        }
+      ]
+    }
+  ]
+}

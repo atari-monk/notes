@@ -1,0 +1,21 @@
+{
+  "sections": [
+    {
+      "title": "21.03.2024",
+      "chats": [
+        {
+          "indexTitle": "Creating and nesting components ",
+          "question": "[Quick Start](https://react.dev/learn)  \nCreating and nesting components \n",
+          "answer": "1. React components are JavaScript/Typescript (Python, Kotlin) functions that return markup\n\n```javascript\nfunction MyButton() {\n  return (\n    <button>I'm a button</button>\n  );\n}\n```\n\n2.  Nesting components  \n\n```javascript\nexport default function MyApp() {\n  return (\n    <div>\n      <h1>Welcome to my app</h1>\n      <MyButton />\n    </div>\n  );\n}\n```\n\n3. Convention\n\nReact component names must always start with a capital letter, while HTML tags must be lowercase.",
+          "dateTime": "2024-03-21T21:30:17.766Z"
+        },
+        {
+          "indexTitle": "Writing markup with JSX ",
+          "question": "Writing markup with JSX ",
+          "answer": "1. JSX is a syntax extension for JavaScript often used with React. \n2. It allows you to write HTML-like syntax directly in your JavaScript code. \n3. However, JSX has stricter rules than HTML, such as requiring self-closing tags like <br /> and requiring a single parent element for multiple JSX elements.  \n4. To convert HTML to JSX, you can use online converters for convenience.  \n    * [online converter](https://transform.tools/html-to-jsx)\n\n```javascript\nfunction AboutPage() {\n  return (\n    <>\n      <h1>About</h1>\n      <p>Hello there.<br />How do you do?</p>\n    </>\n  );\n}\n```",
+          "dateTime": "2024-03-21T21:27:50.144Z"
+        }
+      ]
+    }
+  ]
+}
