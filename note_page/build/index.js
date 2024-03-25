@@ -9210,8 +9210,23 @@ fileList.push(...[
         protected: false,
     },
     {
+        path: '../json/plans.json',
+        name: 'plans.json.json',
+        protected: false,
+    },
+    {
+        path: '../json/day_log.json',
+        name: 'day_log.json',
+        protected: false,
+    },
+    {
+        path: '../json/react_notes.json',
+        name: 'react_notes.json',
+        protected: false,
+    },
+    {
         path: '../json/video_watching_log.json',
-        name: 'video_watching_log.json',
+        name: 'video_watching_log',
         protected: false,
     },
     {

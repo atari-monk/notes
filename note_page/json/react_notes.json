@@ -16,6 +16,59 @@
           "dateTime": "2024-03-21T21:27:50.144Z"
         }
       ]
+    },
+    {
+      "title": "22.03.2024",
+      "chats": [
+        {
+          "indexTitle": "Adding styles ",
+          "question": "Adding styles ",
+          "answer": "Html style\n```html\n<img class=\"avatar\" />\n```\nReact style\n```javascript\n<img className=\"avatar\" />\n```\nCss file\n```css\n.avatar {\n  border-radius: 50%;\n}\n```\nSimplest way to add css file is <link> in html\nOther options is build tool or a framework, consult its documentation",
+          "dateTime": "2024-03-22T16:26:58.269Z"
+        },
+        {
+          "indexTitle": "Displaying data ",
+          "question": "Displaying data \n",
+          "answer": "Curly braces enable embedding js variables in JSX, e.g., user.name.\n```javascript\nreturn (\n  <h1>\n    {user.name}\n  </h1>\n);\n```\nAlso works in JSX attributes\n```javascript\nreturn (\n  <img\n    className=\"avatar\"\n    src={user.imageUrl}\n  />\n);\n```\nAlso expressions like string concatenation\n```javascript\nconst user = {\n  name: 'Hedy Lamarr',\n  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',\n  imageSize: 90,\n};\n\nexport default function Profile() {\n  return (\n    <>\n      <h1>{user.name}</h1>\n      <img\n        className=\"avatar\"\n        src={user.imageUrl}\n        alt={'Photo of ' + user.name}\n        style={{\n          width: user.imageSize,\n          height: user.imageSize\n        }}\n      />\n    </>\n  );\n}\n```\nstyle={{}} means {}, js object in JSX curly braces, {{}}  \nstyle can be used with code if it depends on js variables",
+          "dateTime": "2024-03-22T16:41:53.722Z"
+        },
+        {
+          "indexTitle": "Conditional rendering",
+          "question": "Conditional rendering",
+          "answer": "Js condition on JSX in React\n```javascript\nlet content;\nif (isLoggedIn) {\n  content = <AdminPanel />;\n} else {\n  content = <LoginForm />;\n}\nreturn (\n  <div>\n    {content}\n  </div>\n);\n``` \nConditional ? operator works inside JSX\n```javascript\n<div>\n  {isLoggedIn ? (\n    <AdminPanel />\n  ) : (\n    <LoginForm />\n  )}\n</div>\n```\nWhen no else needed, use this shorter logical && syntax\n```javascript\n<div>\n  {isLoggedIn && <AdminPanel />}\n</div>\n```\nAll above also works for attributes",
+          "dateTime": "2024-03-22T16:48:33.870Z"
+        },
+        {
+          "indexTitle": "Rendering lists",
+          "question": "Rendering lists",
+          "answer": "Using map to convert data to JSX\n\n```javascript\nconst products = [\n  { title: 'Cabbage', id: 1 },\n  { title: 'Garlic', id: 2 },\n  { title: 'Apple', id: 3 },\n];\n```\n\n```javascript\nconst listItems = products.map(product =>\n  <li key={product.id}>\n    {product.title}\n  </li>\n);\n\nreturn (\n  <ul>{listItems}</ul>\n);\n```\nKey should be db unique id, React use it to log insert, delete, or reorder\n```javascript\nconst products = [\n  { title: 'Cabbage', isFruit: false, id: 1 },\n  { title: 'Garlic', isFruit: false, id: 2 },\n  { title: 'Apple', isFruit: true, id: 3 },\n];\n\nexport default function ShoppingList() {\n  const listItems = products.map(product =>\n    <li\n      key={product.id}\n      style={{\n        color: product.isFruit ? 'magenta' : 'darkgreen'\n      }}\n    >\n      {product.title}\n    </li>\n  );\n\n  return (\n    <ul>{listItems}</ul>\n  );\n}\n```",
+          "dateTime": "2024-03-22T16:55:41.482Z"
+        },
+        {
+          "indexTitle": "Responding to events",
+          "question": "Responding to events",
+          "answer": "Respond to events with handler functions inside your components\n```javascript\nfunction MyButton() {\n  function handleClick() {\n    alert('You clicked me!');\n  }\n\n  return (\n    <button onClick={handleClick}>\n      Click me\n    </button>\n  );\n}\n```",
+          "dateTime": "2024-03-22T17:02:14.525Z"
+        },
+        {
+          "indexTitle": "Updating the screen, Component State",
+          "question": "Updating the screen, Component State",
+          "answer": "```javascript\nimport { useState } from 'react';\n```\nDeclare state variable inside your component like this\n```javascript\nfunction MyButton() {\n  const [count, setCount] = useState(0);\n```\nthis provides current state count and function to update it\n```javascript\nfunction MyButton() {\n  const [count, setCount] = useState(0);\n\n  function handleClick() {\n    setCount(count + 1);\n  }\n\n  return (\n    <button onClick={handleClick}>\n      Clicked {count} times\n    </button>\n  );\n}\n```\nSate is independent for each component\n```javascript\nimport { useState } from 'react';\n\nexport default function MyApp() {\n  return (\n    <div>\n      <h1>Counters that update separately</h1>\n      <MyButton />\n      <MyButton />\n    </div>\n  );\n}\n\nfunction MyButton() {\n  const [count, setCount] = useState(0);\n\n  function handleClick() {\n    setCount(count + 1);\n  }\n\n  return (\n    <button onClick={handleClick}>\n      Clicked {count} times\n    </button>\n  );\n}\n```",
+          "dateTime": "2024-03-22T17:12:08.994Z"
+        },
+        {
+          "indexTitle": "Using Hooks",
+          "question": "Using Hooks",
+          "answer": "Hooks, like useState in React, are specialized functions. They must be called at the top level of components or other Hooks. Hooks are not intended for use within conditions or loops.",
+          "dateTime": "2024-03-22T17:23:58.449Z"
+        },
+        {
+          "indexTitle": "Sharing data between components",
+          "question": "Sharing data between components",
+          "answer": "Example of \"lifting up state\"\n```javascript\nimport { useState } from 'react';\n\nexport default function MyApp() {\n  const [count, setCount] = useState(0);\n\n  function handleClick() {\n    setCount(count + 1);\n  }\n\n  return (\n    <div>\n      <h1>Counters that update together</h1>\n      <MyButton count={count} onClick={handleClick} />\n      <MyButton count={count} onClick={handleClick} />\n    </div>\n  );\n}\n\nfunction MyButton({ count, onClick }) {\n  return (\n    <button onClick={onClick}>\n      Clicked {count} times\n    </button>\n  );\n}\n```\nWitch means define state in container/parent component  \nwith state hadler methods  \nThem pass those as props to children components  \nand use it in their function  \nThis will make button share state",
+          "dateTime": "2024-03-22T17:35:08.436Z"
+        }
+      ]
     }
   ]
 }
