@@ -30,8 +30,14 @@
         {
           "indexTitle": "25",
           "question": "25",
-          "answer": "1. cv, now 34 sended",
-          "dateTime": "2024-03-25T11:24:57.220Z"
+          "answer": "1. cv, now 34 sended\n2. update script mouse automate, video on it, testing it",
+          "dateTime": "2024-03-26T12:24:05.866Z"
+        },
+        {
+          "indexTitle": "26",
+          "question": "26",
+          "answer": "1. updated mouse automate to use positions files data, multiple menus and lists type are now posiible to handle, testing it a lot",
+          "dateTime": "2024-03-26T12:25:45.259Z"
         }
       ]
     }
