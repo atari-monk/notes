@@ -1,0 +1,87 @@
+[
+  {
+    "path": "../data/links.json",
+    "name": "links.json",
+    "protected": false
+  },
+  {
+    "path": "../data/sleep_log.json",
+    "name": "sleep_log.json",
+    "protected": false
+  },
+  {
+    "path": "../data/plans.json",
+    "name": "plans.json.json",
+    "protected": false
+  },
+  {
+    "path": "../data/day_log.json",
+    "name": "day_log.json",
+    "protected": false
+  },
+  {
+    "path": "../data/react_notes.json",
+    "name": "react_notes.json",
+    "protected": false
+  },
+  {
+    "path": "../data/nestjs_tutorial.json",
+    "name": "nestjs_tutorial.json",
+    "protected": false
+  },
+  {
+    "path": "../data/video_watching_log.json",
+    "name": "video_watching_log",
+    "protected": false
+  },
+  {
+    "path": "../data/coding_habit_2024.json",
+    "name": "coding_habit_2024.json",
+    "protected": false
+  },
+  {
+    "path": "../data/coding_log.json",
+    "name": "coding_log.json",
+    "protected": false
+  },
+  {
+    "path": "../data/micro_engine_step_by_step.json",
+    "name": "micro_engine_step_by_step.json",
+    "protected": false
+  },
+  {
+    "path": "../data/micro_engine_ecs.json",
+    "name": "micro_engine_ecs.json",
+    "protected": false
+  },
+  {
+    "path": "../data/micro_engine_parts.json",
+    "name": "micro_engine_parts.json",
+    "protected": false
+  },
+  {
+    "path": "../data/js_ts.json",
+    "name": "js_ts.json",
+    "protected": false
+  },
+  {
+    "path": "../data/unity_2d_tutorial.json",
+    "name": "unity_2d_tutorial.json",
+    "protected": false
+  },
+  {
+    "path": "../data/keys.json",
+    "name": "keys.json",
+    "protected": false
+  },
+  {
+    "path": "../data/to_do.json",
+    "name": "to_do.json",
+    "protected": false
+  },
+  {
+    "path": "../data/quotes.json",
+    "name": "quotes.json",
+    "protected": false
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "sections": [
+    {
+      "title": "Mapping key to action",
+      "chats": [
+        {
+          "indexTitle": "Add Key Type",
+          "question": "Add Key Type",
+          "answer": "1. In keyboardTypes add new KEY_ to const, KeyboardKey, KeyboardKeys  \n```plaintext  \n|-- engine_api\n|   |-- src\n|       |-- ecs\n|           |-- keyboard\n|               |-- keyboardTypes.ts\n```\n2. Export Key const  in z_export->esc_system.ts\n```typescript\nexport {\n  KEY_,\n  .\n  .\n  . \n} from '../ecs/system/keyboard/keyboardTypes'\n```\n3. Run command to propagate it in engine,  ball_game, desktop_ball_game\n```bash\nnpm run i-lib\n```",
+          "dateTime": "2024-03-02T16:55:53.390Z"
+        },
+        {
+          "indexTitle": "Add Key to KeyboardMapping system",
+          "question": "Add Key to KeyboardMapping system",
+          "answer": "1. Add mapping of key to action, witch is sending event using event System,  method  \ninitKeyAction.\n```plaintext\n|-- engine\n|   |-- src\n|       |-- ecs\n|           |-- system\n|               |-- keyboard\n|                   |-- KeyboardMapping.ts\n```\n```typescript\n[KEY_]: (id) =>\n        this._eventSystem.publish(KeyboardEvent, {\n          entityId: id,\n          key: KEY_,\n        } as IKeyboardEventData),\n```",
+          "dateTime": "2024-03-02T16:57:56.114Z"
+        },
+        {
+          "indexTitle": "Use added key",
+          "question": "Use added key",
+          "answer": "1. In your chosen system make sure you have eventSystem dependency  \n```typescript\nconstructor(\n    entityManager: IEntityManager,\n    private readonly _eventSystem: IEventSystem\n  ) {\n    super(entityManager)\n  }\n```\n2. Subscribe to KeyboardEvent.  \n```typescript\nthis._eventSystem.subscribe(KeyboardEvent, this.handlerName.bind(this))\n```\nYou may need to import KeyboardEvent mannually  \n```typescript\nimport {\n  KeyboardEvent,\n} from 'engine_api'\n```\n3. Define event handler, for example  \n```typescript\n private handlerName(data: IKeyboardEventData) {\n    //check event data, key, component data\n    if (\n      this._entity.id !== data.entityId ||\n      !this._actionComponent.enableAction ||\n      data.key !== this._action.key\n    )\n      return\n\n   //action logic\n  }\n```",
+          "dateTime": "2024-03-02T17:23:42.015Z"
+        },
+        {
+          "indexTitle": "Example of using key",
+          "question": "Example of using key",
+          "answer": "From class MarkersRenderer, extracted class to handle key  \n```typescript\nimport {\n  IEntityManager,\n  IEventSystem,\n  IKeyAction,\n  IKeyboardEventData,\n  KeyboardEvent,\n} from 'engine_api'\nimport { KeyMap } from 'engine'\n\nexport default class MarkersKeyboard {\n  private _isKeyInit = false\n\n  constructor(\n    private readonly _entityManager: IEntityManager,\n    private readonly _eventSystem: IEventSystem\n  ) {}\n\n  initKeyboardKey(switchMarkers: () => void) {\n    if (this._isKeyInit) return\n    this._eventSystem.subscribe(\n      KeyboardEvent,\n      this.keyHandler.bind(this, this.getKeyAction(), switchMarkers)\n    )\n    this._isKeyInit = true\n  }\n\n  private getKeyAction() {\n    const gameSate = this._entityManager.getStrict('gameState')\n    const keyMap = gameSate.getComponentStrict(KeyMap)\n    const action = keyMap.actions.find((a) => a.action === 'markers') ?? {\n      action: 'markers',\n      key: 'i',\n    }\n    return action\n  }\n\n  private keyHandler(\n    action: IKeyAction,\n    switchMarkers: () => void,\n    data: IKeyboardEventData\n  ) {\n    if (data.entityId !== 'gameState' && data.key !== action.key) return\n    switchMarkers()\n  }\n}\n```\nwitch is then dependency and used in MarkersRenderer\n```typescript\n.\n.\nconstructor(\n    entityManager: IEntityManager,\n    private readonly _renderer: IRenderer,\n    private readonly _markersKeyboard: MarkersKeyboard\n  ) {\n    super(entityManager)\n  }\n.\n.\nprotected startEntity(entity: IEntity) {\n    const components = this.initializeComponents(entity)\n    if (!components.markerPoints.on) return\n\n    this._markersKeyboard.initKeyboardKey(this.switchMarkers.bind(this))\n.\n.\n```",
+          "dateTime": "2024-03-03T18:39:31.047Z"
+        }
+      ]
+    },
+    {
+      "title": "Upgrading Systems",
+      "chats": [
+	    {
+          "indexTitle": "Api",
+          "question": "Api",
+          "answer": "```typescript\nexport default interface IStartable {\n  start(): void\n}\n```\n```typescript\nexport default interface IUpdateable {\n  update(deltaTime: number): void\n}\n```\n```typescript\nexport default interface IRenderable {\n  render(deltaTime: number): void\n}\n```\n```typescript\nimport IEntity from '../../entity/IEntity'\n\nexport default interface IRegisterEntityById {\n  registerEntityById(entity: IEntity): void\n}\n```\n```typescript\nimport IRenderable from '../../IRenderable'\nimport IStartable from '../../IStartable'\nimport IUpdateable from '../../IUpdateable'\nimport IRegisterEntityById from './IRegisterEntityById'\n\nexport default interface ISystem\n  extends IStartable,\n    IUpdateable,\n    IRenderable,\n    IRegisterEntityById {}\n```\n```typescript\nimport IEntity from '../../entity/IEntity'\n\nexport default interface IRegisterEntitiesById {\n  registerEntitiesById(entitys: IEntity[]): void\n}\n```\n```typescript\nimport IRegisterEntitiesById from './IRegisterEntitiesById'\nimport ISystem from './ISystem'\n\nexport default interface IMultiSystem extends ISystem, IRegisterEntitiesById {}\n```",
+          "dateTime": "2024-03-06T12:01:26.727Z"
+        },
+        {
+          "indexTitle": "System",
+          "question": "System",
+          "answer": "```typescript\nimport { IEntity, IManager, ISystem } from 'engine_api'\n\nexport default abstract class SystemBase implements ISystem {\n  protected _entity!: IEntity\n\n  constructor(protected readonly _entityManager: IManager<IEntity>) {}\n\n  registerEntityById(entityId: string): void {\n    this._entity = this._entityManager.getStrict(entityId)\n  }\n\n  start() {}\n\n  update(_deltaTime: number) {}\n\n  render(_deltaTime: number) {}\n}\n```",
+          "dateTime": "2024-03-06T11:33:31.985Z"
+        },
+        {
+          "indexTitle": "MultiSystem ",
+          "question": "MultiSystem ",
+          "answer": "```typescript\nimport { IEntity, IManager, ISystem } from 'engine_api'\n\nexport default abstract class MultiSystem implements ISystem {\n  protected _entities: IEntity[] = []\n\n  constructor(protected readonly _entityManager: IManager<IEntity>) {}\n\n  registerEntityById(entityId: string): void {\n    this._entities.push(this._entityManager.getStrict(entityId))\n  }\n\n  start() {\n    this._entities.forEach((entity) => {\n      this.startEntity(entity)\n    })\n  }\n\n  protected startEntity(_entity: IEntity) {}\n\n  update(deltaTime: number) {\n    this._entities.forEach((entity) => {\n      this.updateEntity(entity, deltaTime)\n    })\n  }\n\n  protected updateEntity(_entity: IEntity, _deltaTime: number) {}\n\n  render(_deltaTime: number) {\n    this._entities.forEach((entity) => {\n      this.renderEntity(entity, _deltaTime)\n    })\n  }\n\n  protected renderEntity(_entity: IEntity, _deltaTime: number) {}\n}\n```",
+          "dateTime": "2024-03-06T11:34:27.102Z"
+        },
+        {
+          "indexTitle": "Inquiry",
+          "question": "Inquiry",
+          "answer": "I have systems in my ecs engine in ts that i want to be inspired by unity.  \nI think MultiSystem is upgrade compared to System dont you think ?  \n\n* The MultiSystem seems to handle multiple entities, making it more versatile compared to the single-entity handling in SystemBase.",
+          "dateTime": "2024-03-06T11:56:53.637Z"
+        }
+      ]
+    }
+  ]
+}

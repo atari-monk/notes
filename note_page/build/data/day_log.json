@@ -1,0 +1,45 @@
+{
+  "sections": [
+    {
+      "title": "03.2024",
+      "chats": [
+        {
+          "indexTitle": "21",
+          "question": "21",
+          "answer": "0a. 12:30 notes, plan  \n0b. 13:00 - 14:20 new solution scripts, turned out they where already in place (but worse), lack of order  \n1. Soccer game, 14:20 - 16:30, refactoring to enable extension of ComponentMapper\n5. 19 - 20:00, sending cv\n3. 21:30 - 22:30, learn react with notes\n\nIn total active from 12:30 to 22:30, 10.5 hours, rather laid back",
+          "dateTime": "2024-03-21T21:44:35.278Z"
+        },
+        {
+          "indexTitle": "22",
+          "question": "22",
+          "answer": "1. Grocery, roasting chicken, slicing food for cold storage, 3 h, 12-15, chicken clean up 15:00 - 17:20\n2. Learning React and taking notes - 1 hour.\n3. Soccer game development (focused on game mechanics) - 1 hour 20 min",
+          "dateTime": "2024-03-22T21:34:00.675Z"
+        },
+        {
+          "indexTitle": "23",
+          "question": "23",
+          "answer": "1. Adding the pool project and 3D Unity project to your portfolio page - 1 hour.\n2. Learning React and taking notes - 1 hour.\n3. Working on your inventory page - 1 hour.\n4. Sending out your CV - 3 sends.\n5. Soccer game development (focused on game mechanics)",
+          "dateTime": "2024-03-23T13:05:23.018Z"
+        },
+        {
+          "indexTitle": "24",
+          "question": "24",
+          "answer": "1. Upgraded scripts proj\n2. Made lame video from that",
+          "dateTime": "2024-03-25T11:21:28.087Z"
+        },
+        {
+          "indexTitle": "25",
+          "question": "25",
+          "answer": "1. cv, now 34 sended\n2. update script mouse automate, video on it, testing it",
+          "dateTime": "2024-03-26T12:24:05.866Z"
+        },
+        {
+          "indexTitle": "26",
+          "question": "26",
+          "answer": "1. updated mouse automate to use positions files data, multiple menus and lists type are now posiible to handle, testing it a lot",
+          "dateTime": "2024-03-26T12:25:45.259Z"
+        }
+      ]
+    }
+  ]
+}

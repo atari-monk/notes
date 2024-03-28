@@ -1,0 +1,175 @@
+{
+  "sections": [
+    {
+      "title": "Coding Log",
+      "chats": [
+        {
+          "indexTitle": "File Format",
+          "question": "File Format",
+          "answer": "1. **Section:** month.year  \n2. **Index Title:** day  \n2. **Question:** day  \n3. **Answer:**  \n```plaintext\n|Task||\n| ------:|:-----------|\n| **Project:**||\n| **TaskNr:**||\n| **TaskType:**||\n| **Description:**||\n| **CommitsNr:**||\n| **PomodoroNr:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n```",
+          "dateTime": "2024-03-01T14:49:52.802Z"
+        }
+      ]
+    },
+    {
+      "title": "02.2024",
+      "chats": [
+        {
+          "indexTitle": "19",
+          "question": "19",
+          "answer": "Refactoring, 3 pomodoros:  \n\n1. Rename file  BaseCollisionDetector to CollisionDetector  \n2. Refactor TopLeftCollisionDetector to use interface IStartable, same as CenterCollisionDetector  \n3. Rename interface ICollisionInfo to ICollision  \n4. Rename file ICollisionInfo to ICollision  \n5. Move file ICollisionEntity to collision folder  \n6. Modiffy ICollisionDetector, use ICollision in it, turned out it's not used currently  \n\nRefactoring, 3 pomodoros (1.5 standing):  \n\n1. Modiffy CollisionDetector to use ICollision  \n2. Refactor lib exports  \n3. Better names in ICollisionHandler  \n4. Rename in ICollisionHandler classes  \n5. Use ICollision in detector, new CenterCollision class  \n6. ICollision in systems  \n\nTutorial, 2 pomodoros:  \n\n1. Duplicating platforms to form level  \n2. Coding player movement controller  \n3. Removing friction, jumping only from ground (not in air)  \n\nRefactoring, 3 pomodoros:  \n\n1. New interface ICollisionAlgorithm  \n2. Implemented in both algorithms for center and top left point collision  \n3. In top left point collision vectors used in data",
+          "dateTime": "2024-02-19T23:33:32.381Z"
+        },
+        {
+          "indexTitle": "20",
+          "question": "20",
+          "answer": "Refactoring, 3 pomodoros:  \n\n1.  Refactored \"Axis-Aligned Bounding Box\" CenterCollision class, to use vectors in new IpRect interface, 2 methods added  \nMuch more readable, maintamable and so on, in one better  \n\nRefactoring, 3 pomodoros:  \n\n1. Yet another refactor of \"Axis-Aligned Bounding Box\" CenterCollision, removed IpRect, using IRect now, collision code is logical now  \n2. Moved api of collision system  \n3. Readed all code and minor refactors, rigidBody is used in handlers!, so do not remove, despite not in collision sytem strictlly  \n4. Updated micro_engine_ecs documentation (all files on one page, for readablity)  \n\nTutorial, 2 pomodoros:\n\n1. Moving platform  \n2. Enemy\n\nRefactoring, 2 pomodoros:  \n1. Updated micro_engine_ecs documentation  \n2. Refactored collision builder in ball_game",
+          "dateTime": "2024-02-20T23:00:29.932Z"
+        },
+        {
+          "indexTitle": "21",
+          "question": "21",
+          "answer": "Feature, 3 pomodoros:\n\n1. Add Kick component  \n2. Refactor exports in engine project (each module has its file now)   \n\nFeature, 5 pomodoros:\n\n1. Used it in Kick Collision Handler,  \ncomponent removed need to flag switch by sending event  \n2. Stored (cached) kick so it's not searched for evry collision     ",
+          "dateTime": "2024-02-21T22:25:42.648Z"
+        },
+        {
+          "indexTitle": "22",
+          "question": "22",
+          "answer": "Refactoring/Feature, 7 pomodoro:    \n\n1. upgraded notes, static pages, inventory page started,  \n2. upgraded menus  \n\nRefactoring, 5 pomodoro:  \n\n1. refactored engine api exports,  \n2. notes in doc file to have code on one page\n",
+          "dateTime": "2024-02-22T23:24:15.985Z"
+        },
+        {
+          "indexTitle": "23",
+          "question": "23",
+          "answer": "Feature, 1 pomodoro\n\n1. remap keys so that kick and dribble has keys mapped for both players",
+          "dateTime": "2024-02-23T10:07:17.698Z"
+        },
+        {
+          "indexTitle": "25",
+          "question": "25",
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|~1 hour|\n| **Task:**|Remap keys so that kick and dribble have keys mapped for both players|\n| **Result:**|Added ability to map keys [ qerf ] and [/.,]|\n| **Difficulty:**|Easy but tedious and boring|\n| **Next:**|Keys are not ideal for play mode when four hands on one keyboard|\n---\n|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|~3 pomodoro|\n| **Task:**|Load config from json|\n| **Result 1:**|Async loading config from json|\n| **Result 2:**|Moved inferface to engine_api|\n| **Result 3:**|Used CopyPlugin in webconfig, to remove assets, css, json data from imports|\n| **Difficulty:**|Easy but tedious|\n| **Next:**|Problem is to define what should be in config and what in components data|\n---\n",
+          "dateTime": "2024-02-25T23:30:20.840Z"
+        },
+        {
+          "indexTitle": "26",
+          "question": "26",
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|1 pomodoro|\n| **Task:**|Make sprites flip on left right|\n| **Result_1:**|Refactored renderer. Removed non vector. Renamed the one with vector to main one|\n| **Result_2:**|In EntityMovement system, on left, right, fliped flag in sprite compoenent, this feeds to renderer|\n| **Difficulty:**|Easy|\n| **Next:**|Now Center of kick collision box must be mirrored along player position|\n---\n|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|3 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, right|\n| **Result_1:**|Failed to do task|\n| **Result_2:**|Used only player1 entity to do test on smaller set|\n| **Result_3:**|Added null checks to system builder, that worked only on full data before|\n| **Difficulty:**|Easy but tiring|\n| **Next:**|This task is still todo|\n---\n",
+          "dateTime": "2024-02-26T22:30:40.804Z"
+        },
+        {
+          "indexTitle": "27",
+          "question": "27",
+          "answer": "|||\n| ------:|:-----------|\n| **Type:**|Feature|\n| **Time:**|9 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, right|\n| **Result_1:**|Failed this task|\n| **Result_2:**|Introduced system for list of registered entities|\n| **Result_3:**|Refactored movement system to use it|\n| **Result_4:**|Old classes still exist for now|\n| **Result_5:**|Added Sprite flip system on new base|\n| **Difficulty:**|Medium, confusing|\n| **Next:**|Do player flip, add direction and kick box|\n---\n",
+          "dateTime": "2024-02-28T10:09:58.772Z"
+        },
+        {
+          "indexTitle": "28",
+          "question": "28",
+          "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|6 pomodoro|\n| **Task:**|Center of kick collision box must be mirrored along player position, on left, righ|\n| **Result_1:**|Added FlipBox in ball_game to flip kick box and direction on left right|\n| **Result_2:**|Markers component|\n| **Result_3:**|Updated center in collision algo when flip occures, this is to lame ? or efficient ?|\n| **Difficulty:**|Medium|\n| **Next:**|This is to complex, maybe put some data in component and update it evry frame so no events needed ?|\n---\n\n|||\n| ------:|:-----------|\n| **Project:**|3d_unity|\n| **Type:**|Tutorial|\n| **Time:**|2 pomodoro|\n| **Task:**|Add Level 2|\n| **Result:**|Done|\n| **Difficulty:**|Easy but lot clicking|\n| **Next:**|Next part|\n---\n",
+          "dateTime": "2024-02-28T23:08:47.361Z"
+        },
+        {
+          "indexTitle": "29",
+          "question": "29",
+          "answer": "|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **Time:**|4 pomodoro|\n| **TaskNr:**|56|\n| **Task:**|Add BallDribble system|\n| **Result:**|Added BallDrible|\n| **Difficulty:**|Medium, still not rutine|\n| **Next:**|It needs improvements, especially on flip|\n---\n|||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **Type:**|Feature|\n| **CommitsNr:**|6|\n| **PomodoroNr:**|9|\n| **TaskNr:**|57|\n| **Task:**|Create and on/off debug renderings with key|\n| **Result_1:**|Extract MarkersRenderer system|\n| **Result_2:**|Extract methods in MarkersRenderer|\n| **Result_3:**|Proj node_test for jsonToMapTest|\n| **Result_4:**|In engine, component with map and json mapping|\n| **Result_5:**|In ball_game, markers renderer|\n| **Result_6:**|In ball_game, added markers to markers renderer|\n| **Difficulty:**|Medium, developing style|\n| **Next:**|This is part 1, no on/off yet|\n---\n",
+          "dateTime": "2024-02-29T23:10:31.849Z"
+        }
+      ]
+    },
+    {
+      "title": "03.2024",
+      "chats": [
+        {
+          "indexTitle": "1",
+          "question": "1",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Refactor|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|4|\n| **PomodoroNr:**|5.6|\n| **Result_1:**|Create best drawPoint method in ts i could, that has each option optional|\n| **Result_2:**|Cleanup MarkersRenderer|\n| **Result_3:**|On/Off added to MarkersRenderer on level of component|\n| **Difficulty:**|Easy but painfull|\n| **Next:**|On/Off on config|\n---\n",
+          "dateTime": "2024-03-01T21:32:17.057Z"
+        },
+        {
+          "indexTitle": "2",
+          "question": "2",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Feature|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|4|\n| **Result_1:**|We created step by step note how to add new key mapping|\n| **Result_2:**|Keyboard mapping is done for 2 players, we need mapping for game|\n| **Result_3:**|Markers can be switched with i|\n| **Difficulty:**|Medium, with notes|\n| **Next:**|Do same for vectors and boxes|\n---\n",
+          "dateTime": "2024-03-02T21:07:06.261Z"
+        },
+        {
+          "indexTitle": "3",
+          "question": "3",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Feature|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Extracted MarkersKeyboard from MarkersRenderer class, to have SRP|\n| **Difficulty:**|Easy but grindy|\n| **Next:**|Go to next feature at last!|\n---\n",
+          "dateTime": "2024-03-03T18:30:45.037Z"
+        },
+        {
+          "indexTitle": "4",
+          "question": "4",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|57|\n| **TaskType:**|Feature|\n| **Description:**|Create and on/off debug renderings with key|\n| **CommitsNr:**|3|\n| **PomodoroNr:**|2|\n| **Result_1:**|At last collision boxes and helper renderings can be on/off with key|\n| **Difficulty:**|Medium|\n| **Next:**||\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|58|\n| **TaskType:**|Feature|\n| **Description:**|Move points to top of field|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|3|\n| **Result_1:**|Refactor, moved scoring to new score component from gameState|\n| **Difficulty:**|Medium|\n| **Next:**|Proceed with this task|\n---\n",
+          "dateTime": "2024-03-04T18:23:43.706Z"
+        },
+        {
+          "indexTitle": "5",
+          "question": "5",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|58|\n| **TaskType:**|Feature|\n| **Description:**|Move points to top of field|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|3|\n| **Result_1:**|Expanded Score component data, used in score render system|\n| **Result_2:**|Control from data|\n| **Difficulty:**|Easy|\n| **Next:**|?|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|59|\n| **TaskType:**|Feature|\n| **Description:**|Upgrade visuals of desktop version|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|2|\n| **Result:**|Scaled goal post asset in size x2, positioned with data|\n| **ToDo:**|Asset needs to be rendered, not scaled with irfan|\n| **Difficulty:**|Medium|\n| **Next:**|?|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|60|\n| **TaskType:**|Feature|\n| **Description:**|Upgrade collision boxes of field|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|4|\n| **Result:**|Field have collision boxes|\n| **Difficulty:**|Medium, one letter bug wasted time|\n| **Next:**|Refactor collision system, becouse this is bad now|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|61|\n| **TaskType:**|Feature|\n| **Description:**|Add new MultiCollisionSystem based on MultiSystem|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|5|\n| **Result_1:**|There is new better collision system|\n| **Result_2:**|Entity returns array of BoxColliders and system works on all of them|\n| **Difficulty:**|Medium|\n| **Next:**|Detector should be dependency and only one not many|\n---\n\n",
+          "dateTime": "2024-03-05T21:22:35.866Z"
+        },
+        {
+          "indexTitle": "6",
+          "question": "6",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|62|\n| **TaskType:**|Upgrade|\n| **Description:**|Note in micro_engine_step_by_step, how to upgrade systems|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Note to log system bases, to view them on one page|\n| **Result_2:**|New method to register multiple entities in MultiSystem|\n| **Difficulty:**|Medium, a lot updates|\n| **Next:**|Collision|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|63|\n| **TaskType:**|Feature|\n| **Description:**|Ball should have field sorounded with collison boxes|\n| **CommitsNr:**|6|\n| **PomodoroNr:**|6|\n| **Result_1:**|Problem of many detectors, initialy failed to uniffy to one|\n| **Result_2:**|One detector achived by removing state from classes|\n| **Result_3:**|Ball deflected from walls in handler|\n| **Result_4:**|Field covered in collision boxes|\n| **Result_5:**|Collision handler for field|\n| **Difficulty:**||\n| **Next:**||\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|64|\n| **TaskType:**|Refactoring|\n| **Description:**|Use MultiSystem as base for SpriteRenderer|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|1.5|\n| **Result:**|Removed old one, using new|\n| **Difficulty:**|Medium|\n| **Next:**|?|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|unity3d|\n| **TaskType:**|Tutorial|\n| **Description:**|Unity basic 3d game tutorial|\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result:**|Finished tutorial|\n| **Difficulty:**|Easy|\n| **Next:**|?|\n---\n\n",
+          "dateTime": "2024-03-07T15:39:41.461Z"
+        },
+        {
+          "indexTitle": "7",
+          "question": "7",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|65|\n| **TaskType:**|Feature|\n| **Description:**|Introduce demo project with configurations so all systems and components are tested|\n| **CommitsNr:**|11|\n| **PomodoroNr:**|8|\n| **Result_1:**|Add Game class and move it from Game up to Engine|\n| **Result_2:**|Add ability to change data with config. InitializationChecker refactor.|\n| **Result_3:**|Add ability to change data with config. Dependency inversion|\n| **Result_4:**|Add ability to change data with config. Failed. A lot of refactoring instead. That means something was in a way.|\n| **Difficulty:**|Hard|\n| **Next:**|Find out if after refactoring it is possible ?|\n---\n",
+          "dateTime": "2024-03-07T15:24:40.920Z"
+        },
+        {
+          "indexTitle": "8",
+          "question": "8",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor some systems|\n| **CommitsNr:**|10|\n| **PomodoroNr:**|7|\n| **Result_1:**|Add automation scripts|\n| **Result_2:**|Refactor DebugRenderer to MultiSystem|\n| **Result_3:**|Update system builder to use config|\n| **Difficulty:**|Manageable but to slow|\n| **Next:**|Upgrade systems, fix StepMovement, Movement|\n---\n",
+          "dateTime": "2024-03-08T22:33:09.463Z"
+        },
+        {
+          "indexTitle": "9",
+          "question": "9",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem base for StepMovement|\n| **CommitsNr:**|3|\n| **PomodoroNr:**|3|\n| **Result:**|Also fixed its builder|\n| **Difficulty:**|Easy|\n| **Next:**|More of similar|\n---\n",
+          "dateTime": "2024-03-09T21:17:27.399Z"
+        },
+        {
+          "indexTitle": "10",
+          "question": "10",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|MultiSystem for movement folder|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|4|\n| **Result:**|Applied new System to all movements, tested 2 possible to test|\n| **Difficulty:**|Medium|\n| **Next:**|More refactoring|\n---\n",
+          "dateTime": "2024-03-10T15:41:50.207Z"
+        },
+        {
+          "indexTitle": "11",
+          "question": "11",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Refactor KinematicsSystem|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|8|\n| **Result_1:**|KinematicsSystem rebased to new base|\n| **Result_2:**|PlayerKick rebased to new base, problem setting cache|\n| **Difficulty:**|Medium but long|\n| **Next:**||\n---\n",
+          "dateTime": "2024-03-11T23:25:09.694Z"
+        },
+        {
+          "indexTitle": "12",
+          "question": "12",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Use new system base|\n| **PomodoroNr:**|6|\n| **Result:**|3 classes|\n---\n",
+          "dateTime": "2024-03-14T11:44:00.455Z"
+        },
+        {
+          "indexTitle": "13",
+          "question": "13",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|66|\n| **TaskType:**|Refactor|\n| **Description:**|Use new system base|\n| **PomodoroNr:**|10|\n| **Result:**|New System base in all|\n---\n",
+          "dateTime": "2024-03-14T11:48:15.477Z"
+        },
+        {
+          "indexTitle": "14",
+          "question": "14",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|67|\n| **TaskType:**|Feature|\n| **Description:**|Update ball dribble system|\n| **CommitsNr:**|2|\n| **PomodoroNr:**|5|\n| **Result_1:**|Refactor BallDrible to extract BallHelper|\n| **Result_2:**|BallDrible flips ball on left, right when ball in dribble|\n| **Difficulty:**|Medium|\n| **Next:**|?|\n---\n|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|68|\n| **TaskType:**|Feature|\n| **Description:**||\n| **CommitsNr:**|1|\n| **PomodoroNr:**|1|\n| **Result_1:**|Removed jest tets, poor debug ability|\n| **Difficulty:**||\n| **Next:**||\n---\n",
+          "dateTime": "2024-03-14T18:27:46.288Z"
+        },
+        {
+          "indexTitle": "22",
+          "question": "22",
+          "answer": "|Task||\n| ------:|:-----------|\n| **Project:**|micro_engine|\n| **TaskNr:**|69|\n| **TaskType:**|Feature|\n| **Description:**|Introduce dribble state|\n| **CommitsNr:**||\n| **PomodoroNr:**||\n| **Result:**||\n| **Difficulty:**||\n| **Next:**||\n---\n",
+          "dateTime": "2024-03-22T20:14:13.652Z"
+        }
+      ]
+    }
+  ]
+}

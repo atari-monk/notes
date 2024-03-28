@@ -1,0 +1,27 @@
+{
+  "sections": [
+    {
+      "title": "Note",
+      "chats": [
+        {
+          "indexTitle": "Source",
+          "question": "Source",
+          "answer": "[Tutorial](https://youtu.be/sFnAHC9lLaw)  \n[Documentation](https://docs.nestjs.com/)  ",
+          "dateTime": "2024-03-28T14:06:36.483Z"
+        },
+        {
+          "indexTitle": "What it is",
+          "question": "What it is",
+          "answer": "NestJS is framework to build server site apps  \nBuild on Node.js, Express.js and TypeScript  \nUsing Angular concepts on backend  \nIt provides structure for architecture level  \n\n",
+          "dateTime": "2024-03-28T14:08:05.574Z"
+        },
+        {
+          "indexTitle": "New Project",
+          "question": "New Project",
+          "answer": "create repo in github, name: nestjs_tutorial, no readme and gitignore  \nclone it with gitbash\n```bash\ngit clone https://github.com/atari-monk/nestjs_tutorial.git\n```\nrun admin powershell\n```bash\ncd \"C:\\atari-monk\\code\"\n```\n```bash\nnpm i -g @nestjs/cli\n```\n```bash\nnest new nestjs_tutorial\n```\nchoose npm\n```bash\ncd nestjs_tutorial\n```\n```bash\ncode .\n```\n```bash\nnpm run start:dev\n```\nveriffy port 3000 in src/main.ts, i edited to 49\n```bash\nlocalhost:3049\n```",
+          "dateTime": "2024-03-28T14:45:34.009Z"
+        }
+      ]
+    }
+  ]
+}
