@@ -8,6 +8,7 @@ import MarkdownIt from 'markdown-it'
 import anchor from 'markdown-it-anchor'
 import implicitFigures from 'markdown-it-implicit-figures'
 import { ISectionsAndChats } from 'notes_lib'
+import { loadJSONFile } from './file'
 
 const jsonContainer = document.getElementById('jsonContainer') as HTMLElement
 const index = document.getElementById('index') as HTMLElement
@@ -31,109 +32,43 @@ export default interface IFile {
 
 const fileList: IFile[] = []
 
-fileList.push(
-  ...[
-    {
-      path: '../json/links.json',
-      name: 'links.json',
-      protected: false,
-    },
-    {
-      path: '../json/sleep_log.json',
-      name: 'sleep_log.json',
-      protected: false,
-    },
-    {
-      path: '../json/plans.json',
-      name: 'plans.json.json',
-      protected: false,
-    },
-    {
-      path: '../json/day_log.json',
-      name: 'day_log.json',
-      protected: false,
-    },
-    {
-      path: '../json/react_notes.json',
-      name: 'react_notes.json',
-      protected: false,
-    },
-    {
-      path: '../json/video_watching_log.json',
-      name: 'video_watching_log',
-      protected: false,
-    },
-    {
-      path: '../json/coding_habit_2024.json',
-      name: 'coding_habit_2024.json',
-      protected: false,
-    },
-    {
-      path: '../json/coding_log.json',
-      name: 'coding_log.json',
-      protected: false,
-    },
-    {
-      path: '../json/micro_engine_step_by_step.json',
-      name: 'micro_engine_step_by_step.json',
-      protected: false,
-    },
-    {
-      path: '../json/micro_engine_ecs.json',
-      name: 'micro_engine_ecs.json',
-      protected: false,
-    },
-    {
-      path: '../json/micro_engine_parts.json',
-      name: 'micro_engine_parts.json',
-      protected: false,
-    },
-    {
-      path: '../json/js_ts.json',
-      name: 'js_ts.json',
-      protected: false,
-    },
-    {
-      path: '../json/unity_2d_tutorial.json',
-      name: 'unity_2d_tutorial.json',
-      protected: false,
-    },
-    {
-      path: '../json/keys.json',
-      name: 'keys.json',
-      protected: false,
-    },
-    {
-      path: '../json/to_do.json',
-      name: 'to_do.json',
-      protected: false,
-    },
-    {
-      path: '../json/quotes.json',
-      name: 'quotes.json',
-      protected: false,
-    },
-  ]
-)
+const filePath: string = 'data/files.json'
 
-const fileListContainer = document.getElementById(
-  'fileListContainer'
-) as HTMLElement
-fileList.forEach((file) => {
-  const link = document.createElement('a')
-  link.href = '#'
-  link.textContent = file.name
-  link.addEventListener('click', async (event) => {
-    event.preventDefault()
-    await handleLinkClick(file)
-  })
-  fileListContainer.appendChild(link)
-  const br = document.createElement('br')
-  fileListContainer.appendChild(br)
-})
+async function initialize() {
+  try {
+    const fileListData = await loadJSONFile(filePath)
+    if (fileListData) {
+      fileList.push(...fileListData)
 
-const firstLink = fileListContainer.querySelector('a') as HTMLElement
-firstLink.click()
+      const fileListContainer = document.getElementById(
+        'fileListContainer'
+      ) as HTMLElement
+      fileList.forEach((file) => {
+        const link = document.createElement('a')
+        link.href = '#'
+        link.textContent = file.name
+        link.addEventListener('click', async (event) => {
+          event.preventDefault()
+          await handleLinkClick(file)
+        })
+        fileListContainer.appendChild(link)
+        const br = document.createElement('br')
+        fileListContainer.appendChild(br)
+      })
+
+      const firstLink = fileListContainer.querySelector('a') as HTMLElement
+      firstLink.click()
+    } else {
+      console.error('Error loading JSON file:', filePath)
+    }
+  } catch (error) {
+    console.error('Error:', error)
+  }
+}
+
+;(async () => {
+  await initialize()
+})()
 
 async function handleLinkClick(file: IFile) {
   if (file.protected) {
